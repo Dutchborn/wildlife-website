@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Collections</title>
+    <link rel="stylesheet" href="assets/css/animals.css">
+    <!-- Include Globe.gl and TopoJSON libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            const parentLi = dropdown.parentElement;
+
+            // Toggle the active class
+            parentLi.classList.toggle('active');
+
+            // Close other dropdowns
+            document.querySelectorAll('.az-navbar ul li').forEach(li => {
+                if (li !== parentLi) {
+                    li.classList.remove('active');
+                }
+            });
+        }
+    </script>
+    <script>
+      
+      function toggleDropdown(dropdownId) {
+          const dropdown = document.getElementById(dropdownId);
+          dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      }
+  </script>
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="assets/videos/WWbackgroundvid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Wildlife Wonders</div>
+        <nav>
+            <ul>
+                <li><a href="wildlifewebsite.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="animals.html">Animals</a></li>
+                <li><a href="conservation.html">Conservation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Animal Collections</h1>
+
+        <!-- Collection Section -->
+        <div class="collections">
+            <!-- Collection Item -->
+            <div class="collection-item">
+                <div class="slideshow-collage">
+                    <img src="assets/images/monkey.jpg" alt="monkey">
+                    <!--
+                    <img src="assets/images/jaguar.jpg" alt="jaguar">
+                    <img src="assets/images/bat.jpg" alt="bat">
+                    <img src="assets/images/wolves.jpg" alt="wolves">
+                    <img src="assets/images/pigglet.jpg" alt="pigglet">
+                    <img src="assets/images/deer.jpg" alt="deer">
+                    <img src="assets/images/kangaroo.jpg" alt="kangaroo">
+                    <img src="assets/images/polecat.jpg" alt="polecat">
+                -->
+                </div>
+                <h2>Mammals</h2>
+                <p>Explore the diversity of warm-blooded vertebrates.</p>
+            </div>
+
+            <!-- Collection Item -->
+            <div class="collection-item">
+                <img src="assets/images/reptiles.jpg" alt="Reptiles">
+                <h2>Reptiles</h2>
+                <p>Discover the fascinating world of cold-blooded creatures.</p>
+            </div>
+
+            <!-- Collection Item -->
+            <div class="collection-item">
+                <img src="assets/images/birds.jpg" alt="Birds">
+                <h2>Birds</h2>
+                <p>Learn about the incredible variety of avian species.</p>
+            </div>
+
+            <!-- Collection Item -->
+            <div class="collection-item">
+                <img src="assets/images/amphibians.jpg" alt="Amphibians">
+                <h2>Amphibians</h2>
+                <p>Uncover the secrets of amphibious life.</p>
+            </div>
+
+            <!-- Collection Item -->
+            <div class="collection-item">
+                <img src="assets/images/fish.jpg" alt="Fish">
+                <h2>Fish</h2>
+                <p>Dive into the underwater world of fish species.</p>
+            </div>
+
+            <!-- Collection Item -->
+            <div class="collection-item">
+                <img src="assets/images/insects.jpg" alt="Insects">
+                <h2>Insects</h2>
+                <p>Marvel at the diversity of the insect kingdom.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="az-navbar">
+        <ul>
+            <li><a href="#A">A</a></li>
+            <li><a href="#B">B</a></li>
+            <li><a href="#C">C</a></li>
+            <li><a href="#D">D</a></li>
+            <li><a href="#E">E</a></li>
+            <li><a href="#F">F</a></li>
+            <li><a href="#G">G</a></li>
+            <li><a href="#H">H</a></li>
+            <li><a href="#I">I</a></li>
+            <li><a href="#J">J</a></li>
+            <li><a href="#K">K</a></li>
+            <li><a href="#L">L</a></li>
+            <li><a href="#M">M</a></li>
+            <li><a href="#N">N</a></li>
+            <li><a href="#O">O</a></li>
+            <li><a href="#P">P</a></li>
+            <li><a href="#Q">Q</a></li>
+            <li><a href="#R">R</a></li>
+            <li><a href="#S">S</a></li>
+            <li><a href="#T">T</a></li>
+            <li><a href="#U">U</a></li>
+            <li><a href="#V">V</a></li>
+            <li><a href="#W">W</a></li>
+            <li><a href="#X">X</a></li>
+            <li><a href="#Y">Y</a></li>
+            <li><a href="#Z">Z</a></li>
+        </ul>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Wildlife Wonders. All rights reserved.</p>
+    </footer>
+</body>
+</html>
