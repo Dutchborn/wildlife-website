@@ -156,3 +156,69 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Slideshow Collage */
+.slideshow-collage {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  overflow: hidden; /* Hide images outside the container */
+}
+
+.slideshow-collage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the container */
+  opacity: 0; /* Start with all images hidden */
+  animation: slideshow 16s infinite; /* 16s for 8 images (2s per image) */
+}
+
+.slideshow-collage img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slideshow-collage img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.slideshow-collage img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.slideshow-collage img:nth-child(4) {
+  animation-delay: 6s;
+}
+
+.slideshow-collage img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+.slideshow-collage img:nth-child(6) {
+  animation-delay: 10s;
+}
+
+.slideshow-collage img:nth-child(7) {
+  animation-delay: 12s;
+}
+
+.slideshow-collage img:nth-child(8) {
+  animation-delay: 14s;
+}
+
+@keyframes slideshow {
+  0% {
+      opacity: 1; /* Image is visible */
+  }
+  12.5% {
+      opacity: 1; /* Keep the image visible */
+  }
+  25% {
+      opacity: 0; /* Fade out the image */
+  }
+  100% {
+      opacity: 0; /* Ensure it stays hidden */
+  }
+}
