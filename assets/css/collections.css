@@ -172,7 +172,7 @@ footer {
   left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, -50%) scale(0.9); 
+  transform: translate(-50%, -50%) scale(0.8); 
   object-fit: cover; /* Ensure images cover the container */
   opacity: 0; /* Start with all images hidden */
   animation: slideshow 16s infinite; /* 16s for 8 images (2s per image) */

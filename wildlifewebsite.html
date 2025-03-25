@@ -38,7 +38,7 @@
         <div class="hero">
             <h1>Discover the Wonders of Wildlife</h1>
             <p>Explore the beauty and diversity of the animal kingdom.</p>
-            <a href="animals.html"
+            <a href="conservation.html"
              class="cta-button">Learn More</a>
         </div>
 
@@ -178,12 +178,80 @@
             </ul>
         </div>
     </div>
+    </div>
 
-</div>        
+    <!-- Habitat Section -->
+<div class="habitat-section">
+    <h2>Every Animal Has a Home</h2>
+    <nav class="habitat-nav">
+        <ul>
+            <li><a href="#" class="tab-link active" onclick="openTab(event, 'habitat')">Habitat</a></li>
+            <li><a href="#" class="tab-link" onclick="openTab(event, 'lifestyle')">Lifestyle and Behavior</a></li>
+            <li><a href="#" class="tab-link" onclick="openTab(event, 'taxonomy')">Taxonomy Groups</a></li>
+            <li><a href="#" class="tab-link" onclick="openTab(event, 'conservation')">Conservation Status</a></li>
+            <li><a href="#" class="tab-link" onclick="openTab(event, 'geography')">Geography</a></li>
+            <li><a href="#" class="tab-link" onclick="openTab(event, 'continents')">Continents</a></li>
+        </ul>
+    </nav>
+
+    <div class="tab-content" id="habitat">
+        <h3>Habitat</h3>
+        <p>Animals live in a variety of habitats, from dense forests to arid deserts, each adapted to their unique needs and survival strategies.</p>
+    </div>
+
+    <div class="tab-content" id="lifestyle" style="display: none;">
+        <h3>Lifestyle and Behavior</h3>
+        <p>Animals exhibit fascinating behaviors, from social interactions to hunting techniques, that define their lifestyles.</p>
+    </div>
+
+    <div class="tab-content" id="taxonomy" style="display: none;">
+        <h3>Taxonomy Groups</h3>
+        <p>Animals are classified into taxonomy groups based on their evolutionary relationships, such as mammals, reptiles, and birds.</p>
+    </div>
+
+    <div class="tab-content" id="conservation" style="display: none;">
+        <h3>Conservation Status</h3>
+        <p>Conservation status highlights the risk of extinction for species, ranging from least concern to critically endangered.</p>
+    </div>
+
+    <div class="tab-content" id="geography" style="display: none;">
+        <h3>Geography</h3>
+        <p>Animals are distributed across various geographic regions, each with unique ecosystems and biodiversity.</p>
+    </div>
+
+    <div class="tab-content" id="continents" style="display: none;">
+        <h3>Continents</h3>
+        <p>From Africa to Antarctica, animals inhabit every continent, adapting to diverse climates and environments.</p>
+    </div>
+</div>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Wildlife Wonders. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        function openTab(event, tabId) {
+            // Prevent the default behavior of the <a> tag
+            event.preventDefault();
+
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.style.display = 'none');
+
+            // Remove "active" class from all tab links
+            const tabLinks = document.querySelectorAll('.tab-link');
+            tabLinks.forEach(link => link.classList.remove('active'));
+
+            // Show the selected tab content
+            document.getElementById(tabId).style.display = 'block';
+
+            // Add "active" class to the clicked tab link
+            event.currentTarget.classList.add('active');
+        }
+
+        // Show the first tab by default
+        document.getElementById('habitat').style.display = 'block';
+    </script>
 </body>
 </html>

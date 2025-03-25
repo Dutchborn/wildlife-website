@@ -94,19 +94,6 @@ nav ul li a:hover {
   margin-top: 70px; /* Add space equal to the header's height */
 }
 
-/* Animal Section */
-.animal {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Animal Image Styling */
-.animal h2 {
-  color: #2980b9;
-}
-
-
 /* Hero Section */
 .hero {
     text-align: center;
@@ -148,7 +135,8 @@ nav ul li a:hover {
 /* Animal Grid */
 .animal-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid layout */
+    grid-template-columns: repeat(5, 1fr); /* Always 5 columns */
+    grid-template-rows: repeat(2, auto); /* Always 2 rows */
     gap: 20px; /* Space between items */
     padding: 10px 10%; /* Center the grid with padding */
     width: 80%; /* Set the grid width to 80% of the screen */
@@ -284,11 +272,97 @@ nav ul li a:hover {
     opacity: 0.8; /* Match opacity with animal cards */
 }
 
+/* Habitat Section */
+.habitat-section {
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px;
+}
 
-/* Media Queries */
-@media (max-width: 1024px) {
+.habitat-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Habitat Navigation Bar */
+.habitat-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.habitat-nav ul li {
+  margin: 0;
+}
+
+.habitat-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px 5px 0 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.habitat-nav ul li a:hover,
+.habitat-nav ul li a.active {
+  color: #1abc9c;
+  border-bottom: 2px solid #1abc9c;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 20px;
+}
+
+.tab-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tab-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%; /* Ensure the footer spans the full width */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  clear: both; /* Clear any floated elements above */
+  position: relative; /* Ensure it stays in the normal document flow */
+  clear: both; /* Clear any floated elements above */
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* Styles for screens between 769px and 1024px */
   .animal-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px 5%;
+    gap: 20px;
   }
 
   .timeline-container {
@@ -297,17 +371,20 @@ nav ul li a:hover {
   }
 
   .timeline-box {
-    width: 100%;
     text-align: center;
   }
 
-  .timeline-box.left,
-  .timeline-box.right {
-    align-self: center;
-    padding: 0;
+  header {
+    padding: 10px 20px;
+  }
+
+  .container {
+    margin-top: 80px;
   }
 }
-  @media (max-width: 768px) {
+
+@media (max-width: 768px) and (min-width: 481px) {
+  /* Styles for screens between 481px and 768px */
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -317,25 +394,25 @@ nav ul li a:hover {
   }
 
   .animal-grid {
-    padding: 20px 5%;
-  }
-
-  header {
-    padding: 10px 20px; /* Ensure consistent padding */
-  }
-
-  .container {
-    margin-top: 80px; /* Adjust margin to match the header's height */
+    grid-template-columns: repeat(2, 1fr); /* Always 5 columns */
+    grid-template-rows: repeat(2, auto); /* Always 2 rows */
+    gap: 10px;
+    width: 90%;
   }
 
   nav ul {
-    flex-direction: row; /* Keep navigation links in a row */
-    justify-content: center; /* Center the navigation links */
+    flex-direction: row;
+    justify-content: center;
     gap: 15px;
+  }
+
+  .animal-card img {
+    height: 150px;
   }
 }
 
 @media (max-width: 480px) {
+  /* Styles for screens 480px and below */
   .hero h1 {
     font-size: 2rem;
   }
@@ -345,11 +422,10 @@ nav ul li a:hover {
   }
 
   .animal-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-   .timeline-box {
-    width: 100%;
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: auto; /* Automatically adjust row height */
+    gap: 10px; /* Add spacing between items */
+    width: 100%; /* Full width for smaller screens */
   }
 
   nav ul {
