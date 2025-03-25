@@ -5,32 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Collections</title>
     <link rel="stylesheet" href="assets/css/collections.css">
-    <!-- Include Globe.gl and TopoJSON libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
-    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
-    <script>
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-            const parentLi = dropdown.parentElement;
-
-            // Toggle the active class
-            parentLi.classList.toggle('active');
-
-            // Close other dropdowns
-            document.querySelectorAll('.az-navbar ul li').forEach(li => {
-                if (li !== parentLi) {
-                    li.classList.remove('active');
-                }
-            });
-        }
-    </script>
-    <script>
-      
-      function toggleDropdown(dropdownId) {
-          const dropdown = document.getElementById(dropdownId);
-          dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-      }
-  </script>
 </head>
 <body>
     <!-- Background Video -->
@@ -45,7 +19,7 @@
         <div class="logo">Wildlife Wonders</div>
         <nav>
             <ul>
-                <li><a href="wildlifewebsite.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="collections.html">Collections</a></li>
                 <li><a href="animals.html">Animals</a></li>
                 <li><a href="conservation.html">Conservation</a></li>
