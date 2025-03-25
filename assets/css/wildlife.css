@@ -321,7 +321,7 @@ nav ul li a:hover {
   }
 
   header {
-    padding: 15px; /* Adjust padding for smaller screens */
+    padding: 10px 20px; /* Ensure consistent padding */
   }
 
   .container {
@@ -329,8 +329,9 @@ nav ul li a:hover {
   }
 
   nav ul {
-    flex-direction: column; /* Stack navigation links vertically */
-    gap: 10px;
+    flex-direction: row; /* Keep navigation links in a row */
+    justify-content: center; /* Center the navigation links */
+    gap: 15px;
   }
 }
 
