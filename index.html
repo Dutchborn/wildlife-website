@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildlife Wonders</title>
-    <link rel="stylesheet" href="assets/css/wildlife.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
 
@@ -94,6 +94,25 @@
             </div>
         </div>    
     </div>
+
+    <!-- Reasons Section -->
+<div class="reasons-section">
+    <h2>Why I Created This Website</h2>
+    <div class="reasons-content">
+        <div class="reason">
+            <h3>A Deep Love for Wildlife</h3>
+            <p>Wildlife has always been my passion. From the majestic lions of the savannah to the delicate butterflies in our gardens, every creature tells a story of resilience, beauty, and the intricate balance of nature.</p>
+        </div>
+        <div class="reason">
+            <h3>Protecting What We Love</h3>
+            <p>This website is my way of giving back to the natural world. By sharing knowledge and raising awareness, I hope to inspire others to join the fight to protect endangered species and preserve their habitats.</p>
+        </div>
+        <div class="reason">
+            <h3>Join Me in Making a Difference</h3>
+            <p>Together, we can create a community of nature lovers who care deeply about the planet. Sign up today to learn, share, and take action to ensure that future generations can experience the wonders of wildlife.</p>
+        </div>
+    </div>
+</div>
     
     <div class="timeline-container">
     <!-- Timeline Box 1 (Left) -->
@@ -179,6 +198,55 @@
     </div>
     </div>
 
+<!-- Unique Animal Facts Slider -->
+<div class="animal-slider-section">
+    <h2>Discover Unique Animals</h2>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="assets/images/axolotl.jpg" alt="Axolotl">
+                <div class="slide-info">
+                    <h3>Axolotl</h3>
+                    <p>The Axolotl, also known as the "Mexican walking fish," can regenerate entire limbs and even parts of its heart and brain!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/okapi.jpg" alt="Okapi">
+                <div class="slide-info">
+                    <h3>Okapi</h3>
+                    <p>Known as the "forest giraffe," the Okapi is native to the Congo and has stripes like a zebra but is closely related to giraffes.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/pangolin.jpg" alt="Pangolin">
+                <div class="slide-info">
+                    <h3>Pangolin</h3>
+                    <p>Pangolins are the only mammals covered in scales, which they use to protect themselves from predators.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/platypus.jpg" alt="Platypus">
+                <div class="slide-info">
+                    <h3>Platypus</h3>
+                    <p>The Platypus is a unique egg-laying mammal with a duck-like bill and webbed feet, native to Australia.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/leafy-sea-dragon.jpg" alt="Leafy Seadragon">
+                <div class="slide-info">
+                    <h3>Leafy Seadragon</h3>
+                    <p>Found in Australian waters, the Leafy Seadragon looks like seaweed, providing it with excellent camouflage.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+    </div>
+  </div>
+
+  <br>
+
     <!-- Habitat Section -->
 <div class="habitat-section">
     <h2>Every Animal Has a Home</h2>
@@ -252,5 +320,27 @@
         // Show the first tab by default
         document.getElementById('habitat').style.display = 'block';
     </script> 
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+      
+        let currentIndex = 0;
+      
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+      
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        });
+      
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+      </script>
 </body>
 </html>
