@@ -160,17 +160,19 @@ footer {
 /* Slideshow Collage */
 .slideshow-collage {
   position: relative;
-  width: 100%; /* Adjust as needed */
-  height: 300px; /* Adjust as needed */
-  overflow: hidden; /* Hide images outside the container */
+  width: 100%; /* Full width of the parent container */
+  height: 300px; /* Set a fixed height for the slideshow */
+  overflow: hidden; /* Hide parts of images outside the container */
+  margin-bottom: 20px; /* Add spacing between the slideshow and the heading */
 }
 
 .slideshow-collage img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
+  transform: translate(-50%, -50%) scale(0.9); 
   object-fit: cover; /* Ensure images cover the container */
   opacity: 0; /* Start with all images hidden */
   animation: slideshow 16s infinite; /* 16s for 8 images (2s per image) */
