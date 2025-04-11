@@ -16,6 +16,11 @@
   z-index: -1; /* Ensure it stays behind all content */
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
 /* Optional: Add a slight overlay for better text readability */
 .video-overlay {
   position: fixed;
@@ -53,42 +58,71 @@ header {
 
 /* Logo styling */
 .logo {
-  font-size: 24px; 
-  font-weight: bold; 
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.brand a {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Navigation styles */
-nav ul {
-  list-style: none; /* Remove default list styles */ 
-  display: flex; /* Flexbox layout for navigation items */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;;
+  padding: 15px 25px;
   flex-wrap: wrap;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-left {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.navbar-left .subtitle {
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
   gap: 15px;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  flex: 1;
+  flex-wrap: wrap;
 }
 
-/* Navigation list item styles */
-nav ul li {
-  flex: 1 1 auto;
-  margin: 0 15px; /* Add spacing between navigation items */
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
-/* Navigation link styles */
-nav ul li a {
-  color: white; /* Set text color for navigation links */ 
-  text-decoration: none; /* Remove underline from links */
-  font-size: 1rem; /* Set font size for navigation links */ 
+.nav-links li a:hover {
+  color: #1abc9c; /* Highlight color on hover */
+}
+
+.search-box input {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 nav ul li a:hover {
   color: #1abc9c; /* Highlight color on hover */
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
 }
 
 footer {
@@ -104,57 +138,56 @@ footer {
   clear: both; /* Clear any floated elements above */
 }
 
-
 /* Container */
 .container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 100px;
-    text-align: center;
+  width: 100%;
+  margin: 0;
+  padding-top: 100px;
+  text-align: center;
 }
 
 /* Collections Section */
 .collections {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 20px; /* Add spacing between items */
-    justify-content: center; /* Center-align items */
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px; /* Add spacing between items */
+  justify-content: center; /* Center-align items */
+  margin-top: 30px;
 }
 
 /* Collection Item */
 .collection-item {
-    flex: 1 1 calc(33.333% - 20px); /* 3 items per row with spacing */
-    max-width: calc(33.333% - 20px);
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 calc(33.333% - 20px); /* 3 items per row with spacing */
+  max-width: calc(33.333% - 20px);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .collection-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .collection-item h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    color: #333;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
 }
 
 .collection-item p {
-    font-size: 1rem;
-    color: #666;
-    padding: 0 10px 20px;
+  font-size: 1rem;
+  color: #666;
+  padding: 0 10px 20px;
 }
 
 .collection-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Slideshow Collage */
@@ -172,7 +205,7 @@ footer {
   left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, -50%) scale(0.8); 
+  transform: translate(-50%, -50%) scale(0.8);
   object-fit: cover; /* Ensure images cover the container */
   opacity: 0; /* Start with all images hidden */
   animation: slideshow 16s infinite; /* 16s for 8 images (2s per image) */
@@ -210,17 +243,59 @@ footer {
   animation-delay: 14s;
 }
 
+/* A-Z Navigation */
+div.az-navbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.az-navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.az-navbar ul li {
+  margin: 0;
+}
+
+.az-navbar ul li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.az-navbar ul li a:hover {
+  background-color: #ddd;
+}
+
+.heading-section {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 150px;
+}
+
+
+
 @keyframes slideshow {
   0% {
-      opacity: 1; /* Image is visible */
+    opacity: 1; /* Image is visible */
   }
   12.5% {
-      opacity: 1; /* Keep the image visible */
+    opacity: 1; /* Keep the image visible */
   }
   25% {
-      opacity: 0; /* Fade out the image */
+    opacity: 0; /* Fade out the image */
   }
   100% {
-      opacity: 0; /* Ensure it stays hidden */
+    opacity: 0; /* Ensure it stays hidden */
   }
 }
