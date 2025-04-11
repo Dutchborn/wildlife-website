@@ -139,11 +139,14 @@ footer {
 }
 
 /* Container */
-.container {
+div.container {
   width: 100%;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 10px;
+  justify-content: center;
   text-align: center;
+  max-width: 1500px;
+  max-height: fit-content;
 }
 
 /* Collections Section */
