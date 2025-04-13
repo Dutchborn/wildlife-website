@@ -524,7 +524,7 @@ nav ul li a:hover {
   text-align: center;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 40px auto;
+  margin: 300px auto; /* Center the section */
   width: 80%;
   max-width: 700px;
 }
@@ -596,31 +596,6 @@ footer {
   clear: both; /* Clear any floated elements above */
   position: relative; /* Ensure it stays in the normal document flow */
   clear: both; /* Clear any floated elements above */
-}
-
-/* Parent container for the row layout */
-.row-container {
-  display: flex; /* Use Flexbox to align items in a row */
-  gap: 0px; /* Add a 20px gap between the sections */
-  margin: 20px 0; /* Add some spacing above and below the row */
-}
-
-/* Fun Facts Section */
-.fun-facts-section {
-  flex: 1; /* Allow the section to take up equal space */
-  background-color: #f9f9f9; /* Optional: Add a background color */
-  padding: 20px; /* Add padding inside the section */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-}
-
-/* Animal Slider Section */
-.animal-slider-section {
-  flex: 2; /* Make the slider section take up more space */
-  background-color: #f9f9f9; /* Optional: Add a background color */
-  padding: 20px; /* Add padding inside the section */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
