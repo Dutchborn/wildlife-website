@@ -18,20 +18,20 @@
 /* Optional: Add a slight overlay for better text readability */
 .video-overlay {
   position: fixed; /* Fixed position to cover the entire screen */
-  top: 0;  
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  z-index: 0; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 /* Set default styles for the entire page */
 body {
-  background-color: #f4f4f4; 
-  color: #333;  
+  background-color: #f4f4f4;
+  color: #333;
   position: relative; /* Ensure the body stays in the normal document flow */
   z-index: 1; /* Ensure it stays above the video background */
-  height: 100%; 
+  height: 100%;
 }
 
 /* Header */
@@ -53,13 +53,13 @@ header {
 
 /* Logo styling */
 .logo {
-  font-size: 24px; 
-  font-weight: bold; 
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* Navigation styles */
 nav ul {
-  list-style: none; /* Remove default list styles */ 
+  list-style: none; /* Remove default list styles */
   display: flex; /* Flexbox layout for navigation items */
   flex-wrap: wrap;
   gap: 15px;
@@ -75,9 +75,9 @@ nav ul li {
 
 /* Navigation link styles */
 nav ul li a {
-  color: white; /* Set text color for navigation links */ 
+  color: white; /* Set text color for navigation links */
   text-decoration: none; /* Remove underline from links */
-  font-size: 1rem; /* Set font size for navigation links */ 
+  font-size: 1rem; /* Set font size for navigation links */
 }
 
 nav ul li a:hover {
@@ -91,99 +91,100 @@ nav ul li a:hover {
   padding: 20px;
   box-sizing: border-box;
   border-radius: 8px; /* Add rounded corners to the content */
-  opacity: 0.8; 
+  opacity: 0.8;
   margin-top: 70px; /* Add space equal to the header's height */
 }
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    background: url(https://Dutchborn.github.io/wildlife-website/assets/images/mountainrange1.jpg) no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-    position: relative;
+  text-align: center;
+  background: url(https://Dutchborn.github.io/wildlife-website/assets/images/mountainrange1.jpg)
+    no-repeat center center/cover;
+  color: white;
+  padding: 100px 20px;
+  position: relative;
 }
 
 /* Hero Heading Styling */
 .hero h1 {
-    font-size: 3rem; 
-    margin-bottom: 20px; 
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 /* Hero Paragraph Styling */
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 /* Call To Action Button */
 .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2980b9;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2980b9;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 /* Hover effect for CTA button */
 .cta-button:hover {
-    background-color: #1a5a7a;
+  background-color: #1a5a7a;
 }
 
 /* Animal Grid */
 .animal-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Always 5 columns */
-    grid-template-rows: repeat(2, auto); /* Always 2 rows */
-    gap: 20px; /* Space between items */
-    padding: 10px; /* Center the grid with padding */
-    width: 95%; /* Set the grid width to 80% of the screen */
-    margin: 0 auto; /* Center the grid horizontally */
-    align-items: center; /* Center items vertically */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Always 5 columns */
+  grid-template-rows: repeat(2, auto); /* Always 2 rows */
+  gap: 20px; /* Space between items */
+  padding: 10px; /* Center the grid with padding */
+  width: 95%; /* Set the grid width to 80% of the screen */
+  margin: 0 auto; /* Center the grid horizontally */
+  align-items: center; /* Center items vertically */
 }
 
 /* Animal Card Styling */
 .animal-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 0;
-    text-align: center;
-    box-sizing: border-box;
-    width: 100%; /* Ensure cards fill the grid cell */
-    height: 100%; /* Ensure cards fill the grid cell */
-    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth transition for hover effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%; /* Ensure cards fill the grid cell */
+  height: 100%; /* Ensure cards fill the grid cell */
+  transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth transition for hover effect */
 }
 
 .animal-card:hover {
-    transform: scale(1.2); /* Slightly enlarge the card */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
+  transform: scale(1.2); /* Slightly enlarge the card */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
 }
 
 /* Ensure images inside animal cards are responsive */
 .animal-card img {
-    width: 100%; /* Ensure images fill the card width */
-    height: 150px; /* Set a fixed height for the images */
-    object-fit: cover; /* Crop the image to fit within the card */
-    border-radius: 8px; /* Keep the rounded corners */
+  width: 100%; /* Ensure images fill the card width */
+  height: 150px; /* Set a fixed height for the images */
+  object-fit: cover; /* Crop the image to fit within the card */
+  border-radius: 8px; /* Keep the rounded corners */
 }
 
 /* Adjust text inside animal cards */
 .animal-card h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 
 .animal-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 10px 0;
 }
 
 /* Reasons Section */
@@ -197,8 +198,8 @@ nav ul li a:hover {
 .reasons-section h2 {
   font-size: 2.8rem;
   margin-bottom: 30px;
-  color: #ff4500; /* Bright orange for attention */
-  font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Playful font */
+  color: #2a5d67; /* Bright orange for attention */
+  font-family: "Comic Sans MS", "Arial", sans-serif; /* Playful font */
   text-shadow: 2px 2px #ffa07a; /* Fun shadow effect */
 }
 
@@ -228,8 +229,8 @@ nav ul li a:hover {
 .reason h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #ff69b4; /* Bright pink for a fun vibe */
-  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  color: #3b7a89; /* Bright pink for a fun vibe */
+  font-family: "Comic Sans MS", "Arial", sans-serif;
   text-shadow: 1px 1px #ffa07a;
 }
 
@@ -237,7 +238,7 @@ nav ul li a:hover {
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 /* Add decorative icons or shapes */
@@ -263,191 +264,207 @@ nav ul li a:hover {
 
 /* Timeline Container */
 .timeline-container {
-    position: relative;
-    width: 80%; /* Center the timeline container */
-    margin: 0 auto;
-    padding: 0; 
-    display: flex;
-    flex-direction: column; /* Stack timeline boxes vertically */
-    gap: 40px; /* Add spacing between timeline boxes */
-    box-sizing: border-box;
+  position: relative;
+  width: 80%; /* Center the timeline container */
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack timeline boxes vertically */
+  gap: 40px; /* Add spacing between timeline boxes */
+  box-sizing: border-box;
 }
 
 /* Central Timeline Line */
 .timeline-container::before {
-    content: '';
-    position: relative;
-    top: 0;
-    left: 50%; /* Center the line */
-    width: 5px;
-    height: 100%;
-    transform: translateX(-50%);
-    z-index: 1;
+  content: "";
+  position: relative;
+  top: 0;
+  left: 50%; /* Center the line */
+  width: 5px;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 /* Timeline Box */
 .timeline-box {
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Stack box, connector, and reference box vertically */
-    gap: 20px; /* Space between elements */
-    width: 50%; /* Half the width of the container */
-    box-sizing: border-box;
-    opacity: 1; /* Match opacity with animal cards */
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack box, connector, and reference box vertically */
+  gap: 20px; /* Space between elements */
+  width: 50%; /* Half the width of the container */
+  box-sizing: border-box;
+  opacity: 1; /* Match opacity with animal cards */
 }
 
 /* Left-aligned timeline box */
 .left {
-    align-self: flex-start; /* Align to the left */
-    text-align: left; /* Align text to the left */
-    padding-right: 10px; /* Add spacing from the central line */
+  align-self: flex-start; /* Align to the left */
+  text-align: left; /* Align text to the left */
+  padding-right: 10px; /* Add spacing from the central line */
 }
-
 
 /* Right-aligned timeline box */
 .right {
-    align-self: flex-end; /* Align to the right */
-    text-align: right; /* Align text to the right */
-    padding-left: 10px; /* Add spacing from the central line */
+  align-self: flex-end; /* Align to the right */
+  text-align: right; /* Align text to the right */
+  padding-left: 10px; /* Add spacing from the central line */
 }
-
 
 /* Box Content */
 .box {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px; /* Rounded corners for the box */
-    padding: 20px;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    z-index: 2; /* Ensure it appears above the timeline line */
-    opacity: 0.8; /* Match opacity with animal cards */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Rounded corners for the box */
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 2; /* Ensure it appears above the timeline line */
+  opacity: 0.8; /* Match opacity with animal cards */
 }
 
 /* Connector Line */
 .connector {
-    width: 5px;
-    height: 50px; /* Height of the connector line */
-    background-color: #2980b9; /* Connector color */
-    margin: 0 auto; /* Center the connector */
-    z-index: 1;
+  width: 5px;
+  height: 50px; /* Height of the connector line */
+  background-color: #2980b9; /* Connector color */
+  margin: 0 auto; /* Center the connector */
+  z-index: 1;
 }
 
 /* Reference Box */
 .reference-box {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px; /* Rounded corners for the reference box */
-    padding: 20px;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    z-index: 2; /* Ensure it appears above the timeline line */
-    opacity: 0.8; /* Match opacity with animal cards */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Rounded corners for the reference box */
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 2; /* Ensure it appears above the timeline line */
+  opacity: 0.8; /* Match opacity with animal cards */
+}
+
+/* Parent container for the row layout */
+.row-container {
+  display: flex; /* Use Flexbox to align items in a row */
+  gap: 0px; /* Add a 20px gap between the sections */
+  margin: 20px 0; /* Add some spacing above and below the row */
+}
+
+/* Fun Facts Section */
+.fun-facts-section {
+  background-color: #f9f9f9; /* Optional: Add a background color */
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  max-height: 300px; /* Adjust as needed */
+  margin-top: 100px;
 }
 
 /* Animal Slider Section */
 .animal-slider-section {
-    position: relative; /* Keep it in the normal document flow */
-    left: 25%; 
-    margin: 40px auto; /* Center it horizontally and add spacing above */
-    margin-top: 0;
-    width: 60%; /* Adjust width to fit nicely on the page */
-    max-width: 600px; /* Limit the maximum width */
-    background-color: #f9f9f9; /* Background color for the container */
-    padding: 20px; /* Add padding inside the container */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center-align the content */
-    opacity: 1; 
+  flex: 2; /* Make the slider section take up more space */
+  position: relative; /* Keep it in the normal document flow */
+  margin: 40px auto; /* Center it horizontally and add spacing above */
+  margin-top: 0;
+  width: 60%; /* Adjust width to fit nicely on the page */
+  max-width: 600px; /* Limit the maximum width */
+  background-color: #f9f9f9; /* Background color for the container */
+  padding: 20px; /* Add padding inside the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center-align the content */
 }
 
 .animal-slider-section h2 {
-font-size: 2.5rem;
-text-align: center;
-margin-bottom: 20px;
-color: #333;
-font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
 }
 
 /* Slider Container */
 .slider-container {
-position: relative;
-max-width: 800px;
-margin: 0 auto;
-overflow: hidden;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflow for a clean look */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Slider */
 .slider {
-display: flex;
-transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Individual Slide */
 .slide {
-min-width: 100%;
-box-sizing: border-box;
-text-align: center;
-background-color: #fff;
-border: 2px solid #ddd;
-border-radius: 10px;
-overflow: hidden;
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .slide img {
-width: 100%;
-height: 700px;
-object-fit: cover;
-border-bottom: 2px solid #ddd;
-border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+  border-radius: 10px 10px 0 0;
 }
 
 .slide-info {
-padding: 15px;
+  padding: 15px;
 }
 
 .slide-info h3 {
-font-size: 1.8rem;
-margin-bottom: 10px;
-color: #007BFF;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #007bff;
 }
 
 .slide-info p {
-font-size: 1rem;
-color: #555;
-line-height: 1.5;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
 }
 
 /* Navigation Buttons */
-.prev-btn, .next-btn {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background-color: rgba(0, 0, 0, 0.5);
-color: #fff;
-border: none;
-border-radius: 50%;
-width: 40px;
-height: 40px;
-font-size: 1.5rem;
-cursor: pointer;
-z-index: 10;
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .prev-btn {
-left: 10px;
+  left: 10px;
 }
 
 .next-btn {
-right: 10px;
+  right: 10px;
 }
 
-.prev-btn:hover, .next-btn:hover {
-background-color: rgba(0, 0, 0, 0.8);
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Habitat Section */
@@ -500,6 +517,52 @@ background-color: rgba(0, 0, 0, 0.8);
   border-bottom: 2px solid #1abc9c;
 }
 
+/* Fun Facts Section */
+.fun-facts-section {
+  background-color: #eafaf1;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  width: 80%;
+  max-width: 700px;
+}
+
+.fun-facts-section h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#fact-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1.2rem;
+}
+
+#fun-fact {
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+#fact-box button {
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#fact-box button:hover {
+  background-color: #16a085;
+}
+
 /* Tab Content */
 .tab-content {
   display: none;
@@ -535,6 +598,31 @@ footer {
   clear: both; /* Clear any floated elements above */
 }
 
+/* Parent container for the row layout */
+.row-container {
+  display: flex; /* Use Flexbox to align items in a row */
+  gap: 0px; /* Add a 20px gap between the sections */
+  margin: 20px 0; /* Add some spacing above and below the row */
+}
+
+/* Fun Facts Section */
+.fun-facts-section {
+  flex: 1; /* Allow the section to take up equal space */
+  background-color: #f9f9f9; /* Optional: Add a background color */
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Animal Slider Section */
+.animal-slider-section {
+  flex: 2; /* Make the slider section take up more space */
+  background-color: #f9f9f9; /* Optional: Add a background color */
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
 @media (max-width: 1024px) and (min-width: 769px) {
   /* Styles for screens between 769px and 1024px */
   .animal-grid {
@@ -563,24 +651,23 @@ footer {
   .reasons-content {
     flex-direction: column;
     align-items: center;
-}
+  }
 
-.reason {
+  .reason {
     max-width: 100%;
-}
+  }
   .animal-slider-section h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .slide-info h3 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .slide-info p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 }
-
 
 @media (max-width: 768px) and (min-width: 481px) {
   /* Styles for screens between 481px and 768px */
@@ -612,21 +699,28 @@ footer {
   .reasons-content {
     flex-direction: column;
     align-items: center;
-}
+  }
 
-.reason {
+  .reason {
     max-width: 100%;
-}
+  }
   .animal-slider-section h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .slide-info h3 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .slide-info p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .row-container {
+    flex-direction: column; /* Stack the sections vertically */
+    gap: 20px; /* Maintain the gap between sections */
   }
 }
 
