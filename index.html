@@ -256,6 +256,40 @@
       </div>
     </div>
 
+    <!-- Begin: Conservation Campaigns Section -->
+<section class="campaigns-section">
+    <h2>Support Wildlife Conservation</h2>
+    <div class="campaigns-container">
+      <div class="campaign-card">
+        <h3>Adopt a Snow Leopard</h3>
+        <p>Help protect this elusive cat from extinction. Your symbolic adoption supports WWF's efforts.</p>
+        <a href="https://www.worldwildlife.org/species/snow-leopard" target="_blank">Learn More</a>
+      </div>
+      <div class="campaign-card">
+        <h3>Save the Rainforest</h3>
+        <p>Rainforests are disappearing at alarming rates. Support initiatives working to conserve these vital habitats.</p>
+        <a href="https://www.rainforest-alliance.org/" target="_blank">Learn More</a>
+      </div>
+      <div class="campaign-card">
+        <h3>Protect Sea Turtles</h3>
+        <p>Pollution and poaching threaten sea turtles. Join global efforts to secure their future.</p>
+        <a href="https://www.conservation.org/projects/protecting-sea-turtles" target="_blank">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Begin: Wildlife Quiz Section -->
+<section class="quiz-section">
+    <h2>Wildlife IQ Quiz</h2>
+    <div id="quiz-box">
+      <p id="quiz-question">Loading question...</p>
+      <div id="quiz-options"></div>
+      <button onclick="nextQuestion()">Next Question</button>
+      <p id="quiz-result"></p>
+    </div>
+  </section>
+  
+
     <!-- Habitat Section -->
 <div class="habitat-section">
     <h2>Every Animal Has a Home</h2>
@@ -272,34 +306,112 @@
 
     <div class="tab-content" id="habitat">
         <h3>Habitat</h3>
-        <p>Animals live in a variety of habitats, from dense forests to arid deserts, each adapted to their unique needs and survival strategies.</p>
+          <p>Animals live in diverse habitats such as rainforests, deserts, oceans, and tundras. Each species is uniquely adapted to survive in its environment.</p>
+          <ul>
+            <li>🏝️ <strong>Coral Reefs:</strong> Clownfish, sea turtles</li>
+            <li>🌲 <strong>Forests:</strong> Tigers, woodpeckers</li>
+            <li>❄️ <strong>Arctic:</strong> Polar bears, arctic foxes</li>
+            <li>🏜️ <strong>Deserts:</strong> Camels, scorpions</li>
+          </ul>
+
     </div>
 
     <div class="tab-content" id="lifestyle" style="display: none;">
         <h3>Lifestyle and Behavior</h3>
         <p>Animals exhibit fascinating behaviors, from social interactions to hunting techniques, that define their lifestyles.</p>
+        <ul>
+            <li>🦁 Lions live in groups called prides — very social!</li>
+            <li>🦋 Butterflies migrate thousands of miles every year.</li>
+            <li>🐘 Elephants grieve for lost members of their herd.</li>
+            <li>🦉 Owls can rotate their heads up to 270 degrees.</li>
+          </ul>          
     </div>
 
     <div class="tab-content" id="taxonomy" style="display: none;">
         <h3>Taxonomy Groups</h3>
         <p>Animals are classified into taxonomy groups based on their evolutionary relationships, such as mammals, reptiles, and birds.</p>
+        <ul>
+            <li>🐾 <strong>Mammals:</strong> Warm-blooded, have hair or fur</li>
+            <li>🦎 <strong>Reptiles:</strong> Cold-blooded, scales, lay eggs</li>
+            <li>🦜 <strong>Birds:</strong> Feathers, beaks, most can fly</li>
+            <li>🐟 <strong>Fish:</strong> Gills, live in water</li>
+            <li>🦗 <strong>Insects:</strong> 6 legs, segmented bodies</li>
+          </ul>
+          
     </div>
 
     <div class="tab-content" id="conservation" style="display: none;">
         <h3>Conservation Status</h3>
         <p>Conservation status highlights the risk of extinction for species, ranging from least concern to critically endangered.</p>
+        <p>Species are ranked based on how close they are to extinction:</p>
+        <ul>
+          <li style="color: green;">🟢 Least Concern: e.g. Red Fox</li>
+          <li style="color: orange;">🟠 Vulnerable: e.g. Giant Panda</li>
+          <li style="color: orangered;">🔴 Endangered: e.g. Asian Elephant</li>
+          <li style="color: darkred;">⚫ Critically Endangered: e.g. Vaquita</li>
+        </ul>
+
     </div>
 
     <div class="tab-content" id="geography" style="display: none;">
         <h3>Geography</h3>
         <p>Animals are distributed across various geographic regions, each with unique ecosystems and biodiversity.</p>
+        <p>Different regions support unique wildlife:</p>
+        <ul>
+          <li>🌍 Africa: Lions, Elephants, Rhinos</li>
+          <li>🇦🇺 Australia: Kangaroos, Koalas, Platypus</li>
+          <li>🌎 South America: Jaguars, Sloths, Macaws</li>
+        </ul>        
     </div>
 
     <div class="tab-content" id="continents" style="display: none;">
         <h3>Continents</h3>
         <p>From Africa to Antarctica, animals inhabit every continent, adapting to diverse climates and environments.</p>
+        <ul>
+            <li>🌍 <strong>Africa:</strong> Cheetah, Meerkat</li>
+            <li>🌏 <strong>Asia:</strong> Snow Leopard, Red Panda</li>
+            <li>🌎 <strong>South America:</strong> Anaconda, Toucan</li>
+            <li>🌍 <strong>Europe:</strong> Eurasian Lynx, Hedgehog</li>
+            <li>🌐 <strong>Australia:</strong> Emu, Wombat</li>
+            <li>❄️ <strong>Antarctica:</strong> Emperor Penguin, Leopard Seal</li>
+          </ul>          
     </div>
 </div>
+
+<!-- Inspiring Testimonials -->
+<section class="testimonial-section">
+    <h2>What Nature Means to Us</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"This site inspired me to volunteer at a wildlife center. I learned so much!"</p>
+        <h4>- Maya, Wildlife Enthusiast</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The conservation stories moved me. We need to do more to protect our planet."</p>
+        <h4>- Liam, Student Activist</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Wildlife Wonders helped me understand the beauty and fragility of life on Earth."</p>
+        <h4>- Aria, Photographer</h4>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <h2>Join the Movement to Protect Wildlife</h2>
+    <p>Sign up to receive updates, conservation tips, and stories from the wild.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+  
+  <!-- Floating Banner -->
+  <div class="floating-banner">
+    🐾 Love Wildlife? <a href="conservation.html">Protect It Here</a>
+  </div>
+  
   
 
     <!-- Footer -->
@@ -352,34 +464,69 @@
             updateSlider();
         });
     </script>
-    <script>
-        const facts = [
-          "A group of flamingos is called a flamboyance.",
-          "Elephants can 'hear' with their feet by detecting ground vibrations.",
-          "Some turtles can breathe through their butts!",
-          "Octopuses have three hearts and blue blood.",
-          "Cows have best friends and get stressed when separated.",
-          "Sea otters hold hands when they sleep to stay together.",
-          "The mantis shrimp can punch with the speed of a bullet.",
-          "Sloths can hold their breath longer than dolphins.",
-          "Giraffes only need 5-30 minutes of sleep a day.",
-          "Pigeons can recognize themselves in mirrors—very few animals can!"
-        ];
-        
-        function newFact() {
-          const factBox = document.getElementById('fun-fact');
-          const randomFact = facts[Math.floor(Math.random() * facts.length)];
-          factBox.textContent = randomFact;
-        }
+    
+<!-- Begin: JS for Fun Facts and Quiz -->
+<script>
+    const facts = [
+    "A group of flamingos is called a flamboyance.",
+    "Elephants can 'hear' with their feet by detecting ground vibrations.",
+    "Some turtles can breathe through their butts!",
+    "Octopuses have three hearts and blue blood.",
+    "Sea otters hold hands when they sleep to stay together.",
+    "Giraffes only need 5–30 minutes of sleep a day.",
+    "Pigeons can recognize themselves in mirrors—very few animals can!"
+  ];
 
-        function newFact() {
-    console.log("Button clicked!"); // Debugging line
-    const factBox = document.getElementById('fun-fact');
+  function newFact() {
     const randomFact = facts[Math.floor(Math.random() * facts.length)];
-    factBox.textContent = randomFact;
-}
-        // Load a random fact on page load
-        window.onload = newFact;
+    document.getElementById("fun-fact").textContent = randomFact;
+  }
+
+  // Load a fact on first page load
+  window.onload = newFact;
+    
+    // Quiz Data
+    const quiz = [
+      {
+        q: "Which mammal lays eggs?",
+        options: ["Kangaroo", "Platypus", "Elephant"],
+        answer: 1
+      },
+      {
+        q: "What is the fastest land animal?",
+        options: ["Cheetah", "Lion", "Leopard"],
+        answer: 0
+      },
+      {
+        q: "Which bird is known for mimicking sounds?",
+        options: ["Parrot", "Eagle", "Sparrow"],
+        answer: 0
+      }
+    ];
+    let currentQuestion = 0;
+    function showQuestion() {
+      const q = quiz[currentQuestion];
+      document.getElementById('quiz-question').textContent = q.q;
+      const options = document.getElementById('quiz-options');
+      options.innerHTML = '';
+      q.options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(i);
+        options.appendChild(btn);
+      });
+    }
+    function checkAnswer(selected) {
+      const correct = quiz[currentQuestion].answer;
+      const result = document.getElementById('quiz-result');
+      result.textContent = selected === correct ? "Correct! 🦁" : "Oops, try again! 🐾";
+    }
+    function nextQuestion() {
+      currentQuestion = (currentQuestion + 1) % quiz.length;
+      document.getElementById('quiz-result').textContent = '';
+      showQuestion();
+    }
+    showQuestion();
     </script>
         
 </body>
