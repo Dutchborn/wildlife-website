@@ -103,6 +103,10 @@ nav ul li a:hover {
   color: white;
   padding: 100px 20px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hero Heading Styling */
@@ -985,7 +989,7 @@ footer {
   #fact-box button:hover {
     background-color: #16a085; /* Darker background color on hover */
   }
-  
+
   /* Animal Slider Section */
 
   .animal-slider-section {
@@ -1008,17 +1012,18 @@ footer {
 /* Medium Screens */
 /* Adjust styles for medium screens */
 @media (min-width: 426px) and (max-width: 768px) {
-  body [
+  body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  ]
+  }
 
   /* Hero Section */
   .hero {
     padding: 80px 20px; /* Adjust padding for medium screens */
   }
+
   .hero h1 {
     font-size: 2.5rem; /* Adjust font size for medium screens */
   }
@@ -1232,12 +1237,12 @@ footer {
 /* Large Screens */
 /* Adjust styles for larger screens */
 @media (min-width: 769px) and (max-width: 1200px) {
-  body [
+  body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  ]
+  }
 
   /* Hero Section */
   .hero {
@@ -1375,16 +1380,17 @@ footer {
     margin: 0 auto; /* Center the slider container */
     height: auto; /* Adjust height for larger screens */
   }
+}
 
   /* Larger Screens 1200+ */
   /* Adjust styles for larger screens */
   @media (min-width: 1201px) and (max-width: 1600px) {
-    body [
+    body {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    ]
+    }
   
     /* Hero Section */
     .hero {
@@ -1458,6 +1464,5 @@ footer {
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
       text-align: center; /* Center-align the content */
     }
-
-}
+  }
 
