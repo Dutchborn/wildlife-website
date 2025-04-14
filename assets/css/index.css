@@ -86,7 +86,7 @@ nav ul li a:hover {
 
 /* Main content styles */
 .container {
-  width: 90%; /* Use a percentage instead of a fixed width */
+  width: 95%; /* Use a percentage instead of a fixed width */
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
@@ -144,6 +144,7 @@ nav ul li a:hover {
   width: 95%; /* Set the grid width to 80% of the screen */
   margin: 0 auto; /* Center the grid horizontally */
   align-items: center; /* Center items vertically */
+  margin-top: 100px; /* Add space below the header */
 }
 
 /* Animal Card Styling */
@@ -187,81 +188,6 @@ nav ul li a:hover {
   margin: 10px 0;
 }
 
-/* Reasons Section */
-.reasons-section {
-  padding: 50px 20px;
-  text-align: center;
-  border-radius: 10px;
-  opacity: 0.8;
-}
-
-.reasons-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 30px;
-  color: #2a5d67; /* Bright orange for attention */
-  font-family: "Comic Sans MS", "Arial", sans-serif; /* Playful font */
-  text-shadow: 2px 2px #ffa07a; /* Fun shadow effect */
-}
-
-.reasons-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 30px;
-}
-
-.reason {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 25px;
-  max-width: 280px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.reason:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.reason h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #3b7a89; /* Bright pink for a fun vibe */
-  font-family: "Comic Sans MS", "Arial", sans-serif;
-  text-shadow: 1px 1px #ffa07a;
-}
-
-.reason p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-  font-family: "Arial", sans-serif;
-}
-
-/* Add decorative icons or shapes */
-.reason::before {
-  content: "🌟"; /* Star emoji for decoration */
-  font-size: 3rem;
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  opacity: 0.2;
-  transform: rotate(15deg);
-}
-
-.reason::after {
-  content: "🌿"; /* Leaf emoji for decoration */
-  font-size: 3rem;
-  position: absolute;
-  bottom: -10px;
-  left: -10px;
-  opacity: 0.2;
-  transform: rotate(-15deg);
-}
-
 /* Timeline Container */
 .timeline-container {
   position: relative;
@@ -272,6 +198,7 @@ nav ul li a:hover {
   flex-direction: column; /* Stack timeline boxes vertically */
   gap: 40px; /* Add spacing between timeline boxes */
   box-sizing: border-box;
+  margin-top: 100px; /* Add space below the header */
 }
 
 /* Central Timeline Line */
@@ -348,25 +275,89 @@ nav ul li a:hover {
 
 /* Parent container for the row layout */
 .row-container {
-  display: flex; /* Use Flexbox to align items in a row */
+  display: grid; /* Use Grid to align items in a row */
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
   gap: 0px; /* Add a 20px gap between the sections */
   margin: 20px 0; /* Add some spacing above and below the row */
 }
 
 
+.fun-facts-section section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}   
+
+/* Fun Facts Section */
+.fun-facts-section {
+  background-color: #eafaf1;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px;  
+  width: 80%;
+  max-width: 900px;
+  opacity: 0.9; 
+  position: relative; 
+  z-index: 1; 
+  display: flex; 
+  flex-direction: column; 
+  
+}
+
+
+.fun-facts-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#fact-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1.2rem;
+}
+
+#fun-fact {
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+#fact-box button {
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1; 
+  position: relative; /* Ensure it stays above the fact box */
+  transform: scale(1);
+}
+
+#fact-box button:hover {
+  background-color: #16a085;
+}
+
 /* Animal Slider Section */
 .animal-slider-section {
-  flex: 2; /* Make the slider section take up more space */
+  flex: 2; /* Make the slider section take up more space */ 
   position: relative; /* Keep it in the normal document flow */
   margin: 40px auto; /* Center it horizontally and add spacing above */
-  margin-top: 0;
   width: 60%; /* Adjust width to fit nicely on the page */
-  max-width: 600px; /* Limit the maximum width */
-  background-color: #f9f9f9; /* Background color for the container */
+  max-width: 1200px; /* Limit the maximum width */
+  background-color: #eafaf1; /* Background color for the container */
   padding: 20px; /* Add padding inside the container */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   text-align: center; /* Center-align the content */
+  align-content: center; /* Center-align the content */
 }
 
 .animal-slider-section h2 {
@@ -375,12 +366,16 @@ nav ul li a:hover {
   margin-bottom: 20px;
   color: #333;
   font-family: "Comic Sans MS", "Arial", sans-serif;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 70px; /* Position the heading at the top */
 }
 
 /* Slider Container */
 .slider-container {
   position: relative;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden; /* Hide overflow for a clean look */
   border-radius: 10px;
@@ -406,10 +401,10 @@ nav ul li a:hover {
 
 .slide img {
   width: 100%;
-  height: 700px;
   object-fit: cover;
   border-bottom: 2px solid #ddd;
   border-radius: 10px 10px 0 0;
+  height: 506px; /* Fixed height for images */
 }
 
 .slide-info {
@@ -460,17 +455,17 @@ nav ul li a:hover {
 
 /* Campaigns Section */
 .campaigns-section {
-  background-color: #f2fdfb;
   padding: 60px 20px;
   text-align: center;
+
 }
 
 .campaigns-section h2 {
   font-size: 2.8rem;
-  color: #2a5d67;
+  color: #ffffff;
   margin-bottom: 40px;
   font-family: 'Comic Sans MS', 'Arial', sans-serif;
-  text-shadow: 1px 1px #9fe5d1;
+  text-shadow: 1px 1px #1abc9c;
 }
 
 .campaigns-container {
@@ -488,6 +483,8 @@ nav ul li a:hover {
   max-width: 280px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Ensure it stays in the normal document flow */
+  opacity: 0.9; /* Match opacity with animal cards */
 }
 
 .campaign-card:hover {
@@ -527,13 +524,15 @@ nav ul li a:hover {
   background-color: #fffbe6;
   padding: 60px 20px;
   text-align: center;
+  display: contents;
 }
 
 .quiz-section h2 {
   font-size: 2.5rem;
-  color: #c0392b;
+  color: #ffffff;
   margin-bottom: 20px;
   font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  text-shadow: 1px 1px #1abc9c;
 }
 
 #quiz-box {
@@ -543,6 +542,7 @@ nav ul li a:hover {
   margin: 0 auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.9; 
 }
 
 #quiz-question {
@@ -571,8 +571,7 @@ nav ul li a:hover {
   background-color: #e67e22;
 }
 
-#quiz-box button:last-of-type {
-  background-color: #16a085;
+#quiz-button {
   margin-top: 20px;
   transform: scale(1.1);
 }
@@ -595,13 +594,14 @@ nav ul li a:hover {
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
+  display: contents;
 }
 
 .habitat-section h2 {
   font-size: 2.5rem;
-  color: #1abc9c;
+  color: #ffffff;
   margin-bottom: 20px;
-  text-shadow: 1px 1px #b2dfdb;
+  text-shadow: 1px 1px #1abc9c;
 }
 
 .habitat-nav ul {
@@ -634,7 +634,7 @@ nav ul li a:hover {
 }
 
 .tab-content {
-  display: none;
+  display: none; /* Hide all tab content by default */
   text-align: left;
   padding: 30px;
   background-color: #ffffff;
@@ -642,6 +642,7 @@ nav ul li a:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   animation: fadeIn 0.6s ease-in-out;
+  opacity: 0.9; 
 }
 
 .tab-content h3 {
@@ -668,68 +669,17 @@ nav ul li a:hover {
 }
 
 
-
-/* Fun Facts Section */
-.fun-facts-section {
-  background-color: #eafaf1;
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 300px auto; /* Center the section */
-  width: 80%;
-  max-width: 700px;
-}
-
-
-.fun-facts-section h2 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-#fact-box {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  font-size: 1.2rem;
-}
-
-#fun-fact {
-  margin-bottom: 20px;
-  color: #34495e;
-}
-
-#fact-box button {
-  padding: 10px 20px;
-  background-color: #1abc9c;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 1; 
-  position: relative; /* Ensure it stays above the fact box */
-  transform: scale(1);
-}
-
-#fact-box button:hover {
-  background-color: #16a085;
-}
-
-
 /* Testimonial Section */
 .testimonial-section {
-  background-color: #fef9f4;
+  background-color: #ffffff;
   padding: 60px 20px;
   text-align: center;
+  display: contents;
 }
 
 .testimonial-section h2 {
   font-size: 2.8rem;
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 30px;
 }
 
@@ -762,17 +712,18 @@ nav ul li a:hover {
   padding: 60px 20px;
   text-align: center;
   border-top: 5px solid #1abc9c;
+  display: contents;
 }
 
 .cta-section h2 {
   font-size: 2.5rem;
-  color: #16a085;
+  color: #ffffff;
 }
 
 .cta-section p {
   font-size: 1.2rem;
   margin: 15px 0 30px;
-  color: #34495e;
+  color: #333;
 }
 
 .newsletter-form input {
@@ -811,6 +762,7 @@ nav ul li a:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   font-size: 1rem;
   animation: pulse 2s infinite;
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .floating-banner a {
@@ -818,12 +770,6 @@ nav ul li a:hover {
   font-weight: bold;
   text-decoration: underline;
   margin-left: 10px;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(26, 188, 156, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(26, 188, 156, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(26, 188, 156, 0); }
 }
 
 
@@ -840,145 +786,678 @@ footer {
   clear: both; /* Clear any floated elements above */
 }
 
-/* Responsive grid layout for rich content if needed */
-@media (min-width: 768px) {
-  .tab-content ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-  }
-  .tab-content ul li {
-    background: #f0fdf9;
-    padding: 12px 15px;
-    border-left: 4px solid #1abc9c;
-    border-radius: 10px;
-  }
+
+/* Floating Banner Animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(26, 188, 156, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(26, 188, 156, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(26, 188, 156, 0); }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  /* Styles for screens between 769px and 1024px */
+/* Responsive Styles */ 
+/* Mobile Styles */
+/* Adjust styles for smaller screens */
+@media (max-width: 425px) {
+  /* Animal Grid */
   .animal-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 20px 5%;
-    gap: 20px;
+    grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+  }
+  .animal-card {
+    max-width: 100%; /* Full width for cards on small screens */
+    margin: 0 auto; /* Center the card */
+  }
+  .animal-card img {
+    height: 150px; /* Adjust height for smaller screens */
+  }
+  .animal-card h2 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+  .animal-card p {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+  .animal-card:hover {
+    transform: scale(1); /* Remove hover effect on small screens */
+    box-shadow: none; /* Remove shadow on small screens */
+  }
+  .animal-card::before {
+    font-size: 1.5rem; /* Adjust icon size for smaller screens */
+    top: -5px; /* Adjust position for smaller screens */
+    right: -5px; /* Adjust position for smaller screens */
+  }
+  .animal-card h3 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
   }
 
+  /* Timeline Section */
   .timeline-container {
-    width: 100%;
-    padding: 20px;
+    flex-direction: column; /* Stack timeline boxes vertically on small screens */
+    align-items: center; /* Center align the timeline boxes */
   }
-
+  .timeline-container::before {
+    display: none; /* Hide the central line on small screens */
+  }
   .timeline-box {
-    text-align: center;
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 0 auto; /* Center the box */
+  }
+  .timeline-box.left {
+    align-self: center; /* Center align the left box */
+    text-align: center; /* Center align the text */
+    padding-right: 0; /* Remove right padding */
+  }
+  .timeline-box.right {
+    align-self: center; /* Center align the right box */
+    text-align: center; /* Center align the text */
+    padding-left: 0; /* Remove left padding */
+  }
+  .timeline-box .box {
+    width: 100%; /* Full width for the box on small screens */
+  }
+  .timeline-box .connector {
+    width: 100%; /* Full width for the connector on small screens */
+    height: 5px; /* Adjust height for smaller screens */
+    margin: 0 auto; /* Center the connector */
+  }
+  .timeline-box .reference-box {
+    width: 100%; /* Full width for the reference box on small screens */
+  }
+  .timeline-box .reference-box h3 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+  .timeline-box .reference-box p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  .timeline-box .reference-box ul {
+    padding-left: 0; /* Remove left padding */
+  }
+  .timeline-box .reference-box ul li {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+  .timeline-box .reference-box ul li::before {
+    font-size: 1.5rem; /* Adjust icon size for smaller screens */
+    top: -5px; /* Adjust position for smaller screens */
+    right: -5px; /* Adjust position for smaller screens */
+  }
+  .timeline-box .reference-box ul li::after {
+    font-size: 1.5rem; /* Adjust icon size for smaller screens */
+    top: -5px; /* Adjust position for smaller screens */
+    right: -5px; /* Adjust position for smaller screens */
   }
 
-  header {
-    padding: 10px 20px;
-  }
-
-  .container {
-    margin-top: 80px;
-  }
-
-  .reasons-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .reason {
-    max-width: 100%;
-  }
-  .animal-slider-section h2 {
-    font-size: 2rem;
-  }
-
-  .slide-info h3 {
-    font-size: 1.5rem;
-  }
-
-  .slide-info p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 768px) and (min-width: 481px) {
-  /* Styles for screens between 481px and 768px */
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  .animal-grid {
-    grid-template-columns: repeat(2, 1fr); /* Always 5 columns */
-    grid-template-rows: repeat(2, auto); /* Always 2 rows */
-    gap: 10px;
-    width: 90%;
-  }
-
-  nav ul {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .animal-card img {
-    height: 150px;
-  }
-
-  .reasons-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .reason {
-    max-width: 100%;
-  }
-  .animal-slider-section h2 {
-    font-size: 2rem;
-  }
-
-  .slide-info h3 {
-    font-size: 1.5rem;
-  }
-
-  .slide-info p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 768px) {
+  /* row-container */
   .row-container {
-    flex-direction: column; /* Stack the sections vertically */
-    gap: 20px; /* Maintain the gap between sections */
+    display: flex; /* Use Flexbox to align items in a row */
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add a 20px gap between the sections */
+    margin: 20px 0; /* Add some spacing above and below the row */
   }
+  .row-container section {
+    flex: 1; /* Allow sections to grow and fill the available space */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Background color for the sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align the content */
+    width: 100%; /* Full width for the sections */
+    max-width: 100%; /* Full width for the sections */
+  }
+  .row-container section h2 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin-bottom: 10px; /* Add spacing below the heading */
+  }
+  .row-container section p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    line-height: 1.5; /* Adjust line height for readability */
+    margin-bottom: 10px; /* Add spacing below the paragraph */
+  }
+  .row-container section ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  .row-container section ul li {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    margin-bottom: 5px; /* Add spacing below each list item */
+    position: relative; /* Position relative for pseudo-elements */
+  }
+  .row-container section ul li::before {
+    content: "✔"; /* Add a checkmark before each list item */
+    position: absolute; /* Position absolute for the icon */
+    left: -20px; /* Adjust position to the left */
+    color: #1abc9c; /* Icon color */
+    font-size: 1.2rem; /* Icon size */
+  }
+  .row-container section ul li::after {
+    content: ""; /* Add an empty content for the after pseudo-element */
+    position: absolute; /* Position absolute for the icon */
+    left: -20px; /* Adjust position to the left */
+    color: #1abc9c; /* Icon color */
+    font-size: 1.2rem; /* Icon size */
+  }
+  /* Fun Facts Section */
+  .fun-facts-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    width: 100%; /* Full width for the section */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the section */
+    height: auto; /* Adjust height for smaller screens */
+    max-width: 100%; /* Full width for the section */
+    background-color: #eafaf1; /* Background color for the container */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align the content */
+  }
+  .fun-facts-section h2 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    color: #333; /* Heading color */
+  }
+  #fact-box {
+    background: #ffffff; /* Background color for the fact box */
+    padding: 25px; /* Padding inside the fact box */
+    border-radius: 10px; /* Rounded corners for the fact box */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    font-size: 1.2rem; /* Font size for the fact text */
+    width: 100%; /* Full width for the fact box */
+    max-width: 90%; /* Limit maximum width for smaller screens */
+  }
+  #fun-fact {
+    margin-bottom: 20px; /* Add spacing below the fun fact */
+    color: #34495e; /* Fun fact text color */
+    font-size: 1.2rem; /* Font size for the fun fact text */
+  }
+  #fact-box button {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #1abc9c; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 6px; /* Rounded corners for the button */
+    font-size: 1rem; /* Font size for the button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    z-index: 1; /* Ensure it stays above the fact box */
+    position: relative; /* Ensure it stays in the normal document flow */
+    transform: scale(1); /* Scale effect for the button */
+  }
+  #fact-box button:hover {
+    background-color: #16a085; /* Darker background color on hover */
+  }
+  
+  /* Animal Slider Section */
+
+  .animal-slider-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    width: 100%; /* Full width for the slider section */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the slider section */
+    height: auto; /* Adjust height for smaller screens */
+    max-width: 100%; /* Full width for the slider section */
+    background-color: #eafaf1; /* Background color for the container */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align the content */
+  }  
 }
 
-@media (max-width: 480px) {
-  /* Styles for screens 480px and below */
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .animal-grid {
-    grid-template-columns: 1fr; /* One column */
-    grid-template-rows: auto; /* Automatically adjust row height */
-    gap: 10px; /* Add spacing between items */
-    width: 100%; /* Full width for smaller screens */
-  }
-
-  nav ul {
+/* Medium Screens */
+/* Adjust styles for medium screens */
+@media (min-width: 426px) and (max-width: 768px) {
+  body [
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  ]
+
+  /* Hero Section */
+  .hero {
+    padding: 80px 20px; /* Adjust padding for medium screens */
+  }
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust font size for medium screens */
+  }
+  .hero p {
+    font-size: 1.2rem; /* Adjust font size for medium screens */
+  }
+  .cta-button {
+    padding: 8px 16px; /* Adjust padding for medium screens */
+    font-size: 1rem; /* Adjust font size for medium screens */
   }
 
+  /* Animal Grid */
+  .animal-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+  .animal-card {
+    max-width: 100%; /* Full width for cards on medium screens */
+    margin: 0 auto; /* Center the card */
+  }
   .animal-card img {
-    height: 120px;
+    height: 200px; /* Adjust height for medium screens */
+  }
+  .animal-card h2 {
+    font-size: 1.5rem; /* Adjust font size for medium screens */
+  }
+  .animal-card p {
+    font-size: 1rem; /* Adjust font size for medium screens */
+  }
+  .animal-card:hover {
+    transform: scale(1); /* Remove hover effect on medium screens */
+    box-shadow: none; /* Remove shadow on medium screens */
+  }
+  .animal-card::before {
+    font-size: 2rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .animal-card h3 {
+    font-size: 1.5rem; /* Adjust font size for medium screens */
+  }
+
+  /* Timeline Section */
+  .timeline-container {
+    flex-direction: column; /* Stack timeline boxes vertically on medium screens */
+    align-items: center; /* Center align the timeline boxes */
+  }
+  .timeline-container::before {
+    display: none; /* Hide the central line on medium screens */
+  }
+  .timeline-box {
+    width: 80%; /* Adjust width for medium screens */
+    margin: 0 auto; /* Center the box */
+  }
+  .timeline-box.left {
+    align-self: center; /* Center align the left box */
+    text-align: center; /* Center align the text */
+    padding-right: 0; /* Remove right padding */
+  }
+  .timeline-box.right {
+    align-self: center; /* Center align the right box */
+    text-align: center; /* Center align the text */
+    padding-left: 0; /* Remove left padding */
+  }
+  .timeline-box .box {
+    width: 100%; /* Full width for the box on medium screens */
+  }
+  .timeline-box .connector {
+    width: 100%; /* Full width for the connector on medium screens */
+    height: 5px; /* Adjust height for medium screens */
+    margin: 0 auto; /* Center the connector */
+  }
+  .timeline-box .reference-box {
+    width: 100%; /* Full width for the reference box on medium screens */
+  }
+  .timeline-box .reference-box h3 {
+    font-size: 1.5rem; /* Adjust font size for medium screens */
+  }
+  .timeline-box .reference-box p {
+    font-size: 1rem; /* Adjust font size for medium screens */
+  }
+  .timeline-box .reference-box ul {
+    padding-left: 0; /* Remove left padding */
+  }
+  .timeline-box .reference-box ul li {
+    font-size: 0.9rem; /* Adjust font size for medium screens */
+  }
+  .timeline-box .reference-box ul li::before {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .timeline-box .reference-box ul li::after {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .timeline-box .reference-box ul li::before {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .timeline-box .reference-box ul li::after {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .timeline-box .reference-box ul li::before {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .timeline-box .reference-box ul li::after {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+
+  .row-container {
+    display: flex; /* Use Flexbox to align items in a row */
+    gap: 0px; /* Add a 20px gap between the sections */
+    margin: 20px 0; /* Add some spacing above and below the row */
+    border: 2px solid #ddd; /* Optional: Add a border around the row */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    width: 100%; /* Full width for the row */
+    padding: 0 20px; /* Add padding for spacing */
+  }
+  .row-container .fun-facts-section {
+    width: 100%; /* Full width for the fun facts section */
+    padding: 20px; /* Add padding for spacing */
+  }
+  .row-container .fun-facts-section h2 {
+    font-size: 2rem; /* Adjust font size for medium screens */
+  }
+  .row-container .fun-facts-section #fact-box {
+    width: 100%; /* Full width for the fact box */
+    padding: 20px; /* Add padding for spacing */
+  }
+  .row-container .fun-facts-section #fact-box button {
+    width: 100%; /* Full width for the button */
+    padding: 10px; /* Add padding for spacing */
+    font-size: 1rem; /* Adjust font size for medium screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact {
+    font-size: 1.2rem; /* Adjust font size for medium screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::before {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::after {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::before {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::after {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::before {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::after {
+    font-size: 1.5rem; /* Adjust icon size for medium screens */
+    top: -5px; /* Adjust position for medium screens */
+    right: -5px; /* Adjust position for medium screens */
+  }
+  .row-container .animal-slider-section {
+    width: 100%; /* Full width for the slider section */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the slider section */
+    height: auto; /* Adjust height for medium screens */
+  }
+  .row-container .animal-slider-section h2 {
+    font-size: 2rem; /* Adjust font size for medium screens */
+  }
+  .animal-slider-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    width: 100%; /* Full width for the slider section */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the slider section */
+    height: auto; /* Adjust height for medium screens */
+    max-width: 100%; /* Full width for the slider section */
+    background-color: #eafaf1; /* Background color for the container */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align the content */
+  }
+  .animal-slider-section h2 {
+    font-size: 2rem; /* Adjust font size for medium screens */
+  }
+  .animal-slider-section .slider-container {
+    width: 100%; /* Full width for the slider container */
+    margin: 0 auto; /* Center the slider container */
+    height: auto; /* Adjust height for medium screens */
   }
 }
+
+/* Large Screens */
+/* Adjust styles for larger screens */
+@media (min-width: 769px) and (max-width: 1200px) {
+  body [
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  ]
+
+  /* Hero Section */
+  .hero {
+    padding: 100px 20px; /* Adjust padding for larger screens */
+  }
+  .hero h1 {
+    font-size: 3rem; /* Adjust font size for larger screens */
+  }
+  .hero p {
+    font-size: 1.5rem; /* Adjust font size for larger screens */
+  }
+  .cta-button {
+    padding: 10px 20px; /* Adjust padding for larger screens */
+    font-size: 1.2rem; /* Adjust font size for larger screens */
+  }
+
+  /* Animal Grid */
+  .animal-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+  }
+  .animal-card {
+    max-width: 100%; /* Full width for cards on larger screens */
+    margin: 0 auto; /* Center the card */
+  }
+  .animal-card img {
+    height: 250px; /* Adjust height for larger screens */
+  }
+  .animal-card h2 {
+    font-size: 1.8rem; /* Adjust font size for larger screens */
+  }
+  .animal-card p {
+    font-size: 1.2rem; /* Adjust font size for larger screens */
+  }
+  .animal-card:hover {
+    transform: scale(1); /* Remove hover effect on larger screens */
+    box-shadow: none; /* Remove shadow on larger screens */
+  }
+  .animal-card::before {
+    font-size: 2.5rem; /* Adjust icon size for larger screens */
+    top: -5px; /* Adjust position for larger screens */
+    right: -5px; /* Adjust position for larger screens */
+  }
+  .animal-card h3 {
+    font-size: 1.8rem; /* Adjust font size for larger screens */
+  }
+
+  .row-container {
+    display: flex; /* Use Flexbox to align items in a row */
+    gap: 0px; /* Add a 20px gap between the sections */
+    margin: 20px 0; /* Add some spacing above and below the row */
+    border: 2px solid #ddd; /* Optional: Add a border around the row */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    width: 100%; /* Full width for the row */
+    padding: 0 20px; /* Add padding for spacing */
+  }
+  .row-container .fun-facts-section {
+    width: 100%; /* Full width for the fun facts section */
+    padding: 20px; /* Add padding for spacing */
+  }
+  .row-container .fun-facts-section h2 {
+    font-size: 2rem; /* Adjust font size for larger screens */
+  }
+  .row-container .fun-facts-section #fact-box {
+    width: 100%; /* Full width for the fact box */
+    padding: 20px; /* Add padding for spacing */
+  }
+  .row-container .fun-facts-section #fact-box button {
+    width: 100%; /* Full width for the button */
+    padding: 10px; /* Add padding for spacing */
+    font-size: 1rem; /* Adjust font size for larger screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact {
+    font-size: 1.2rem; /* Adjust font size for larger screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::before {
+    font-size: 1.5rem; /* Adjust icon size for larger screens */
+    top: -5px; /* Adjust position for larger screens */
+    right: -5px; /* Adjust position for larger screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::after {
+    font-size: 1.5rem; /* Adjust icon size for larger screens */
+    top: -5px; /* Adjust position for larger screens */
+    right: -5px; /* Adjust position for larger screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::before {
+    font-size: 1.5rem; /* Adjust icon size for larger screens */
+    top: -5px; /* Adjust position for larger screens */
+    right: -5px; /* Adjust position for larger screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::after {
+    font-size: 1.5rem; /* Adjust icon size for larger screens */
+    top: -5px; /* Adjust position for larger screens */
+    right: -5px; /* Adjust position for larger screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::before {
+    font-size: 1.5rem; /* Adjust icon size for larger screens */
+    top: -5px; /* Adjust position for larger screens */
+    right: -5px; /* Adjust position for larger screens */
+  }
+  .row-container .fun-facts-section #fact-box #fun-fact::after {
+    font-size: 1.5rem; /* Adjust icon size for larger screens */
+    top: -5px; /* Adjust position for larger screens */
+    right: -5px; /* Adjust position for larger screens */
+  }
+  .row-container .animal-slider-section {
+    width: 100%; /* Full width for the slider section */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the slider section */
+    height: auto; /* Adjust height for larger screens */
+  }
+  .row-container .animal-slider-section h2 {
+    font-size: 2rem; /* Adjust font size for larger screens */
+  }
+  .animal-slider-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    width: 100%; /* Full width for the slider section */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the slider section */
+    height: auto; /* Adjust height for larger screens */
+    max-width: 100%; /* Full width for the slider section */
+    background-color: #eafaf1; /* Background color for the container */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align the content */
+  }
+  .animal-slider-section h2 {
+    font-size: 2rem; /* Adjust font size for larger screens */
+  }
+  .animal-slider-section .slider-container {
+    width: 100%; /* Full width for the slider container */
+    margin: 0 auto; /* Center the slider container */
+    height: auto; /* Adjust height for larger screens */
+  }
+
+  /* Larger Screens 1200+ */
+  /* Adjust styles for larger screens */
+  @media (min-width: 1201px) and (max-width: 1600px) {
+    body [
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    ]
+  
+    /* Hero Section */
+    .hero {
+      padding: 120px 20px; /* Adjust padding for larger screens */
+    }
+    .hero h1 {
+      font-size: 3.5rem; /* Adjust font size for larger screens */
+    }
+    .hero p {
+      font-size: 1.8rem; /* Adjust font size for larger screens */
+    }
+    .cta-button {
+      padding: 12px 24px; /* Adjust padding for larger screens */
+      font-size: 1.4rem; /* Adjust font size for larger screens */
+    }
+  
+    /* Animal Grid */
+    .animal-grid {
+      grid-template-columns: repeat(5, 1fr); /* 4 columns on larger screens */
+    }
+    .animal-card {
+      max-width: 100%; /* Full width for cards on larger screens */
+      margin: 0 auto; /* Center the card */
+    }
+    .animal-card img {
+      height: 300px; /* Adjust height for larger screens */
+    }
+    .animal-card h2 {
+      font-size: 2rem; /* Adjust font size for larger screens */
+    }
+    .animal-card p {
+      font-size: 1.5rem; /* Adjust font size for larger screens */
+    }
+    .animal-card::before {
+      font-size: 3rem; /* Adjust icon size for larger screens */
+      top: -5px; /* Adjust position for larger screens */
+      right: -5px; /* Adjust position for larger screens */
+    }
+    .animal-card h3 {
+      font-size: 2rem; /* Adjust font size for larger screens */
+    }
+
+    .animal-slider-section {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align the items */
+      width: 100%; /* Full width for the slider section */
+      padding: 20px; /* Add padding for spacing */
+      margin: 0 auto; /* Center the slider section */
+      height: auto; /* Adjust height for larger screens */
+      max-width: 100%; /* Full width for the slider section */
+      background-color: #eafaf1; /* Background color for the container */
+      padding: 20px; /* Add padding inside the container */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      text-align: center; /* Center-align the content */
+    }
+
+    .slider-container {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align the items */
+      width: 100%; /* Full width for the slider container */
+      padding: 20px; /* Add padding for spacing */
+      margin: 0 auto; /* Center the slider container */
+      height: auto; /* Adjust height for larger screens */
+      max-width: 100%; /* Full width for the slider container */
+      background-color: #eafaf1; /* Background color for the container */
+      padding: 20px; /* Add padding inside the container */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      text-align: center; /* Center-align the content */
+    }
+
+}
+

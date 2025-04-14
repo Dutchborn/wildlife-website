@@ -1,0 +1,74 @@
+/* Reasons Section */
+.reasons-section {
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.reasons-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #2a5d67; /* Bright orange for attention */
+  font-family: "Comic Sans MS", "Arial", sans-serif; /* Playful font */
+  text-shadow: 2px 2px #ffa07a; /* Fun shadow effect */
+}
+
+.reasons-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.reason {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 280px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.reason:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reason h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #3b7a89; /* Bright pink for a fun vibe */
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  text-shadow: 1px 1px #ffa07a;
+}
+
+.reason p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Arial", sans-serif;
+}
+
+/* Add decorative icons or shapes */
+.reason::before {
+  content: "🌟"; /* Star emoji for decoration */
+  font-size: 3rem;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  opacity: 0.2;
+  transform: rotate(15deg);
+}
+
+.reason::after {
+  content: "🌿"; /* Leaf emoji for decoration */
+  font-size: 3rem;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  opacity: 0.2;
+  transform: rotate(-15deg);
+}

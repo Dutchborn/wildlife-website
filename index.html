@@ -125,40 +125,7 @@
       </div>
     </div>
 
-    <!-- Reasons Section -->
-    <div class="reasons-section">
-      <h2 style="color: #2a5d67">Why I Created This Website</h2>
-      <div class="reasons-content">
-        <div class="reason">
-          <h3 style="color: #3b7a89">A Deep Love for Wildlife</h3>
-          <p>
-            Wildlife has always been my passion. From the majestic lions of the
-            savannah to the delicate butterflies in our gardens, every creature
-            tells a story of resilience, beauty, and the intricate balance of
-            nature.
-          </p>
-        </div>
-        <div class="reason">
-          <h3 style="color: #3b7a89">Protecting What We Love</h3>
-          <p>
-            This website is my way of giving back to the natural world. By
-            sharing knowledge and raising awareness, I hope to inspire others to
-            join the fight to protect endangered species and preserve their
-            habitats.
-          </p>
-        </div>
-        <div class="reason">
-          <h3 style="color: #3b7a89">Join Me in Making a Difference</h3>
-          <p>
-            Together, we can create a community of nature lovers who care deeply
-            about the planet. Sign up today to learn, share, and take action to
-            ensure that future generations can experience the wonders of
-            wildlife.
-          </p>
-        </div>
-      </div>
-    </div>
-
+    <!-- Timeline Section -->
     <div class="timeline-container">
       <!-- Timeline Box 1 (Left) -->
       <div class="timeline-box left">
@@ -317,81 +284,102 @@
       </div>
     </div>
 
-    <div class="row-container">
-      <!-- Fun Facts Section -->
-      <section class="fun-facts-section">
-        <h2>Did You Know?</h2>
-        <div id="fact-box">
-          <p id="fun-fact">Loading a wild fact...</p>
-          <button onclick="newFact()">Tell Me Another!</button>
+    <!-- Fun Facts and Unique Animals Section -->
+    <div class="row-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <!-- Column 1: Fun Facts Sections -->
+        <div style="display: grid; grid-template-rows: repeat(3, auto);">
+            <!-- Fun Facts Section 1 -->
+            <section class="fun-facts-section">
+                <h2>Did You Know?</h2>
+                <div id="fact-box">
+                    <p id="fun-fact">Loading a wild fact...</p>
+                    <button onclick="newFact()">Tell Me Another!</button>
+                </div>
+            </section>
+            <!-- Fun Facts Section 2 -->
+            <section class="fun-facts-section">
+                <h2>Did You Know?</h2>
+                <div id="fact-box">
+                    <p id="fun-fact">Loading a wild fact...</p>
+                    <button onclick="newFact()">Tell Me Another!</button>
+                </div>
+            </section>
+            <!-- Fun Facts Section 3 -->
+            <section class="fun-facts-section">
+                <h2>Did You Know?</h2>
+                <div id="fact-box">
+                    <p id="fun-fact">Loading a wild fact...</p>
+                    <button onclick="newFact()">Tell Me Another!</button>
+                </div>
+            </section>
         </div>
-      </section>
 
-      <!-- Unique Animal Facts Slider -->
-      <div class="animal-slider-section">
-        <h2>Discover Unique Animals</h2>
-        <div class="slider-container">
-          <div class="slider">
-            <div class="slide">
-              <img src="assets/images/axolotl.jpg" alt="Axolotl" />
-              <div class="slide-info">
-                <h3>Axolotl</h3>
-                <p>
-                  The Axolotl, also known as the "Mexican walking fish," can
-                  regenerate entire limbs and even parts of its heart and brain!
-                </p>
-              </div>
+        <!-- Column 2: Animal Slider Section -->
+        
+            <div class="animal-slider-section">
+                <h2>Discover Unique Animals</h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="assets/images/axolotl.jpg" alt="Axolotl" />
+                            <div class="slide-info">
+                                <h3>Axolotl</h3>
+                                <p>
+                                    The Axolotl, also known as the "Mexican walking fish," can
+                                    regenerate entire limbs and even parts of its heart and brain!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/okapi.jpg" alt="Okapi" />
+                            <div class="slide-info">
+                                <h3>Okapi</h3>
+                                <p>
+                                    Known as the "forest giraffe," the Okapi is native to the
+                                    Congo and has stripes like a zebra but is closely related to
+                                    giraffes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/pangolin.jpg" alt="Pangolin" />
+                            <div class="slide-info">
+                                <h3>Pangolin</h3>
+                                <p>
+                                    Pangolins are the only mammals covered in scales, which they
+                                    use to protect themselves from predators.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/platypus.jpg" alt="Platypus" />
+                            <div class="slide-info">
+                                <h3>Platypus</h3>
+                                <p>
+                                    The Platypus is a unique egg-laying mammal with a duck-like
+                                    bill and webbed feet, native to Australia.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="assets/images/leafy-sea-dragon.jpg"
+                                alt="Leafy Seadragon"
+                            />
+                            <div class="slide-info">
+                                <h3>Leafy Seadragon</h3>
+                                <p>
+                                    Found in Australian waters, the Leafy Seadragon looks like
+                                    seaweed, providing it with excellent camouflage.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
             </div>
-            <div class="slide">
-              <img src="assets/images/okapi.jpg" alt="Okapi" />
-              <div class="slide-info">
-                <h3>Okapi</h3>
-                <p>
-                  Known as the "forest giraffe," the Okapi is native to the
-                  Congo and has stripes like a zebra but is closely related to
-                  giraffes.
-                </p>
-              </div>
-            </div>
-            <div class="slide">
-              <img src="assets/images/pangolin.jpg" alt="Pangolin" />
-              <div class="slide-info">
-                <h3>Pangolin</h3>
-                <p>
-                  Pangolins are the only mammals covered in scales, which they
-                  use to protect themselves from predators.
-                </p>
-              </div>
-            </div>
-            <div class="slide">
-              <img src="assets/images/platypus.jpg" alt="Platypus" />
-              <div class="slide-info">
-                <h3>Platypus</h3>
-                <p>
-                  The Platypus is a unique egg-laying mammal with a duck-like
-                  bill and webbed feet, native to Australia.
-                </p>
-              </div>
-            </div>
-            <div class="slide">
-              <img
-                src="assets/images/leafy-sea-dragon.jpg"
-                alt="Leafy Seadragon"
-              />
-              <div class="slide-info">
-                <h3>Leafy Seadragon</h3>
-                <p>
-                  Found in Australian waters, the Leafy Seadragon looks like
-                  seaweed, providing it with excellent camouflage.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Navigation Buttons -->
-          <button class="prev-btn">&#10094;</button>
-          <button class="next-btn">&#10095;</button>
-        </div>
-      </div>
     </div>
 
     <!-- Begin: Conservation Campaigns Section -->
@@ -428,7 +416,7 @@
           </p>
           <a
             href="https://www.conservation.org/projects/protecting-sea-turtles"
-            target="_blank"
+          target="_blank"
             >Learn More</a
           >
         </div>
@@ -446,7 +434,7 @@
           <button onclick="checkAnswer(2)"></button>
           <button onclick="checkAnswer(3)"></button>
         </div>
-        <button onclick="nextQuestion()">Next Question</button>
+        <button id="quiz-button" onclick="nextQuestion()">Next Question</button>
         <p id="quiz-result"></p>
       </div>
     </section>
@@ -483,8 +471,8 @@
             >
           </li>
           <li>
-            <a href="#" class="tab-link" onclick="openTab(event, 'geography')"
-              >Geography</a
+            <a href="#" class="tab-link" onclick="openTab(event, 'migration')"
+              >Migration</a
             >
           </li>
           <li>
@@ -503,84 +491,196 @@
           environment.
         </p>
         <ul>
-          <li>🏝️ <strong>Coral Reefs:</strong> Clownfish, sea turtles</li>
-          <li>🌲 <strong>Forests:</strong> Tigers, woodpeckers</li>
-          <li>❄️ <strong>Arctic:</strong> Polar bears, arctic foxes</li>
-          <li>🏜️ <strong>Deserts:</strong> Camels, scorpions</li>
+            <li>🌍 <strong>Savannas:</strong> Lions, Cheetahs, Zebras, Wildebeests, African Wild Dogs</li>
+            <li>🏜️ <strong>Deserts:</strong> Camels, Fennec Foxes, Scorpions, Desert Tortoises, Sidewinder Snakes</li>
+            <li>🌲 <strong>Forests:</strong> Tigers, Woodpeckers, Wolves, Black Bears, Red Pandas</li>
+            <li>❄️ <strong>Arctic:</strong> Polar Bears, Arctic Foxes, Narwhals, Walruses, Snowy Owls</li>
+            <li>🏝️ <strong>Coral Reefs:</strong> Clownfish, Sea Turtles, Manta Rays, Moray Eels, Seahorses</li>
+            <li>🏔️ <strong>Mountains:</strong> Snow Leopards, Mountain Goats, Himalayan Tahr, Andean Condors</li>
+            <li>🌾 <strong>Grasslands:</strong> Prairie Dogs, Bison, Kangaroos, Ostriches, Coyotes</li>
+            <li>🌊 <strong>Oceans:</strong> Blue Whales, Dolphins, Sharks, Sea Otters, Jellyfish</li>
+            <li>🌳 <strong>Rainforests:</strong> Jaguars, Sloths, Macaws, Poison Dart Frogs, Orangutans</li>
+            <li>🌋 <strong>Volcanic Islands:</strong> Galápagos Tortoises, Marine Iguanas, Flightless Cormorants</li>
         </ul>
       </div>
 
       <div class="tab-content" id="lifestyle" style="display: none">
         <h3>Lifestyle and Behavior</h3>
         <p>
-          Animals exhibit fascinating behaviors, from social interactions to
-          hunting techniques, that define their lifestyles.
+          Animals exhibit fascinating behaviors, from social interactions to hunting techniques, that define their lifestyles. These behaviors are often shaped by their environment, survival needs, and social structures.
         </p>
         <ul>
-          <li>🦁 Lions live in groups called prides — very social!</li>
-          <li>🦋 Butterflies migrate thousands of miles every year.</li>
-          <li>🐘 Elephants grieve for lost members of their herd.</li>
-          <li>🦉 Owls can rotate their heads up to 270 degrees.</li>
+          <li>🦁 <strong>Lions:</strong> Live in groups called prides, with females working together to hunt and raise cubs.</li>
+          <li>🦋 <strong>Butterflies:</strong> Migrate thousands of miles every year, navigating using the sun and Earth's magnetic fields.</li>
+          <li>🐘 <strong>Elephants:</strong> Grieve for lost members of their herd and show remarkable memory and empathy.</li>
+          <li>🦉 <strong>Owls:</strong> Can rotate their heads up to 270 degrees to spot prey in the dark.</li>
+          <li>🐺 <strong>Wolves:</strong> Hunt in packs, using teamwork and communication to take down larger prey.</li>
+          <li>🐒 <strong>Chimpanzees:</strong> Use tools like sticks to extract termites from mounds and leaves to drink water.</li>
+          <li>🐦 <strong>Birds of Paradise:</strong> Perform elaborate courtship dances and displays to attract mates.</li>
+          <li>🐟 <strong>Clownfish:</strong> Live in symbiosis with sea anemones, gaining protection while keeping the anemone clean.</li>
+          <li>🦜 <strong>Parrots:</strong> Mimic sounds, including human speech, to communicate and bond with their flock.</li>
+          <li>🦘 <strong>Kangaroos:</strong> Use powerful hind legs to hop great distances and tails for balance while moving.</li>
+          <li>🐜 <strong>Ants:</strong> Build complex underground colonies and work together to transport food many times their size.</li>
+          <li>🐳 <strong>Humpback Whales:</strong> Use "bubble net feeding," where they blow bubbles to herd fish into tight groups for easier feeding.</li>
+          <li>🦏 <strong>Rhinoceroses:</strong> Often have symbiotic relationships with birds like oxpeckers, which eat parasites off their skin.</li>
+          <li>🦡 <strong>Honey Badgers:</strong> Known for their fearless nature, they can fend off much larger predators like lions and hyenas.</li>
+          <li>🦦 <strong>Sea Otters:</strong> Use rocks as tools to crack open shellfish and hold hands while sleeping to stay together.</li>
+          <li>🦎 <strong>Geckos:</strong> Use specialized toe pads to climb smooth surfaces, even glass, with ease.</li>
+          <li>🐧 <strong>Penguins:</strong> Take turns keeping eggs warm during harsh Antarctic winters while their partner hunts for food.</li>
+          <li>🦊 <strong>Arctic Foxes:</strong> Use their keen sense of hearing to locate prey under the snow and pounce to catch it.</li>
+          <li>🐝 <strong>Bees:</strong> Perform a "waggle dance" to communicate the location of flowers to other bees in the hive.</li>
+          <li>🐊 <strong>Crocodiles:</strong> Carry their hatchlings gently in their mouths to protect them from predators and guide them to water.</li>
         </ul>
       </div>
 
       <div class="tab-content" id="taxonomy" style="display: none">
         <h3>Taxonomy Groups</h3>
         <p>
-          Animals are classified into taxonomy groups based on their
-          evolutionary relationships, such as mammals, reptiles, and birds.
+          Animals are classified into taxonomy groups based on their evolutionary relationships, physical characteristics, and behaviors. These groups help scientists understand the diversity of life on Earth.
         </p>
         <ul>
-          <li>🐾 <strong>Mammals:</strong> Warm-blooded, have hair or fur</li>
-          <li>🦎 <strong>Reptiles:</strong> Cold-blooded, scales, lay eggs</li>
-          <li>🦜 <strong>Birds:</strong> Feathers, beaks, most can fly</li>
-          <li>🐟 <strong>Fish:</strong> Gills, live in water</li>
-          <li>🦗 <strong>Insects:</strong> 6 legs, segmented bodies</li>
+          <li>🐾 <strong>Mammals:</strong> Warm-blooded, have hair or fur, and most give live birth.
+            <ul>
+              <li>Examples: Lions, Elephants, Dolphins, Bats</li>
+            </ul>
+          </li>
+          <li>🦎 <strong>Reptiles:</strong> Cold-blooded, have scales, and lay eggs.
+            <ul>
+              <li>Examples: Snakes, Crocodiles, Turtles, Lizards</li>
+            </ul>
+          </li>
+          <li>🦜 <strong>Birds:</strong> Have feathers, beaks, and most can fly.
+            <ul>
+              <li>Examples: Eagles, Penguins, Parrots, Owls</li>
+            </ul>
+          </li>
+          <li>🐟 <strong>Fish:</strong> Live in water, have gills, and lay eggs.
+            <ul>
+              <li>Examples: Sharks, Clownfish, Salmon, Seahorses</li>
+            </ul>
+          </li>
+          <li>🦗 <strong>Insects:</strong> Have six legs, segmented bodies, and often wings.
+            <ul>
+              <li>Examples: Butterflies, Ants, Bees, Beetles</li>
+            </ul>
+          </li>
+          <li>🦐 <strong>Crustaceans:</strong> Aquatic animals with hard exoskeletons and jointed limbs.
+            <ul>
+              <li>Examples: Crabs, Lobsters, Shrimp, Barnacles</li>
+            </ul>
+          </li>
+          <li>🐙 <strong>Mollusks:</strong> Soft-bodied animals, often with shells.
+            <ul>
+              <li>Examples: Octopuses, Snails, Clams, Squids</li>
+            </ul>
+          </li>
+          <li>🪱 <strong>Amphibians:</strong> Cold-blooded animals that live both in water and on land.
+            <ul>
+              <li>Examples: Frogs, Salamanders, Newts, Caecilians</li>
+            </ul>
+          </li>
+          <li>🦠 <strong>Microorganisms:</strong> Microscopic organisms that play vital roles in ecosystems.
+            <ul>
+              <li>Examples: Plankton, Bacteria, Protozoa, Algae</li>
+            </ul>
+          </li>
         </ul>
       </div>
 
       <div class="tab-content" id="conservation" style="display: none">
         <h3>Conservation Status</h3>
         <p>
-          Conservation status highlights the risk of extinction for species,
-          ranging from least concern to critically endangered.
+          Conservation status highlights the risk of extinction for species, ranging from least concern to critically endangered. These categories are defined by the International Union for Conservation of Nature (IUCN) Red List.
         </p>
         <p>Species are ranked based on how close they are to extinction:</p>
         <ul>
-          <li style="color: green">🟢 Least Concern: e.g. Red Fox</li>
-          <li style="color: orange">🟠 Vulnerable: e.g. Giant Panda</li>
-          <li style="color: orangered">🔴 Endangered: e.g. Asian Elephant</li>
-          <li style="color: darkred">⚫ Critically Endangered: e.g. Vaquita</li>
+          <li style="color: green">🟢 <strong>Least Concern (LC):</strong> Species that are widespread and abundant.
+            <ul>
+              <li>Examples: Red Fox, Pigeon, House Sparrow</li>
+            </ul>
+          </li>
+          <li style="color: yellowgreen">🟡 <strong>Near Threatened (NT):</strong> Species that may become endangered in the near future.
+            <ul>
+              <li>Examples: Giraffe, Okapi, Emperor Penguin</li>
+            </ul>
+          </li>
+          <li style="color: orange">🟠 <strong>Vulnerable (VU):</strong> Species facing a high risk of extinction in the wild.
+            <ul>
+              <li>Examples: Giant Panda, African Elephant, Polar Bear</li>
+            </ul>
+          </li>
+          <li style="color: orangered">🔴 <strong>Endangered (EN):</strong> Species facing a very high risk of extinction in the wild.
+            <ul>
+              <li>Examples: Bengal Tiger, Blue Whale, Green Sea Turtle</li>
+            </ul>
+          </li>
+          <li style="color: darkred">⚫ <strong>Critically Endangered (CR):</strong> Species facing an extremely high risk of extinction in the wild.
+            <ul>
+              <li>Examples: Vaquita, Javan Rhino, Axolotl</li>
+            </ul>
+          </li>
+          <li style="color: black">⚫ <strong>Extinct in the Wild (EW):</strong> Species that only survive in captivity or through cultivation.
+            <ul>
+              <li>Examples: Scimitar Oryx, Hawaiian Crow</li>
+            </ul>
+          </li>
+          <li style="color: gray">⚪ <strong>Extinct (EX):</strong> Species that no longer exist.
+            <ul>
+              <li>Examples: Dodo, Passenger Pigeon, Tasmanian Tiger</li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Conservation efforts are critical to prevent species from moving into higher-risk categories. These efforts include habitat restoration, anti-poaching measures, breeding programs, and raising awareness about the importance of biodiversity.
+        </p>
+        <h4>How You Can Help:</h4>
+        <ul>
+          <li>🌱 Support organizations working to protect wildlife, such as WWF or Conservation International.</li>
+          <li>🌍 Reduce your carbon footprint to combat climate change, which threatens many species.</li>
+          <li>🛡️ Advocate for stronger wildlife protection laws and policies.</li>
+          <li>📢 Spread awareness about endangered species and their importance to ecosystems.</li>
         </ul>
       </div>
 
-      <div class="tab-content" id="geography" style="display: none">
-        <h3>Geography</h3>
+      <div class="tab-content" id="migration" style="display: none">
+        <h3>Migration Patterns</h3>
         <p>
-          Animals are distributed across various geographic regions, each with
-          unique ecosystems and biodiversity.
+          Many animals undertake incredible migrations across the globe, traveling thousands of miles to find food, breed, or escape harsh climates. These journeys are often perilous and require extraordinary endurance and navigation skills.
         </p>
-        <p>Different regions support unique wildlife:</p>
         <ul>
-          <li>🌍 Africa: Lions, Elephants, Rhinos</li>
-          <li>🇦🇺 Australia: Kangaroos, Koalas, Platypus</li>
-          <li>🌎 South America: Jaguars, Sloths, Macaws</li>
+          <li>🦋 <strong>Monarch Butterflies:</strong> Travel up to 3,000 miles from North America to Mexico, relying on environmental cues like temperature and sunlight.</li>
+          <li>🐋 <strong>Humpback Whales:</strong> Migrate from polar feeding grounds to tropical breeding grounds, covering distances of up to 16,000 miles annually.</li>
+          <li>🦅 <strong>Arctic Terns:</strong> Fly over 44,000 miles annually between the Arctic and Antarctic, experiencing two summers each year.</li>
+          <li>🐃 <strong>Wildebeests:</strong> Move across the Serengeti in search of fresh grazing lands, with over 1.5 million individuals participating in this annual migration.</li>
+          <li>🐟 <strong>Salmon:</strong> Swim upstream to spawn in freshwater rivers, often returning to the exact location where they were born.</li>
+          <li>🦩 <strong>Flamingos:</strong> Migrate to find suitable wetlands during dry seasons, often traveling hundreds of miles.</li>
+          <li>🐘 <strong>Elephants:</strong> In Africa, elephants migrate seasonally to find water and food, covering distances of up to 50 miles per day.</li>
+          <li>🦌 <strong>Caribou:</strong> Undertake one of the longest land migrations, traveling up to 3,000 miles annually across the Arctic tundra.</li>
+          <li>🐦 <strong>Bar-tailed Godwits:</strong> Hold the record for the longest nonstop flight of any bird, flying over 7,000 miles from Alaska to New Zealand.</li>
+          <li>🐧 <strong>Emperor Penguins:</strong> Migrate across the Antarctic ice to breeding colonies, enduring extreme cold and harsh winds.</li>
+          <li>🐢 <strong>Sea Turtles:</strong> Travel thousands of miles between feeding grounds and nesting beaches, guided by Earth's magnetic fields.</li>
+          <li>🦈 <strong>Great White Sharks:</strong> Migrate across oceans, often traveling thousands of miles to follow prey or reach breeding grounds.</li>
         </ul>
+        <p>
+          These migrations are vital for the survival of many species, allowing them to access resources, reproduce, and maintain healthy populations. However, human activities such as habitat destruction and climate change pose significant threats to these incredible journeys.
+        </p>
       </div>
 
       <div class="tab-content" id="continents" style="display: none">
         <h3>Continents</h3>
         <p>
           From Africa to Antarctica, animals inhabit every continent, adapting
-          to diverse climates and environments.
+          to diverse climates and environments. Each continent hosts unique
+          species that thrive in its specific ecosystems.
         </p>
         <ul>
-          <li>🌍 <strong>Africa:</strong> Cheetah, Meerkat</li>
-          <li>🌏 <strong>Asia:</strong> Snow Leopard, Red Panda</li>
-          <li>🌎 <strong>South America:</strong> Anaconda, Toucan</li>
-          <li>🌍 <strong>Europe:</strong> Eurasian Lynx, Hedgehog</li>
-          <li>🌐 <strong>Australia:</strong> Emu, Wombat</li>
-          <li>❄️ <strong>Antarctica:</strong> Emperor Penguin, Leopard Seal</li>
+          <li>🌍 <strong>Africa:</strong> Cheetah, Meerkat, African Elephant, Giraffe</li>
+          <li>🌏 <strong>Asia:</strong> Snow Leopard, Red Panda, Bengal Tiger, Asian Elephant</li>
+          <li>🌎 <strong>South America:</strong> Anaconda, Toucan, Jaguar, Sloth</li>
+          <li>🌍 <strong>Europe:</strong> Eurasian Lynx, Hedgehog, European Bison, Red Deer</li>
+          <li>🌐 <strong>Australia:</strong> Emu, Wombat, Kangaroo, Koala</li>
+          <li>❄️ <strong>Antarctica:</strong> Emperor Penguin, Leopard Seal, Weddell Seal, Krill</li>
+          <li>🌎 <strong>North America:</strong> Bald Eagle, Grizzly Bear, Bison, Raccoon</li>
         </ul>
       </div>
     </div>
