@@ -1433,6 +1433,15 @@ footer {
       font-size: 2rem; /* Adjust font size for larger screens */
     }
 
+    /* Timeline Section */
+    .timeline-container {
+      flex-direction: column; /* Stack timeline boxes vertically on larger screens */
+      align-items: center; /* Center align the timeline boxes */
+    }
+    .timeline-container::before {
+      display: none; /* Hide the central line on larger screens */
+    }
+  
     .animal-slider-section {
       display: flex;
       flex-direction: column; /* Stack items vertically */
@@ -1441,28 +1450,7 @@ footer {
       padding: 20px; /* Add padding for spacing */
       margin: 0 auto; /* Center the slider section */
       height: auto; /* Adjust height for larger screens */
-      max-width: 100%; /* Full width for the slider section */
-      background-color: #eafaf1; /* Background color for the container */
-      padding: 20px; /* Add padding inside the container */
-      border-radius: 10px; /* Rounded corners */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-      text-align: center; /* Center-align the content */
-    }
-
-    .slider-container {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center align the items */
-      width: 100%; /* Full width for the slider container */
-      padding: 20px; /* Add padding for spacing */
-      margin: 0 auto; /* Center the slider container */
-      height: auto; /* Adjust height for larger screens */
-      max-width: 100%; /* Full width for the slider container */
-      background-color: #eafaf1; /* Background color for the container */
-      padding: 20px; /* Add padding inside the container */
-      border-radius: 10px; /* Rounded corners */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-      text-align: center; /* Center-align the content */
+      justify-content: center; /* Center align the items */
     }
   }
 
