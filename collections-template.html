@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collection Category</title>
+  <link rel="stylesheet" href="assets/css/collections.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="brand">
+        <a href="index.html">Wildlife Wonders</a>
+      </div>
+      <small class="subtitle">All you want to know about animals</small>
+    </div>
+    <ul class="nav-links justify-content-center d-lg-flex">
+      <li><a href="#">Mammals</a></li>
+      <li><a href="#">Reptiles</a></li>
+      <li><a href="#">Birds</a></li>
+      <li><a href="#">Amphibia</a></li>
+      <li><a href="#">Mollusk</a></li>
+      <li><a href="#">Fish</a></li>
+      <li><a href="#">Insects</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" placeholder="quick search" name="search-box" id="search-box">
+    </div>
+  </header>
+
+  <main class="template-container" style="margin-top:120px;text-align:center;padding:40px 20px;">
+    <h1 id="category-title">Loading...</h1>
+    <img id="category-image" src="" alt="Category Image" style="max-width:500px;width:100%;border-radius:12px;margin:30px auto;display:block;" />
+    <p id="category-description"></p>
+    <div id="animal-list" class="animal-list"></div>
+    <a href="collections.html" class="back-link" style="display:inline-block;margin-top:30px;background-color:#1abc9c;color:white;padding:12px 24px;text-decoration:none;border-radius:6px;">← Back to Collections</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Wildlife Wonders. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const categorySlug = params.get("category");
+
+    const collectionDescriptions = {
+      "fast-animals": "Meet nature’s speedsters built for power and precision.",
+      "slow-animals": "Graceful in their own way — take it slow with these creatures.",
+      "flying-creatures": "Masters of the skies. Birds, bats, and beyond."
+    };
+
+    const imageMap = {
+      "fast-animals": "https://source.unsplash.com/600x400/?cheetah",
+      "slow-animals": "https://source.unsplash.com/600x400/?sloth",
+      "flying-creatures": "https://source.unsplash.com/600x400/?bird"
+    };
+
+    const animalCollections = {
+      "fast-animals": ["Cheetah", "Antelope", "Greyhound", "Horse", "Falcon"],
+      "slow-animals": ["Sloth", "Tortoise", "Snail", "Koala", "Manatee"],
+      "flying-creatures": ["Eagle", "Hawk", "Parrot", "Bat", "Butterfly"]
+    };
+
+    const title = categorySlug?.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+    document.getElementById("category-title").textContent = title || "Unknown Category";
+    document.getElementById("category-description").textContent = collectionDescriptions[categorySlug] || "This collection is coming soon.";
+    document.getElementById("category-image").src = imageMap[categorySlug] || "https://source.unsplash.com/600x400/?wildlife";
+
+    const animals = animalCollections[categorySlug] || [];
+    const listContainer = document.getElementById("animal-list");
+    const list = document.createElement("ul");
+    list.style.listStyle = "none";
+    list.style.display = "flex";
+    list.style.flexWrap = "wrap";
+    list.style.gap = "15px";
+    list.style.justifyContent = "center";
+    list.style.padding = "20px";
+
+    animals.forEach(animal => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `animals.html?name=${encodeURIComponent(animal.toLowerCase())}`;
+      link.textContent = animal;
+      link.style.textDecoration = "none";
+      link.style.background = "#1abc9c";
+      link.style.color = "#fff";
+      link.style.padding = "10px 16px";
+      link.style.borderRadius = "6px";
+      li.appendChild(link);
+      list.appendChild(li);
+    });
+
+    listContainer.appendChild(list);
+  </script>
+</body>
+</html>

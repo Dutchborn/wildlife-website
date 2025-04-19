@@ -1,156 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Animal Details</title>
-  <link rel="stylesheet" href="assets/css/collections.css" />
-  <style>
-    .animal-container {
-      margin-top: 120px;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .animal-container h1 {
-      font-size: 2.5rem;
-      color: #1abc9c;
-    }
-
-    .animal-container img {
-      max-width: 400px;
-      border-radius: 12px;
-      margin: 20px auto;
-      display: block;
-    }
-
-    .animal-container p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 20px auto;
-      color: #444;
-    }
-
-    .tags {
-      margin-top: 30px;
-    }
-
-    .tags a {
-      text-decoration: none;
-      background: #1abc9c;
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 6px;
-      margin: 5px;
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .tags a:hover {
-      background-color: #16a085;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header class="navbar">
-    <div class="navbar-left">
-      <div class="brand">
-        <a href="index.html">Wildlife Wonders</a>
-      </div>
-      <small class="subtitle">All you want to know about animals</small>
-    </div>
-
-    <ul class="nav-links justify-content-center d-lg-flex">
-      <li><a href="#">Mammals</a></li>
-      <li><a href="#">Reptiles</a></li>
-      <li><a href="#">Birds</a></li>
-      <li><a href="#">Amphibia</a></li>
-      <li><a href="#">Mollusk</a></li>
-      <li><a href="#">Fish</a></li>
-      <li><a href="#">Insects</a></li>
-    </ul>
-
-    <div class="search-box">
-      <input type="text" placeholder="quick search" name="search-box" id="search-box">
-    </div>
-  </header>
-
-  <!-- Main Animal Info -->
-  <main class="animal-container">
-    <h1 id="animal-name">Loading...</h1>
-    <img id="animal-image" src="" alt="Animal Image" />
-    <p id="animal-description"></p>
-    <div class="tags" id="animal-tags"></div>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Wildlife Wonders. All rights reserved.</p>
-  </footer>
-
-  <!-- Script to Load Animal Data -->
-  <script>
-    const animalData = {
-      cheetah: {
-        name: "Cheetah",
-        description: "Cheetahs are the fastest land animals, reaching speeds of up to 70 mph.",
-        image: "https://source.unsplash.com/600x400/?cheetah",
-        tags: ["Fast Animals", "Savanna Survivors", "Mammals"]
-      },
-      flamingo: {
-        name: "Flamingo",
-        description: "Flamingos are known for their bright pink feathers and long, stilt-like legs.",
-        image: "https://source.unsplash.com/600x400/?flamingo",
-        tags: ["Colorful Creatures", "Birds", "Waders"]
-      },
-      octopus: {
-        name: "Octopus",
-        description: "Octopuses are highly intelligent mollusks known for problem-solving and camouflage.",
-        image: "https://source.unsplash.com/600x400/?octopus",
-        tags: ["Mollusk", "Shape-Shifters", "Alien-Looking Animals"]
-      },
-      elephant: {
-        name: "Elephant",
-        description: "Elephants are the largest land mammals, known for their intelligence and memory.",
-        image: "https://source.unsplash.com/600x400/?elephant",
-        tags: ["Massive Giants", "Mammals", "Savanna Survivors"]
-      },
-      toucan: {
-        name: "Toucan",
-        description: "Toucans are tropical birds famous for their large, colorful beaks.",
-        image: "https://source.unsplash.com/600x400/?toucan",
-        tags: ["Colorful Creatures", "Rainforest Residents", "Birds"]
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Animals</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 0;
       }
-      // You can expand this list to include more animals
-    };
 
-    const params = new URLSearchParams(window.location.search);
-    const animalKey = params.get("name");
+      /* Header */
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+        color: white;
+        padding: 10px 20px;
+        position: fixed; /* Fix the header at the top */
+        top: 0; /* Ensure it stays at the top */
+        left: 0;
+        width: 100%; /* Full width */
+        z-index: 10; /* Ensure it stays above other content */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+      }
 
-    const data = animalData[animalKey];
+      /* Logo styling */
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
 
-    if (data) {
-      document.getElementById("animal-name").textContent = data.name;
-      document.getElementById("animal-description").textContent = data.description;
-      document.getElementById("animal-image").src = data.image;
+      .brand a {
+        color: #fff;
+        text-decoration: none;
+      }
 
-      const tagContainer = document.getElementById("animal-tags");
-      data.tags.forEach(tag => {
-        const slug = tag.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-        const tagLink = document.createElement("a");
-        tagLink.href = `collection-template.html?category=${slug}`;
-        tagLink.textContent = tag;
-        tagContainer.appendChild(tagLink);
+      /* Navigation styles */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 25px;
+        flex-wrap: wrap;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-left {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-weight: bold;
+        margin-right: 20px;
+        font-size: 24px;
+      }
+
+      .navbar-left .subtitle {
+        font-size: 12px;
+        color: #999;
+        font-weight: normal;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        flex-wrap: wrap;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links li a:hover {
+        color: #1abc9c; /* Highlight color on hover */
+      }
+
+      .search-box input {
+        padding: 6px 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      nav ul li a:hover {
+        color: #1abc9c; /* Highlight color on hover */
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 120px auto;
+        padding: 20px;
+      }
+
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      .filter-bar input,
+      .filter-bar select {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .animal-card {
+        display: flex;
+        background: #fff;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .animal-card img {
+        width: 200px;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .animal-info {
+        padding: 15px;
+        flex: 1;
+      }
+
+      .animal-info h2 {
+        margin: 0 0 5px;
+        font-size: 1.4rem;
+      }
+
+      .animal-info em {
+        display: block;
+        margin-bottom: 10px;
+        color: #777;
+      }
+
+      .load-more-btn {
+        display: block;
+        margin: 30px auto;
+        padding: 12px 24px;
+        font-size: 1rem;
+        background-color: #1abc9c;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        background: #2c3e50;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%; /* Ensure the footer spans the full width */
+        box-sizing: border-box; /* Include padding in the width calculation */
+        clear: both; /* Clear any floated elements above */
+        position: relative; /* Ensure it stays in the normal document flow */
+        clear: both; /* Clear any floated elements above */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="navbar">
+      <div class="navbar-left">
+        <div class="brand">
+          <a href="index.html">Wildlife Wonders</a>
+        </div>
+        <small class="subtitle">All you want to know about animals</small>
+      </div>
+
+      <ul class="nav-links justify-content-center d-lg-flex">
+        <li><a href="#">Mammals</a></li>
+        <li><a href="#">Reptiles</a></li>
+        <li><a href="#">Birds</a></li>
+        <li><a href="#">Amphibia</a></li>
+        <li><a href="#">Mollusk</a></li>
+        <li><a href="#">Fish</a></li>
+        <li><a href="#">Insects</a></li>
+      </ul>
+
+      <div class="search-box">
+        <input
+          type="text"
+          placeholder="quick search"
+          name="search-box"
+          id="search-box"
+        />
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="Search animals..." />
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="Mammal">Mammal</option>
+          <option value="Bird">Bird</option>
+          <option value="Reptile">Reptile</option>
+          <option value="Fish">Fish</option>
+          <option value="Amphibian">Amphibian</option>
+          <option value="Insect">Insect</option>
+        </select>
+        <select id="sortFilter">
+          <option value="a-z">Sort A-Z</option>
+          <option value="z-a">Sort Z-A</option>
+          <option value="popularity">Most Popular</option>
+        </select>
+      </div>
+
+      <div id="animalWrapper"></div>
+      <button class="load-more-btn" id="loadMore">View More</button>
+    </main>
+
+    <footer>
+      <p style="text-align: center">
+        &copy; 2025 Wildlife Wonders. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const allAnimals = Array.from({ length: 10000 }).map((_, i) => {
+        return {
+          name: `Animal ${i + 1}`,
+          scientific: `Species ${String.fromCharCode(65 + (i % 26))}`,
+          category: [
+            "Mammal",
+            "Bird",
+            "Reptile",
+            "Fish",
+            "Amphibian",
+            "Insect",
+          ][i % 6],
+          description: "A fascinating creature important to biodiversity.",
+          image: `https://source.unsplash.com/300x200/?animal,${i}`,
+          popularity: Math.floor(Math.random() * 10000),
+        };
       });
 
-      document.title = `${data.name} | Wildlife Wonders`;
-    } else {
-      document.getElementById("animal-name").textContent = "Animal Not Found";
-      document.getElementById("animal-description").textContent = "Sorry, this animal could not be found in our database.";
-      document.getElementById("animal-image").style.display = "none";
-    }
-  </script>
-</body>
+      let filteredAnimals = [...allAnimals];
+      let currentIndex = 0;
+      const pageSize = 100;
+
+      const wrapper = document.getElementById("animalWrapper");
+      const loadMoreBtn = document.getElementById("loadMore");
+      const searchInput = document.getElementById("searchInput");
+      const categoryFilter = document.getElementById("categoryFilter");
+      const sortFilter = document.getElementById("sortFilter");
+
+      function renderAnimals() {
+        const slice = filteredAnimals.slice(
+          currentIndex,
+          currentIndex + pageSize
+        );
+        slice.forEach(({ name, scientific, image, description }) => {
+          const card = document.createElement("div");
+          card.className = "animal-card";
+          card.innerHTML = `
+          <img src="${image}" alt="${name}" />
+          <div class="animal-info">
+            <h2><a href="animal.html?name=${encodeURIComponent(
+              name.toLowerCase()
+            )}">${name}</a></h2>
+            <em>${scientific}</em>
+            <p>${description}</p>
+          </div>
+        `;
+          wrapper.appendChild(card);
+        });
+        currentIndex += pageSize;
+        if (currentIndex >= filteredAnimals.length) {
+          loadMoreBtn.style.display = "none";
+        }
+      }
+
+      function applyFilters() {
+        const term = searchInput.value.toLowerCase();
+        const category = categoryFilter.value;
+        const sort = sortFilter.value;
+
+        filteredAnimals = allAnimals.filter((a) => {
+          return (
+            a.name.toLowerCase().includes(term) &&
+            (category === "all" || a.category === category)
+          );
+        });
+
+        if (sort === "a-z")
+          filteredAnimals.sort((a, b) => a.name.localeCompare(b.name));
+        else if (sort === "z-a")
+          filteredAnimals.sort((a, b) => b.name.localeCompare(a.name));
+        else if (sort === "popularity")
+          filteredAnimals.sort((a, b) => b.popularity - a.popularity);
+
+        wrapper.innerHTML = "";
+        currentIndex = 0;
+        loadMoreBtn.style.display =
+          filteredAnimals.length > 0 ? "block" : "none";
+        renderAnimals();
+      }
+
+      searchInput.addEventListener("input", applyFilters);
+      categoryFilter.addEventListener("change", applyFilters);
+      sortFilter.addEventListener("change", applyFilters);
+      loadMoreBtn.addEventListener("click", renderAnimals);
+
+      window.addEventListener("DOMContentLoaded", applyFilters);
+    </script>
+  </body>
 </html>
+
