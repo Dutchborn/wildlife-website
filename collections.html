@@ -4,17 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/collections.css">
 </head>
 <body>
-    <!-- Background Video -->
-    <video autoplay muted loop id="background-video">
-        <source src="assets/videos/WWbackgroundvid.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="video-overlay"></div>
-
     <!-- Header -->
     <header class="navbar">
         <div class="navbar-left">
@@ -39,81 +31,21 @@
         </div>
       </header>
       
-
     <!-- Main Content -->
-    <div class="container">
-        <!-- Collection Section -->
-        <div class="collections">
-            <!-- Collection Item -->
-            <div class="collection-item">
-                <div class="slideshow-collage">
-                    <img src="assets/images/monkey.jpg" alt="monkey">
-                    <img src="assets/images/jaguar.jpg" alt="jaguar">
-                    <img src="assets/images/bat.jpg" alt="bat">
-                    <img src="assets/images/wolves.jpg" alt="wolves">
-                    <img src="assets/images/pigglet.jpg" alt="pigglet">
-                    <img src="assets/images/deer.jpg" alt="deer">
-                    <img src="assets/images/kangaroo.jpg" alt="kangaroo">
-                    <img src="assets/images/polecat.jpg" alt="polecat">
-                </div>
-                <h2>Mammals</h2>
-                <p>Explore the diversity of warm-blooded vertebrates.</p>
-            </div>
+  <main class="collections-wrapper">
+    <h1 class="collections-title">Explore Our Animal Collections</h1>
 
-            <!-- Collection Item -->
-            <div class="collection-item">
-                <div class="slideshow-collage">
-                <img src="assets/images/chameleon.jpg" alt="chameleon">
-                <img src="assets/images/snake.jpg" alt="snake">
-                <img src="assets/images/alligator.jpg" alt="alligator">
-                <img src="assets/images/turtle.jpg" alt="turtle">
-                <img src="assets/images/gharial.jpg" alt="gharial crocodile">
-                <img src="assets/images/komodo.jpg" alt="komodo dragon">
-                <img src="assets/images/tortoise.jpg" alt="kangaroo">
-                <img src="assets/images/gecko.jpg" alt="gecko">
-                </div>
-                <h2>Reptiles</h2>
-                <p>Discover the fascinating world of cold-blooded creatures.</p>
-            </div>
+    <div class="collections-container">
+      <div class="category-card" data-category="fluffy">Fluffy</div>
+      <div class="category-card" data-category="scaly">Scaly</div>
+      <div class="category-card" data-category="stinky">Stinky</div>
+      <div class="category-card" data-category="fancy">Fancy</div>
 
-            <!-- Collection Item -->
-            <div class="collection-item">
-                <div class="slideshow-collage">
-                    <img src="assets/images/harpy-eagle.jpg" alt="harpy-eagle">
-                    <img src="assets/images/owls.jpg" alt="owls">
-                    <img src="assets/images/duck.jpg" alt="duck">
-                    <img src="assets/images/flamingos.jpg" alt="flamingos">
-                    <img src="assets/images/bald-eagle.jpg" alt="bald-eagle">
-                    <img src="assets/images/kingfisher.jpg" alt="kingfisher">
-                    <img src="assets/images/peacock.jpg" alt="peacock">
-                    <img src="assets/images/puffin.jpg" alt="puffin">
-                    </div>
-                <h2>Birds</h2>
-                <p>Learn about the incredible variety of avian species.</p>
-            </div>
-
-            <!-- Collection Item -->
-            <div class="collection-item">
-                <img src="assets/images/amphibians.jpg" alt="Amphibians">
-                <h2>Amphibians</h2>
-                <p>Uncover the secrets of amphibious life.</p>
-            </div>
-
-            <!-- Collection Item -->
-            <div class="collection-item">
-                <img src="assets/images/fish.jpg" alt="Fish">
-                <h2>Fish</h2>
-                <p>Dive into the underwater world of fish species.</p>
-            </div>
-
-            <!-- Collection Item -->
-            <div class="collection-item">
-                <img src="assets/images/insects.jpg" alt="Insects">
-                <h2>Insects</h2>
-                <p>Marvel at the diversity of the insect kingdom.</p>
-            </div>
-        </div>
+      <div class="carousel-container" id="carouselContainer">
+        <div class="carousel" id="carousel"></div>
+      </div>
     </div>
+  </main>
 
     <div class="az-navbar">
         <ul>
@@ -145,10 +77,84 @@
             <li><a href="#Z">Z</a></li>
         </ul>
     </div>
+
+    <div class="container">
+      <!-- Collection Section -->
+      <div class="collections">
+          <!-- Collection Item -->
+          <div class="collection-item">
+              <div class="slideshow-collage">
+                  <img src="assets/images/monkey.jpg" alt="monkey">
+                  <img src="assets/images/jaguar.jpg" alt="jaguar">
+                  <img src="assets/images/bat.jpg" alt="bat">
+                  <img src="assets/images/wolves.jpg" alt="wolves">
+                  <img src="assets/images/pigglet.jpg" alt="pigglet">
+                  <img src="assets/images/deer.jpg" alt="deer">
+                  <img src="assets/images/kangaroo.jpg" alt="kangaroo">
+                  <img src="assets/images/polecat.jpg" alt="polecat">
+              </div>
+              <h2>Mammals</h2>
+              <p>Explore the diversity of warm-blooded vertebrates.</p>
+          </div>
+
+          <!-- Collection Item -->
+          <div class="collection-item">
+              <div class="slideshow-collage">
+              <img src="assets/images/chameleon.jpg" alt="chameleon">
+              <img src="assets/images/snake.jpg" alt="snake">
+              <img src="assets/images/alligator.jpg" alt="alligator">
+              <img src="assets/images/turtle.jpg" alt="turtle">
+              <img src="assets/images/gharial.jpg" alt="gharial crocodile">
+              <img src="assets/images/komodo.jpg" alt="komodo dragon">
+              <img src="assets/images/tortoise.jpg" alt="kangaroo">
+              <img src="assets/images/gecko.jpg" alt="gecko">
+              </div>
+              <h2>Reptiles</h2>
+              <p>Discover the fascinating world of cold-blooded creatures.</p>
+          </div>
+
+          <!-- Collection Item -->
+          <div class="collection-item">
+              <div class="slideshow-collage">
+                  <img src="assets/images/harpy-eagle.jpg" alt="harpy-eagle">
+                  <img src="assets/images/owls.jpg" alt="owls">
+                  <img src="assets/images/duck.jpg" alt="duck">
+                  <img src="assets/images/flamingos.jpg" alt="flamingos">
+                  <img src="assets/images/bald-eagle.jpg" alt="bald-eagle">
+                  <img src="assets/images/kingfisher.jpg" alt="kingfisher">
+                  <img src="assets/images/peacock.jpg" alt="peacock">
+                  <img src="assets/images/puffin.jpg" alt="puffin">
+                  </div>
+              <h2>Birds</h2>
+              <p>Learn about the incredible variety of avian species.</p>
+          </div>
+
+          <!-- Collection Item -->
+          <div class="collection-item">
+              <img src="assets/images/amphibians.jpg" alt="Amphibians">
+              <h2>Amphibians</h2>
+              <p>Uncover the secrets of amphibious life.</p>
+          </div>
+
+          <!-- Collection Item -->
+          <div class="collection-item">
+              <img src="assets/images/fish.jpg" alt="Fish">
+              <h2>Fish</h2>
+              <p>Dive into the underwater world of fish species.</p>
+          </div>
+
+          <!-- Collection Item -->
+          <div class="collection-item">
+              <img src="assets/images/insects.jpg" alt="Insects">
+              <h2>Insects</h2>
+              <p>Marvel at the diversity of the insect kingdom.</p>
+          </div>
+      </div>
+  </div>
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Wildlife Wonders. All rights reserved.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>  
+    <script src="assets/js/collections.js"></script>
 </body>
 </html>
