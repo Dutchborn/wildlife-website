@@ -1,9 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Collections</title>
-    <link rel="stylesheet" href="assets/css/animals.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Details</title>
+  <link rel="stylesheet" href="assets/css/collections.css" />
+  <style>
+    .animal-container {
+      margin-top: 120px;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
+    .animal-container h1 {
+      font-size: 2.5rem;
+      color: #1abc9c;
+    }
+
+    .animal-container img {
+      max-width: 400px;
+      border-radius: 12px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .animal-container p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 20px auto;
+      color: #444;
+    }
+
+    .tags {
+      margin-top: 30px;
+    }
+
+    .tags a {
+      text-decoration: none;
+      background: #1abc9c;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      margin: 5px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .tags a:hover {
+      background-color: #16a085;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="brand">
+        <a href="index.html">Wildlife Wonders</a>
+      </div>
+      <small class="subtitle">All you want to know about animals</small>
+    </div>
+
+    <ul class="nav-links justify-content-center d-lg-flex">
+      <li><a href="#">Mammals</a></li>
+      <li><a href="#">Reptiles</a></li>
+      <li><a href="#">Birds</a></li>
+      <li><a href="#">Amphibia</a></li>
+      <li><a href="#">Mollusk</a></li>
+      <li><a href="#">Fish</a></li>
+      <li><a href="#">Insects</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" placeholder="quick search" name="search-box" id="search-box">
+    </div>
+  </header>
+
+  <!-- Main Animal Info -->
+  <main class="animal-container">
+    <h1 id="animal-name">Loading...</h1>
+    <img id="animal-image" src="" alt="Animal Image" />
+    <p id="animal-description"></p>
+    <div class="tags" id="animal-tags"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Wildlife Wonders. All rights reserved.</p>
+  </footer>
+
+  <!-- Script to Load Animal Data -->
+  <script>
+    const animalData = {
+      cheetah: {
+        name: "Cheetah",
+        description: "Cheetahs are the fastest land animals, reaching speeds of up to 70 mph.",
+        image: "https://source.unsplash.com/600x400/?cheetah",
+        tags: ["Fast Animals", "Savanna Survivors", "Mammals"]
+      },
+      flamingo: {
+        name: "Flamingo",
+        description: "Flamingos are known for their bright pink feathers and long, stilt-like legs.",
+        image: "https://source.unsplash.com/600x400/?flamingo",
+        tags: ["Colorful Creatures", "Birds", "Waders"]
+      },
+      octopus: {
+        name: "Octopus",
+        description: "Octopuses are highly intelligent mollusks known for problem-solving and camouflage.",
+        image: "https://source.unsplash.com/600x400/?octopus",
+        tags: ["Mollusk", "Shape-Shifters", "Alien-Looking Animals"]
+      },
+      elephant: {
+        name: "Elephant",
+        description: "Elephants are the largest land mammals, known for their intelligence and memory.",
+        image: "https://source.unsplash.com/600x400/?elephant",
+        tags: ["Massive Giants", "Mammals", "Savanna Survivors"]
+      },
+      toucan: {
+        name: "Toucan",
+        description: "Toucans are tropical birds famous for their large, colorful beaks.",
+        image: "https://source.unsplash.com/600x400/?toucan",
+        tags: ["Colorful Creatures", "Rainforest Residents", "Birds"]
+      }
+      // You can expand this list to include more animals
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const animalKey = params.get("name");
+
+    const data = animalData[animalKey];
+
+    if (data) {
+      document.getElementById("animal-name").textContent = data.name;
+      document.getElementById("animal-description").textContent = data.description;
+      document.getElementById("animal-image").src = data.image;
+
+      const tagContainer = document.getElementById("animal-tags");
+      data.tags.forEach(tag => {
+        const slug = tag.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+        const tagLink = document.createElement("a");
+        tagLink.href = `collection-template.html?category=${slug}`;
+        tagLink.textContent = tag;
+        tagContainer.appendChild(tagLink);
+      });
+
+      document.title = `${data.name} | Wildlife Wonders`;
+    } else {
+      document.getElementById("animal-name").textContent = "Animal Not Found";
+      document.getElementById("animal-description").textContent = "Sorry, this animal could not be found in our database.";
+      document.getElementById("animal-image").style.display = "none";
+    }
+  </script>
+</body>
+</html>
