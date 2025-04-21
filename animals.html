@@ -12,7 +12,6 @@
         margin: 0;
         padding: 0;
       }
-
       /* Header */
       header {
         display: flex;
@@ -98,13 +97,11 @@
       nav ul li a:hover {
         color: #1abc9c; /* Highlight color on hover */
       }
-
       .container {
         max-width: 1000px;
         margin: 120px auto;
         padding: 20px;
       }
-
       .filter-bar {
         display: flex;
         flex-wrap: wrap;
@@ -112,7 +109,6 @@
         justify-content: space-between;
         margin-bottom: 30px;
       }
-
       .filter-bar input,
       .filter-bar select {
         padding: 10px;
@@ -120,7 +116,6 @@
         border: 1px solid #ccc;
         border-radius: 6px;
       }
-
       .animal-card {
         display: flex;
         background: #fff;
@@ -130,29 +125,24 @@
         overflow: hidden;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
-
       .animal-card img {
         width: 200px;
         height: auto;
         object-fit: cover;
       }
-
       .animal-info {
         padding: 15px;
         flex: 1;
       }
-
       .animal-info h2 {
         margin: 0 0 5px;
         font-size: 1.4rem;
       }
-
       .animal-info em {
         display: block;
         margin-bottom: 10px;
         color: #777;
       }
-
       .load-more-btn {
         display: block;
         margin: 30px auto;
@@ -164,23 +154,9 @@
         border-radius: 6px;
         cursor: pointer;
       }
-
-      footer {
-        text-align: center;
-        background: #2c3e50;
-        color: white;
-        padding: 10px;
-        margin-top: 20px;
-        width: 100%; /* Ensure the footer spans the full width */
-        box-sizing: border-box; /* Include padding in the width calculation */
-        clear: both; /* Clear any floated elements above */
-        position: relative; /* Ensure it stays in the normal document flow */
-        clear: both; /* Clear any floated elements above */
-      }
     </style>
   </head>
   <body>
-    <!-- Header -->
     <header class="navbar">
       <div class="navbar-left">
         <div class="brand">
@@ -190,13 +166,13 @@
       </div>
 
       <ul class="nav-links justify-content-center d-lg-flex">
-        <li><a href="#">Mammals</a></li>
-        <li><a href="#">Reptiles</a></li>
-        <li><a href="#">Birds</a></li>
-        <li><a href="#">Amphibia</a></li>
-        <li><a href="#">Mollusk</a></li>
-        <li><a href="#">Fish</a></li>
-        <li><a href="#">Insects</a></li>
+        <li><a href="animals.html?category=Mammal">Mammals</a></li>
+        <li><a href="animals.html?category=Reptile">Reptiles</a></li>
+        <li><a href="animals.html?category=Bird">Birds</a></li>
+        <li><a href="animals.html?category=Amphibia">Amphibia</a></li>
+        <li><a href="animals.html?category=Mollusk">Mollusk</a></li>
+        <li><a href="animals.html?category=Fish">Fish</a></li>
+        <li><a href="animals.html?category=Insect">Insects</a></li>
       </ul>
 
       <div class="search-box">
@@ -217,8 +193,7 @@
           <option value="Mammal">Mammal</option>
           <option value="Bird">Bird</option>
           <option value="Reptile">Reptile</option>
-          <option value="Fish">Fish</option>
-          <option value="Amphibian">Amphibian</option>
+          <option value="Aquatic">Aquatic</option>
           <option value="Insect">Insect</option>
         </select>
         <select id="sortFilter">
@@ -227,66 +202,166 @@
           <option value="popularity">Most Popular</option>
         </select>
       </div>
-
       <div id="animalWrapper"></div>
       <button class="load-more-btn" id="loadMore">View More</button>
     </main>
-
     <footer>
       <p style="text-align: center">
         &copy; 2025 Wildlife Wonders. All rights reserved.
       </p>
     </footer>
-
     <script>
-      const allAnimals = Array.from({ length: 10000 }).map((_, i) => {
-        return {
-          name: `Animal ${i + 1}`,
-          scientific: `Species ${String.fromCharCode(65 + (i % 26))}`,
-          category: [
-            "Mammal",
-            "Bird",
-            "Reptile",
-            "Fish",
-            "Amphibian",
-            "Insect",
-          ][i % 6],
-          description: "A fascinating creature important to biodiversity.",
-          image: `https://source.unsplash.com/300x200/?animal,${i}`,
-          popularity: Math.floor(Math.random() * 10000),
-        };
-      });
+      const allAnimals = [
+        {
+          name: "Cheetah",
+          scientific: "Acinonyx jubatus",
+          category: "Mammal",
+          popularity: 98,
+        },
+        {
+          name: "Blue Whale",
+          scientific: "Balaenoptera musculus",
+          category: "Aquatic",
+          popularity: 90,
+        },
+        {
+          name: "Lion",
+          scientific: "Panthera leo",
+          category: "Mammal",
+          popularity: 95,
+        },
+        {
+          name: "Tiger",
+          scientific: "Panthera tigris",
+          category: "Mammal",
+          popularity: 93,
+        },
+        {
+          name: "Elephant",
+          scientific: "Loxodonta africana",
+          category: "Mammal",
+          popularity: 99,
+        },
+        {
+          name: "Giraffe",
+          scientific: "Giraffa camelopardalis",
+          category: "Mammal",
+          popularity: 85,
+        },
+        {
+          name: "Penguin",
+          scientific: "Spheniscidae",
+          category: "Bird",
+          popularity: 88,
+        },
+        {
+          name: "Parrot",
+          scientific: "Psittaciformes",
+          category: "Bird",
+          popularity: 77,
+        },
+        {
+          name: "Shark",
+          scientific: "Selachimorpha",
+          category: "Aquatic",
+          popularity: 92,
+        },
+        {
+          name: "Butterfly",
+          scientific: "Rhopalocera",
+          category: "Insect",
+          popularity: 80,
+        },
+        {
+          name: "Eagle",
+          scientific: "Accipitridae",
+          category: "Bird",
+          popularity: 86,
+        },
+        {
+          name: "Panda",
+          scientific: "Ailuropoda melanoleuca",
+          category: "Mammal",
+          popularity: 94,
+        },
+        {
+          name: "Zebra",
+          scientific: "Equus zebra",
+          category: "Mammal",
+          popularity: 82,
+        },
+        {
+          name: "Koala",
+          scientific: "Phascolarctos cinereus",
+          category: "Mammal",
+          popularity: 89,
+        },
+        {
+          name: "Dolphin",
+          scientific: "Delphinidae",
+          category: "Aquatic",
+          popularity: 96,
+        },
+        {
+          name: "Frog",
+          scientific: "Anura",
+          category: "Reptile",
+          popularity: 78,
+        },
+      ];
 
       let filteredAnimals = [...allAnimals];
       let currentIndex = 0;
-      const pageSize = 100;
-
+      const pageSize = 6;
       const wrapper = document.getElementById("animalWrapper");
       const loadMoreBtn = document.getElementById("loadMore");
       const searchInput = document.getElementById("searchInput");
       const categoryFilter = document.getElementById("categoryFilter");
       const sortFilter = document.getElementById("sortFilter");
 
-      function renderAnimals() {
+      async function fetchWikiData(name) {
+        try {
+          const res = await fetch(
+            `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(
+              name
+            )}`
+          );
+          if (!res.ok) return null;
+          return await res.json();
+        } catch {
+          return null;
+        }
+      }
+
+      async function createAnimalCard(animal) {
+        const card = document.createElement("div");
+        card.className = "animal-card";
+        const wiki = await fetchWikiData(animal.name);
+        const img =
+          wiki?.thumbnail?.source ||
+          `https://source.unsplash.com/300x200/?${animal.name}`;
+        const desc = wiki?.extract || "No description available.";
+        card.innerHTML = `
+        <img src="${img}" alt="${animal.name}" />
+        <div class="animal-info">
+          <h2><a href="animal.html?name=${encodeURIComponent(
+            animal.name.toLowerCase()
+          )}">${animal.name}</a></h2>
+          <em>${animal.scientific}</em>
+          <p>${desc}</p>
+        </div>
+      `;
+        wrapper.appendChild(card);
+      }
+
+      async function renderAnimals() {
         const slice = filteredAnimals.slice(
           currentIndex,
           currentIndex + pageSize
         );
-        slice.forEach(({ name, scientific, image, description }) => {
-          const card = document.createElement("div");
-          card.className = "animal-card";
-          card.innerHTML = `
-          <img src="${image}" alt="${name}" />
-          <div class="animal-info">
-            <h2><a href="animal.html?name=${encodeURIComponent(
-              name.toLowerCase()
-            )}">${name}</a></h2>
-            <em>${scientific}</em>
-            <p>${description}</p>
-          </div>
-        `;
-          wrapper.appendChild(card);
-        });
+        for (const animal of slice) {
+          await createAnimalCard(animal);
+        }
         currentIndex += pageSize;
         if (currentIndex >= filteredAnimals.length) {
           loadMoreBtn.style.display = "none";
@@ -297,21 +372,17 @@
         const term = searchInput.value.toLowerCase();
         const category = categoryFilter.value;
         const sort = sortFilter.value;
-
-        filteredAnimals = allAnimals.filter((a) => {
-          return (
+        filteredAnimals = allAnimals.filter(
+          (a) =>
             a.name.toLowerCase().includes(term) &&
             (category === "all" || a.category === category)
-          );
-        });
-
+        );
         if (sort === "a-z")
           filteredAnimals.sort((a, b) => a.name.localeCompare(b.name));
         else if (sort === "z-a")
           filteredAnimals.sort((a, b) => b.name.localeCompare(a.name));
         else if (sort === "popularity")
           filteredAnimals.sort((a, b) => b.popularity - a.popularity);
-
         wrapper.innerHTML = "";
         currentIndex = 0;
         loadMoreBtn.style.display =
@@ -323,9 +394,14 @@
       categoryFilter.addEventListener("change", applyFilters);
       sortFilter.addEventListener("change", applyFilters);
       loadMoreBtn.addEventListener("click", renderAnimals);
-
-      window.addEventListener("DOMContentLoaded", applyFilters);
+      window.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const preselectedCategory = urlParams.get("category");
+        if (preselectedCategory) {
+          categoryFilter.value = preselectedCategory;
+        }
+        applyFilters();
+      });
     </script>
   </body>
 </html>
-
