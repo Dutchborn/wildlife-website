@@ -326,7 +326,17 @@ nav ul li a:hover {
   font-size: 1.2rem;
 }
 
-#fun-fact {
+#animal-fact {
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+#conservation-fact {
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+#wild-fact {
   margin-bottom: 20px;
   color: #34495e;
 }
