@@ -43,56 +43,68 @@
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const categorySlug = params.get("category");
-
+    const categorySlug = params.get("collection");
+  
     const collectionDescriptions = {
       "fast-animals": "Meet nature’s speedsters built for power and precision.",
       "slow-animals": "Graceful in their own way — take it slow with these creatures.",
       "flying-creatures": "Masters of the skies. Birds, bats, and beyond."
+      // Add more as needed
     };
-
+  
     const imageMap = {
       "fast-animals": "https://source.unsplash.com/600x400/?cheetah",
       "slow-animals": "https://source.unsplash.com/600x400/?sloth",
       "flying-creatures": "https://source.unsplash.com/600x400/?bird"
+      // Add more as needed
     };
-
+  
     const animalCollections = {
-      "fast-animals": ["Cheetah", "Antelope", "Greyhound", "Horse", "Falcon"],
-      "slow-animals": ["Sloth", "Tortoise", "Snail", "Koala", "Manatee"],
-      "flying-creatures": ["Eagle", "Hawk", "Parrot", "Bat", "Butterfly"]
+      "fast-animals": [
+        { name: "Cheetah", image: "https://source.unsplash.com/300x200/?cheetah", description: "The fastest land animal." },
+        { name: "Antelope", image: "https://source.unsplash.com/300x200/?antelope", description: "Graceful and swift." },
+        { name: "Greyhound", image: "https://source.unsplash.com/300x200/?greyhound", description: "Fastest dog breed." },
+        { name: "Horse", image: "https://source.unsplash.com/300x200/?horse", description: "A classic speed companion." },
+        { name: "Falcon", image: "https://source.unsplash.com/300x200/?falcon", description: "Fastest creature in a dive." }
+      ],
+      "slow-animals": [
+        { name: "Sloth", image: "https://source.unsplash.com/300x200/?sloth", description: "Sleeps most of the day." },
+        { name: "Tortoise", image: "https://source.unsplash.com/300x200/?tortoise", description: "Slow and steady wins the race." },
+        { name: "Snail", image: "https://source.unsplash.com/300x200/?snail", description: "Famous for its slow crawl." },
+        { name: "Koala", image: "https://source.unsplash.com/300x200/?koala", description: "Spends 20 hours a day sleeping." },
+        { name: "Manatee", image: "https://source.unsplash.com/300x200/?manatee", description: "The gentle sea cow." }
+      ],
+      "flying-creatures": [
+        { name: "Eagle", image: "https://source.unsplash.com/300x200/?eagle", description: "Majestic and powerful." },
+        { name: "Hawk", image: "https://source.unsplash.com/300x200/?hawk", description: "Sharp-eyed predator." },
+        { name: "Parrot", image: "https://source.unsplash.com/300x200/?parrot", description: "Colorful and intelligent." },
+        { name: "Bat", image: "https://source.unsplash.com/300x200/?bat", description: "The only flying mammal." },
+        { name: "Butterfly", image: "https://source.unsplash.com/300x200/?butterfly", description: "Delicate and graceful." }
+      ]
     };
-
+  
     const title = categorySlug?.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
     document.getElementById("category-title").textContent = title || "Unknown Category";
     document.getElementById("category-description").textContent = collectionDescriptions[categorySlug] || "This collection is coming soon.";
     document.getElementById("category-image").src = imageMap[categorySlug] || "https://source.unsplash.com/600x400/?wildlife";
-
+  
     const animals = animalCollections[categorySlug] || [];
     const listContainer = document.getElementById("animal-list");
-    const list = document.createElement("ul");
-    list.style.listStyle = "none";
-    list.style.display = "flex";
-    list.style.flexWrap = "wrap";
-    list.style.gap = "15px";
-    list.style.justifyContent = "center";
-    list.style.padding = "20px";
-
+    listContainer.innerHTML = "";
+  
     animals.forEach(animal => {
-      const li = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = `animals.html?name=${encodeURIComponent(animal.toLowerCase())}`;
-      link.textContent = animal;
-      link.style.textDecoration = "none";
-      link.style.background = "#1abc9c";
-      link.style.color = "#fff";
-      link.style.padding = "10px 16px";
-      link.style.borderRadius = "6px";
-      li.appendChild(link);
-      list.appendChild(li);
+      const card = document.createElement("div");
+      card.className = "animal-card";
+      card.innerHTML = `
+        <a href="animals.html?name=${encodeURIComponent(animal.name.toLowerCase())}" class="animal-link">
+          <img src="${animal.image}" alt="${animal.name}" />
+          <h3>${animal.name}</h3>
+          <p>${animal.description}</p>
+        </a>
+      `;
+      listContainer.appendChild(card);
     });
-
-    listContainer.appendChild(list);
   </script>
+  
 </body>
 </html>

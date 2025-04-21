@@ -211,7 +211,7 @@ footer {
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  transform: rotateY(var(--angle)) translateZ(220px);
+  transform: rotateY(var(--angle)) translateZ(420px);
   transition: transform 0.3s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-decoration: none;
@@ -232,6 +232,52 @@ footer {
   animation-play-state: paused;
 }
 
+.animal-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.animal-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.animal-card:hover {
+  transform: scale(1.03);
+}
+
+.animal-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 15px;
+}
+
+.animal-link img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+.animal-link h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.animal-link p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
 
 /* Container */
 div.container {
@@ -241,7 +287,6 @@ div.container {
   display: flex;
   justify-content: center;
   text-align: center;
-  max-width: 1500px;
   max-height: fit-content;
 }
 
@@ -264,6 +309,7 @@ div.container {
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0.9; /* Slightly transparent */
 }
 
 .collection-item img {

@@ -5,7 +5,7 @@ const carousel = document.getElementById("carousel");
 
 // Paired: [collection name, background image URL]
 const fullCollectionList = [
-  ["Fast Animals", "https://source.unsplash.com/300x200/?cheetah"],
+  ["Fast Animals", "assets/images/cheetah.jpg"],
   ["Slow Animals", "https://source.unsplash.com/300x200/?sloth"],
   ["Flying Creatures", "https://source.unsplash.com/300x200/?eagle"],
   ["Jumpers & Leapers", "https://source.unsplash.com/300x200/?frog"],
