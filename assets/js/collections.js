@@ -35,7 +35,8 @@ categories.forEach((card) => {
       fullCollectionList.forEach((item, i) => {
         const el = document.createElement("a");
         el.className = "carousel-card";
-        el.href = `collections/${item[0].toLowerCase().replace(/[^a-z0-9]+/g, "-")}.html`;
+        const slug = item[0].toLowerCase().replace(/[^a-z0-9]+/g, "-");
+        el.href = `collections-template.html?collection=${slug}`;
         el.style.setProperty('--angle', `${i * angleIncrement}deg`);
         el.style.backgroundImage = `url(${item[1]})`;
         el.title = item[0];
@@ -43,7 +44,7 @@ categories.forEach((card) => {
       });
 
       carouselContainer.style.display = "flex";
-    }, 2000); // wait 2s before showing carousel
+    }, 700); // Delay before showing the carousel
   });
 
   card.addEventListener("mouseleave", () => {
