@@ -84,7 +84,7 @@ nav ul li a:hover {
   color: #1abc9c; /* Highlight color on hover */
 }
 
-/* Main content styles */
+/* Hero container styles */
 .container {
   width: 95%; /* Use a percentage instead of a fixed width */
   margin: 0 auto;
