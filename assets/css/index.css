@@ -440,7 +440,7 @@ nav ul li a:hover {
 .slide-info h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #007bff;
+  color: #333;
 }
 
 .slide-info p {
@@ -1094,7 +1094,7 @@ footer {
   .slide-info h3 {
     font-size: 1.8rem; /* Font size for the slide title */
     margin-bottom: 10px; /* Add spacing below the title */
-    color: #007bff; /* Title color */
+    color: #333; /* Title color */
   }
   .slide-info p {
     font-size: 1rem; /* Font size for the slide description */
@@ -1490,11 +1490,11 @@ footer {
   .slide-info h3 {
     font-size: 1.5rem; /* Font size for the slide title */
     margin-bottom: 10px; /* Add spacing below the title */
-    color: #007bff; /* Title color */
+    color: #333; /* Title color */
   }
   .slide-info p {
     font-size: 1rem; /* Font size for the slide description */
-    color: #555; /* Description text color */
+    color: #333; /* Description text color */
     line-height: 1.5; /* Line height for readability */
   }
   /* Navigation Buttons */
@@ -1891,7 +1891,7 @@ footer {
   .slide-info h3 {
     font-size: 1.5rem; /* Font size for the slide title */
     margin-bottom: 10px; /* Add spacing below the title */
-    color: #007bff; /* Title color */
+    color: #333; /* Title color */
   }
   .slide-info p {
     font-size: 1rem; /* Font size for the slide description */
