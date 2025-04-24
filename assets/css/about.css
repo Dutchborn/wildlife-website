@@ -1,3 +1,52 @@
+body {
+  background-image: url("../images/zebras.jpg");
+  background-size: cover;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Burger menu icon */
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+.burger-menu:hover {
+  color: #1abc9c; /* Change color on hover */
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none; /* Remove default list styles */
+  display: flex; /* Flexbox layout for navigation items */
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation list item styles */
+nav ul li {
+  flex: 1 1 auto;
+  margin: 0 15px; /* Add spacing between navigation items */
+}
+
+/* Navigation link styles */
+nav ul li a {
+  color: white; /* Set text color for navigation links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1rem; /* Set font size for navigation links */
+}
+
+nav ul li a:hover {
+  color: #1abc9c; /* Highlight color on hover */
+}
+
 /* Reasons Section */
 .reasons-section {
   padding: 50px 20px;
@@ -71,4 +120,17 @@
   left: -10px;
   opacity: 0.2;
   transform: rotate(-15deg);
+}
+
+footer {
+  text-align: center;
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%; /* Ensure the footer spans the full width */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  clear: both; /* Clear any floated elements above */
+  position: relative; /* Ensure it stays in the normal document flow */
+  clear: both; /* Clear any floated elements above */
 }
