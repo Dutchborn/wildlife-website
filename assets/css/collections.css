@@ -17,6 +17,17 @@ body {
   color: #333;
 }
 
+/* Burger menu icon */
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+.burger-menu:hover {
+  color: #1abc9c; /* Change color on hover */
+}
+
 /* Optional overlay for better contrast */
 body::before {
   content: "";
@@ -446,6 +457,74 @@ div.az-navbar {
 }
 
 @media (max-width: 425px) {
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ffffff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+  .navbar-left {
+    margin: 0; /* Remove margin for smaller screens */
+    text-align: center; /* Center-align text */
+  }
+  .nav-links {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+    gap: 10px; /* Reduce spacing between items */
+  }
+  .nav-links li {
+    margin: 0; /* Remove margin for smaller screens */
+  }
+  .nav-links li a {
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  .search-box {
+    margin: 10px 0; /* Add margin for smaller screens */
+    width: 100%; /* Full width for smaller screens */
+  }
+  .search-box input {
+    width: 100%; /* Full width for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  .collections-wrapper {
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+  }
+  .collections-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+  .collections-container {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+  .category-card {
+    width: 100px; /* Adjust width for smaller screens */
+    height: 70px; /* Adjust height for smaller screens */
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+  .category-card:hover {
+    transform: scale(1.05); /* Adjust scale for smaller screens */
+  }
+  .carousel-container {
+    width: 100%; /* Full width for smaller screens */
+    height: 200px; /* Adjust height for smaller screens */
+  }
+  .carousel-card {
+    width: 80px; /* Adjust width for smaller screens */
+    height: 50px; /* Adjust height for smaller screens */
+  }
+  .carousel-card:hover {
+    transform: scale(1.05) rotateY(var(--angle)) translateZ(220px); /* Adjust scale for smaller screens */
+  }
+
+
   .slideshow-collage img {
     width: 100%;
     height: auto;
@@ -487,27 +566,6 @@ div.az-navbar {
   }
   .search-box input {
     font-size: 12px; /* Adjust font size for smaller screens */
-  }
-  .collections-title {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-  }
-  .collections-container {
-    height: 300px; /* Adjust height for smaller screens */
-  }
-  .category-card {
-    width: 150px; /* Adjust width for smaller screens */
-    height: 100px; /* Adjust height for smaller screens */
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-  .category-card:hover {
-    transform: scale(1.05); /* Adjust scale for smaller screens */
-  }
-  .carousel-card {
-    width: 100px; /* Adjust width for smaller screens */
-    height: 70px; /* Adjust height for smaller screens */
-  }
-  .carousel-card:hover {
-    transform: scale(1.05) rotateY(var(--angle)) translateZ(220px); /* Adjust scale for smaller screens */
   }
   .animal-list {
     flex-direction: column; /* Stack items vertically */
