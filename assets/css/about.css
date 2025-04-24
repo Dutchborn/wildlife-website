@@ -1,6 +1,9 @@
 body {
   background-image: url("../images/zebras.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fix the background image */
   margin: 0;
   padding: 0;
   height: 100%; /* Ensure the body spans the full height of the viewport */
@@ -147,6 +150,64 @@ nav ul li a:hover {
   transform: rotate(-15deg);
 }
 
+/* Who We Are Section */
+.who-we-are-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  text-align: center;
+}
+
+.who-we-are-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-family: "Arial", sans-serif;
+}
+
+.who-we-are-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Our Content Section */
+.our-content-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.our-content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.our-content-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.our-content-section li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.our-content-section li strong {
+  color: #1abc9c; /* Highlighted text color */
+}
+
 /* Contact Form Styling */
 .contact-form {
   max-width: 800px; /* Wider form for horizontal layout */
@@ -260,12 +321,12 @@ footer {
   background: #2c3e50;
   color: white;
   padding: 10px;
-  margin-top: 20px;
   width: 100%; /* Ensure the footer spans the full width */
   box-sizing: border-box; /* Include padding in the width calculation */
   clear: both; /* Clear any floated elements above */
   position: relative; /* Ensure it stays in the normal document flow */
-  clear: both; /* Clear any floated elements above */
+  z-index: 1; /* Ensure it stays above the video background */
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 768px) {
