@@ -8,7 +8,7 @@ const fullCollectionList = [
   ["Fast Animals", "assets/images/cheetah.jpg"],
   ["Slow Animals", "assets/images/sloth.jpg"],
   ["Flying Creatures", "assets/images/bald-eagle.jpg"],
-  ["Jumpers & Leapers", "assets/images/tree-frog.jpg"],
+  ["Jumpers and Leapers", "assets/images/tree-frog.jpg"],
   ["Swimming Masters", "assets/images/dolphin-jumping.jpg"],
   ["Climbers", "assets/images/howler-monkey.jpg"],
   ["Burrowers", "assets/images/meerkat.jpg"],

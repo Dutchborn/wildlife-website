@@ -60,26 +60,200 @@
     };
   
     const animalCollections = {
+      "night-dwellers": [
+        { name: "Owl", image: "https://source.unsplash.com/300x200/?owl", description: "Nocturnal birds of prey." },
+        { name: "Bat", image: "https://source.unsplash.com/300x200/?bat", description: "The only flying mammal." },
+        { name: "Raccoon", image: "https://source.unsplash.com/300x200/?raccoon", description: "Clever and adaptable creatures." },
+        { name: "Hedgehog", image: "https://source.unsplash.com/300x200/?hedgehog", description: "Known for its spiny coat." },
+        { name: "Firefly", image: "https://source.unsplash.com/300x200/?firefly", description: "Bioluminescent insects." },
+        { name: "Fennec Fox", image: "https://source.unsplash.com/300x200/?fennec-fox", description: "Small desert fox with large ears." },
+        { name: "Ocelot", image: "https://source.unsplash.com/300x200/?ocelot", description: "Small wild cat known for its beautiful coat." },
+        { name: "Kinkajou", image: "https://source.unsplash.com/300x200/?kinkajou", description: "Nocturnal rainforest mammal." },
+        { name: "Tarsier", image: "https://source.unsplash.com/300x200/?tarsier", description: "Small primate with large eyes." },
+        { name: "Aye-Aye", image: "https://source.unsplash.com/300x200/?aye-aye", description: "Unique lemur with a long middle finger." }
+      ],
+      "arctic-survivors": [
+        { name: "Polar Bear", image: "https://source.unsplash.com/300x200/?polar-bear", description: "The largest land carnivore." },
+        { name: "Arctic Fox", image: "https://source.unsplash.com/300x200/?arctic-fox", description: "Adapted to cold climates." },
+        { name: "Walrus", image: "https://source.unsplash.com/300x200/?walrus", description: "Known for its tusks and whiskers." },
+        { name: "Snowy Owl", image: "https://source.unsplash.com/300x200/?snowy-owl", description: "Beautiful white owl of the Arctic." },
+        { name: "Narwhal", image: "https://source.unsplash.com/300x200/?narwhal", description: "Known as the unicorn of the sea." },
+        { name: "Musk Ox", image: "https://source.unsplash.com/300x200/?musk-ox", description: "Known for its thick fur and strong build." },
+        { name: "Beluga Whale", image: "https://source.unsplash.com/300x200/?beluga-whale", description: "Known for its white color and vocalizations." },
+        { name: "Reindeer", image: "https://source.unsplash.com/300x200/?reindeer", description: "Domesticated caribou of the Arctic." },
+        { name: "Arctic Hare", image: "https://source.unsplash.com/300x200/?arctic-hare", description: "Adapted to cold environments." },
+        { name: "Lemming", image: "https://source.unsplash.com/300x200/?lemming", description: "Small rodents known for their population cycles." }
+      ],
+      "insect-kingdom": [
+        { name: "Butterfly", image: "https://source.unsplash.com/300x200/?butterfly", description: "Known for their colorful wings." },
+        { name: "Beetle", image: "https://source.unsplash.com/300x200/?beetle", description: "Diverse group of insects." },
+        { name: "Dragonfly", image: "https://source.unsplash.com/300x200/?dragonfly", description: "Known for their agility in flight." },
+        { name: "Ant", image: "https://source.unsplash.com/300x200/?ant", description: "Social insects living in colonies." },
+        { name: "Ladybug", image: "https://source.unsplash.com/300x200/?ladybug", description: "Beneficial insects known for their red color." },
+        { name: "Grasshopper", image: "https://source.unsplash.com/300x200/?grasshopper", description: "Known for their jumping ability." },
+        { name: "Honeybee", image: "https://source.unsplash.com/300x200/?honeybee", description: "Important pollinators." },
+        { name: "Mantis", image: "https://source.unsplash.com/300x200/?mantis", description: "Known for their predatory behavior." },
+        { name: "Caterpillar", image: "https://source.unsplash.com/300x200/?caterpillar", description: "Larval stage of butterflies and moths." },
+        { name: "Firefly", image: "https://source.unsplash.com/300x200/?firefly", description: "Bioluminescent insects known for their glow." }
+      ],
+      "dessert-dwellers": [
+        { name: "Camel", image: "https://source.unsplash.com/300x200/?camel", description: "Known as the ship of the desert." },
+        { name: "Fennec Fox", image: "https://source.unsplash.com/300x200/?fennec-fox", description: "Small fox with large ears." },
+        { name: "Horned Lizard", image: "https://source.unsplash.com/300x200/?horned-lizard", description: "Known for its spiky appearance." },
+        { name: "Scorpion", image: "https://source.unsplash.com/300x200/?scorpion", description: "Arachnids known for their sting." },
+        { name: "Gila Monster", image: "https://source.unsplash.com/300x200/?gila-monster", description: "Venomous lizard of the desert." },
+        { name: "Sidewinder Rattlesnake", image: "https://source.unsplash.com/300x200/?sidewinder-rattlesnake", description: "Known for its unique movement." },
+        { name: "Desert Tortoise", image: "https://source.unsplash.com/300x200/?desert-tortoise", description: "Adapted to arid environments." },
+        { name: "Kangaroo Rat", image: "https://source.unsplash.com/300x200/?kangaroo-rat", description: "Known for its jumping ability." },
+        { name: "Cactus Wren", image: "https://source.unsplash.com/300x200/?cactus-wren", description: "Birds that thrive in desert habitats." },
+        { name: "Jerboa", image: "https://source.unsplash.com/300x200/?jerboa", description: "Small rodent known for its long legs." }
+      ], 
+
       "fast-animals": [
         { name: "Cheetah", image: "https://source.unsplash.com/300x200/?cheetah", description: "The fastest land animal." },
         { name: "Antelope", image: "https://source.unsplash.com/300x200/?antelope", description: "Graceful and swift." },
         { name: "Greyhound", image: "https://source.unsplash.com/300x200/?greyhound", description: "Fastest dog breed." },
         { name: "Horse", image: "https://source.unsplash.com/300x200/?horse", description: "A classic speed companion." },
-        { name: "Falcon", image: "https://source.unsplash.com/300x200/?falcon", description: "Fastest creature in a dive." }
+        { name: "Falcon", image: "https://source.unsplash.com/300x200/?falcon", description: "Fastest creature in a dive." },
+        { name: "Peregrine Falcon", image: "https://source.unsplash.com/300x200/?peregrine-falcon", description: "Fastest bird in the world." },
+        { name: "Sailfish", image: "https://source.unsplash.com/300x200/?sailfish", description: "Fastest fish in the ocean." },
+        { name: "Black Marlin", image: "https://source.unsplash.com/300x200/?black-marlin", description: "Incredible speed in the water." },
+        { name: "Pronghorn Antelope", image: "https://source.unsplash.com/300x200/?pronghorn-antelope", description: "Fastest land animal in North America." },
+        { name: "Springbok", image: "https://source.unsplash.com/300x200/?springbok", description: "Known for its speed and agility." }
       ],
       "slow-animals": [
         { name: "Sloth", image: "https://source.unsplash.com/300x200/?sloth", description: "Sleeps most of the day." },
         { name: "Tortoise", image: "https://source.unsplash.com/300x200/?tortoise", description: "Slow and steady wins the race." },
         { name: "Snail", image: "https://source.unsplash.com/300x200/?snail", description: "Famous for its slow crawl." },
         { name: "Koala", image: "https://source.unsplash.com/300x200/?koala", description: "Spends 20 hours a day sleeping." },
-        { name: "Manatee", image: "https://source.unsplash.com/300x200/?manatee", description: "The gentle sea cow." }
+        { name: "Manatee", image: "https://source.unsplash.com/300x200/?manatee", description: "The gentle sea cow." },
+        { name: "Three-Toed Sloth", image: "https://source.unsplash.com/300x200/?three-toed-sloth", description: "Known for its slow movements." },
+        { name: "Giant Tortoise", image: "https://source.unsplash.com/300x200/?giant-tortoise", description: "One of the longest-living animals." },
+        { name: "Garden Snail", image: "https://source.unsplash.com/300x200/?garden-snail", description: "Commonly found in gardens." },
+        { name: "Sea Turtle", image: "https://source.unsplash.com/300x200/?sea-turtle", description: "Slow swimmers of the ocean." },
+        { name: "Sluggish Slug", image: "https://source.unsplash.com/300x200/?slug", description: "Similar to snails but without a shell." }
       ],
       "flying-creatures": [
         { name: "Eagle", image: "https://source.unsplash.com/300x200/?eagle", description: "Majestic and powerful." },
         { name: "Hawk", image: "https://source.unsplash.com/300x200/?hawk", description: "Sharp-eyed predator." },
         { name: "Parrot", image: "https://source.unsplash.com/300x200/?parrot", description: "Colorful and intelligent." },
         { name: "Bat", image: "https://source.unsplash.com/300x200/?bat", description: "The only flying mammal." },
-        { name: "Butterfly", image: "https://source.unsplash.com/300x200/?butterfly", description: "Delicate and graceful." }
+        { name: "Butterfly", image: "https://source.unsplash.com/300x200/?butterfly", description: "Delicate and graceful." },
+        { name: "Dragonfly", image: "https://source.unsplash.com/300x200/?dragonfly", description: "Fast and agile in flight." },
+        { name: "Albatross", image: "https://source.unsplash.com/300x200/?albatross", description: "Known for its long wingspan." },
+        { name: "Flamingo", image: "https://source.unsplash.com/300x200/?flamingo", description: "Famous for its pink color." },
+        { name: "Hummingbird", image: "https://source.unsplash.com/300x200/?hummingbird", description: "Smallest bird with rapid wing beats." },
+        { name: "Condor", image: "https://source.unsplash.com/300x200/?condor", description: "One of the largest flying birds." }
+      ],
+      "swimming-masters": [
+        { name: "Dolphin", image: "https://source.unsplash.com/300x200/?dolphin", description: "Intelligent and playful." },
+        { name: "Shark", image: "https://source.unsplash.com/300x200/?shark", description: "Top predator of the ocean." },
+        { name: "Octopus", image: "https://source.unsplash.com/300x200/?octopus", description: "Known for its intelligence." },
+        { name: "Seal", image: "https://source.unsplash.com/300x200/?seal", description: "Playful marine mammals." },
+        { name: "Jellyfish", image: "https://source.unsplash.com/300x200/?jellyfish", description: "Beautiful but can sting." },
+        { name: "Sea Turtle", image: "https://source.unsplash.com/300x200/?sea-turtle", description: "Ancient mariners of the sea." },
+        { name: "Clownfish", image: "https://source.unsplash.com/300x200/?clownfish", description: "Famous for its symbiotic relationship with anemones." },
+        { name: "Anglerfish", image: "https://source.unsplash.com/300x200/?anglerfish", description: "Known for its bioluminescent lure." },
+        { name: "Narwhal", image: "https://source.unsplash.com/300x200/?narwhal", description: "The unicorn of the sea." },
+        { name: "Manta Ray", image: "https://source.unsplash.com/300x200/?manta-ray", description: "Gentle giants of the ocean." }
+      ],
+      "jumpers-and-leapers": [
+        { name: "Kangaroo", image: "https://source.unsplash.com/300x200/?kangaroo", description: "Famous for its powerful legs." },
+        { name: "Frog", image: "https://source.unsplash.com/300x200/?frog", description: "Known for its jumping ability." },
+        { name: "Grasshopper", image: "https://source.unsplash.com/300x200/?grasshopper", description: "Incredible jumpers." },
+        { name: "Wallaby", image: "https://source.unsplash.com/300x200/?wallaby", description: "Smaller relatives of kangaroos." },
+        { name: "Toad", image: "https://source.unsplash.com/300x200/?toad", description: "Known for its warty skin." },
+        { name: "Bunny", image: "https://source.unsplash.com/300x200/?bunny", description: "Cute and fluffy jumpers." },
+        { name: "Jerboa", image: "https://source.unsplash.com/300x200/?jerboa", description: "Desert-dwelling jumpers." },
+        { name: "Red Panda", image: "https://source.unsplash.com/300x200/?red-panda", description: "Known for its climbing and jumping skills." },
+        { name: "Springhare", image: "https://source.unsplash.com/300x200/?springhare", description: "A nocturnal jumper." },
+        { name: "Hare", image: "https://source.unsplash.com/300x200/?hare", description: "Fast and agile jumpers." }
+      ],
+      "climbers": [
+        { name: "Monkey", image: "https://source.unsplash.com/300x200/?monkey", description: "Known for their agility." },
+        { name: "Sloth", image: "https://source.unsplash.com/300x200/?sloth", description: "Slow but great climbers." },
+        { name: "Koala", image: "https://source.unsplash.com/300x200/?koala", description: "Spends most of its life in trees." },
+        { name: "Lemur", image: "https://source.unsplash.com/300x200/?lemur", description: "Unique to Madagascar." },
+        { name: "Spider Monkey", image: "https://source.unsplash.com/300x200/?spider-monkey", description: "Known for their long limbs." },
+        { name: "Chameleon", image: "https://source.unsplash.com/300x200/?chameleon", description: "Masters of camouflage." },
+        { name: "Gibbon", image: "https://source.unsplash.com/300x200/?gibbon", description: "Known for their swinging abilities." },
+        { name: "Tarsier", image: "https://source.unsplash.com/300x200/?tarsier", description: "Smallest primate with large eyes." },
+        { name: "Orangutan", image: "https://source.unsplash.com/300x200/?orangutan", description: "Intelligent and tree-dwelling." },
+        { name: "Squirrel", image: "https://source.unsplash.com/300x200/?squirrel", description: "Agile climbers and jumpers." }
+      ],
+      "burrowers": [
+        { name: "Wombat", image: "https://source.unsplash.com/300x200/?wombat", description: "Known for its burrowing." },
+        { name: "Badger", image: "https://source.unsplash.com/300x200/?badger", description: "Famous for its digging." },
+        { name: "Mole", image: "https://source.unsplash.com/300x200/?mole", description: "Lives underground." },
+        { name: "Prairie Dog", image: "https://source.unsplash.com/300x200/?prairie-dog", description: "Lives in colonies." },
+        { name: "Groundhog", image: "https://source.unsplash.com/300x200/?groundhog", description: "Known for its burrowing." },
+        { name: "Armadillo", image: "https://source.unsplash.com/300x200/?armadillo", description: "Known for its armor." },
+        { name: "Meerkat", image: "https://source.unsplash.com/300x200/?meerkat", description: "Lives in large groups." },
+        { name: "Ant Eater", image: "https://source.unsplash.com/300x200/?ant-eater", description: "Known for its long snout." },
+        { name: "Naked Mole Rat", image: "https://source.unsplash.com/300x200/?naked-mole-rat", description: "Lives in colonies underground." },
+        { name: "European Rabbit", image: "https://source.unsplash.com/300x200/?european-rabbit", description: "Commonly found in gardens." }
+      ],
+      "camouflagers": [
+        { name: "Chameleon", image: "https://source.unsplash.com/300x200/?chameleon", description: "Masters of disguise." },
+        { name: "Leaf-Tailed Gecko", image: "https://source.unsplash.com/300x200/?leaf-tailed-gecko", description: "Looks like a leaf." },
+        { name: "Stick Insect", image: "https://source.unsplash.com/300x200/?stick-insect", description: "Blends in with branches." },
+        { name: "Octopus", image: "https://source.unsplash.com/300x200/?octopus", description: "Can change color and texture." },
+        { name: "Cuttlefish", image: "https://source.unsplash.com/300x200/?cuttlefish", description: "Masters of camouflage." },
+        { name: "Flounder", image: "https://source.unsplash.com/300x200/?flounder", description: "Flatfish that blends with the ocean floor." },
+        { name: "Scorpionfish", image: "https://source.unsplash.com/300x200/?scorpionfish", description: "Known for its camouflage." },
+        { name: "Leafy Sea Dragon", image: "https://source.unsplash.com/300x200/?leafy-sea-dragon", description: "Looks like seaweed." },
+        { name: "Pygmy Seahorse", image: "https://source.unsplash.com/300x200/?pygmy-seahorse", description: "Blends in with coral." },
+        { name: "Mimic Octopus", image: "https://source.unsplash.com/300x200/?mimic-octopus", description: "Can imitate other sea creatures." }
+      ],
+      "colourful-creatures": [
+        { name: "Poison Dart Frog", image: "https://source.unsplash.com/300x200/?poison" , description: "Brightly colored and toxic." },
+        { name: "Blue Poison Dart Frog", image: "https://source.unsplash.com/300x200/?blue-poison-dart-frog", description: "Vibrant blue color." },
+        { name: "Mandarin Fish", image: "https://source.unsplash.com/300x200/?mandarin-fish", description: "Known for its bright colors." },
+        { name: "Scarlet Macaw", image: "https://source.unsplash.com/300x200/?scarlet-macaw", description: "Colorful and intelligent." },
+        { name: "Clownfish", image: "https://source.unsplash.com/300x200/?clownfish", description: "Famous for its orange color." },
+        { name: "Peacock", image: "https://source.unsplash.com/300x200/?peacock", description: "Known for its vibrant feathers." },
+        { name: "Blue Jay", image: "https://source.unsplash.com/300x200/?blue-jay", description: "Bright blue color." },
+        { name: "Red-Eyed Tree Frog", image: "https://source.unsplash.com/300x200/?red-eyed-tree-frog", description: "Known for its red eyes." },
+        { name: "Rainbow Lorikeet", image: "https://source.unsplash.com/300x200/?rainbow-lorikeet", description: "Colorful and playful." },
+        { name: "Chameleon", image: "https://source.unsplash.com/300x200/?chameleon", description: "Masters of color change." }
+      ],
+      "fluffy-fuzzy": [
+        { name: "Panda", image: "https://source.unsplash.com/300x200/?panda", description: "Known for its black and white fur." },
+        { name: "Koala", image: "https://source.unsplash.com/300x200/?koala", description: "Cute and cuddly marsupial." },
+        { name: "Bunny", image: "https://source.unsplash.com/300x200/?bunny", description: "Fluffy and adorable." },
+        { name: "Alpaca", image: "https://source.unsplash.com/300x200/?alpaca", description: "Known for its soft fleece." },
+        { name: "Himalayan Cat", image: "https://source.unsplash.com/300x200/?himalayan-cat", description: "Fluffy and affectionate." },
+        { name: "Persian Cat", image: "https://source.unsplash.com/300x200/?persian-cat", description: "Known for its long fur." },
+        { name: "Samoyed Dog", image: "https://source.unsplash.com/300x200/?samoyed-dog", description: "Fluffy and friendly." },
+        { name: "Panda", image: "https://source.unsplash.com/300x200/?panda", description: "Known for its black and white fur." },
+        { name: "Koala", image: "https://source.unsplash.com/300x200/?koala", description: "Cute and cuddly marsupial." },
+        { name: "Bunny", image: "https://source.unsplash.com/300x200/?bunny", description: "Fluffy and adorable." },
+        { name: "Alpaca", image: "https://source.unsplash.com/300x200/?alpaca", description: "Known for its soft fleece." },
+        { name: "Himalayan Cat", image: "https://source.unsplash.com/300x200/?himalayan-cat", description: "Fluffy and affectionate." },
+      ],
+      "tiny-critters": [
+        { name: "Pygmy Marmoset", image: "https://source.unsplash.com/300x200/?pygmy-marmoset", description: "World's smallest monkey." },
+        { name: "Bumblebee Bat", image: "https://source.unsplash.com/300x200/?bumblebee-bat", description: "Smallest bat species." },
+        { name: "Bee Hummingbird", image: "https://source.unsplash.com/300x200/?bee-hummingbird", description: "Smallest bird in the world." },
+        { name: "Etruscan Shrew", image: "https://source.unsplash.com/300x200/?etruscan-shrew", description: "Smallest mammal by weight." },
+        { name: "Kitti's Hog-Nosed Bat", image: "https://source.unsplash.com/300x200/?kitti-hog-nosed-bat", description: "World's smallest bat." },
+        { name: "Pygmy Goat", image: "https://source.unsplash.com/300x200/?pygmy-goat", description: "Small breed of goat." },
+        { name: "Dwarf Hamster", image: "https://source.unsplash.com/300x200/?dwarf-hamster", description: "Small pet hamster." },
+        { name: "Tiny Tortoise", image: "https://source.unsplash.com/300x200/?tiny-tortoise", description: "Smallest tortoise species." },
+        { name: "Miniature Horse", image: "https://source.unsplash.com/300x200/?miniature-horse", description: "Small breed of horse." },
+        { name: "Teacup Pig", image: "https://source.unsplash.com/300x200/?teacup-pig", description: "Small breed of pig." }
+      ],
+      "horned-tusked": [
+        { name: "Rhino", image: "https://source.unsplash.com/300x200/?rhino", description: "Known for its horn." },
+        { name: "Unicorn", image: "https://source.unsplash.com/300x200/?unicorn", description: "Mythical creature with a single horn." },
+        { name: "Narwhal", image: "https://source.unsplash.com/300x200/?narwhal", description: "Known as the unicorn of the sea." },
+        { name: "Ibex", image: "https://source.unsplash.com/300x200/?ibex", description: "Mountain goat with long horns." },
+        { name: "Antelope", image: "https://source.unsplash.com/300x200/?antelope", description: "Known for its speed and agility." },
+        { name: "Gazelle", image: "https://source.unsplash.com/300x200/?gazelle", description: "Graceful and fast." },
+        { name: "Bighorn Sheep", image: "https://source.unsplash.com/300x200/?bighorn-sheep", description: "Known for its large horns." },
+        { name: "Kudu", image: "https://source.unsplash.com/300x200/?kudu", description: "Known for its spiral horns." },
+        { name: "Oryx", image: "https://source.unsplash.com/300x200/?oryx", description: "Desert-dwelling antelope." },
+        { name: "Markhor", image: "https://source.unsplash.com/300x200/?markhor", description: "Wild goat with twisted horns." }
       ]
     };
   
