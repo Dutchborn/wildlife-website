@@ -53,14 +53,3 @@ Wildlife Wonders is designed to:
 - **GitHub Pages**: For hosting and deployment.
 
 ---
-
-## Getting Started
-
-### Prerequisites
-- A modern web browser.
-- Basic knowledge of HTML, CSS, and JavaScript (optional for contributors).
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/wildlife-wonders.git
