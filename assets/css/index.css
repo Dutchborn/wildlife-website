@@ -15,7 +15,7 @@
   z-index: -1; /* Ensure it stays behind all content */
 }
 
-/* Optional: Add a slight overlay for better text readability */
+/* Add a slight overlay for better text readability */
 .video-overlay {
   position: fixed; /* Fixed position to cover the entire screen */
   top: 0;
