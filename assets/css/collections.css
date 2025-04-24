@@ -181,9 +181,6 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
-  background-image: url("https://source.unsplash.com/300x200/?wildlife");
-  background-size: cover;
-  background-position: center;
   border-radius: 16px;
   cursor: pointer;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
