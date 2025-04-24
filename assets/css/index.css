@@ -707,6 +707,7 @@ nav ul li a:hover {
   font-size: 2.8rem;
   color: #ffffff;
   margin-bottom: 30px;
+  text-shadow: 1px 1px #1abc9c;
 }
 
 .testimonial-grid {
@@ -744,6 +745,7 @@ nav ul li a:hover {
 .cta-section h2 {
   font-size: 2.5rem;
   color: #ffffff;
+  text-shadow: 1px 1px #1abc9c;
 }
 
 .cta-section p {
