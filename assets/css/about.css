@@ -20,6 +20,23 @@ body {
   color: #1abc9c; /* Change color on hover */
 }
 
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  color: white;
+  padding: 10px 20px;
+  position: fixed; /* Fix the header at the top */
+  top: 0; /* Ensure it stays at the top */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 10; /* Ensure it stays above other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
 /* Navigation styles */
 nav ul {
   list-style: none; /* Remove default list styles */
@@ -58,9 +75,9 @@ nav ul li a:hover {
 .reasons-section h2 {
   font-size: 2.8rem;
   margin-bottom: 30px;
-  color: #2a5d67; /* Bright orange for attention */
+  color: #333; 
   font-family: "Comic Sans MS", "Arial", sans-serif; /* Playful font */
-  text-shadow: 2px 2px #ffa07a; /* Fun shadow effect */
+  text-shadow: 2px 2px #1abc9c; /* Fun shadow effect */
 }
 
 .reasons-content {
@@ -89,9 +106,9 @@ nav ul li a:hover {
 .reason h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #3b7a89; /* Bright pink for a fun vibe */
+  color: #333; /* Darker color for the title */
   font-family: "Comic Sans MS", "Arial", sans-serif;
-  text-shadow: 1px 1px #ffa07a;
+  text-shadow: 1px 1px #1abc9c;
 }
 
 .reason p {
