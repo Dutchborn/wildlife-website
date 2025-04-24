@@ -159,6 +159,7 @@ nav ul li a:hover {
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
   text-align: center;
+  position: relative; /* Ensure it stays in the normal document flow */
 }
 
 .who-we-are-section h2 {
@@ -174,6 +175,27 @@ nav ul li a:hover {
   line-height: 1.6;
 }
 
+/* Add decorative icons or shapes */
+.who-we-are-section::before {
+  content: "🌟"; /* Star emoji for decoration */
+  font-size: 3rem;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  opacity: 0.2;
+  transform: rotate(15deg);
+}
+
+.who-we-are-section::after {
+  content: "🌿";
+  font-size: 3rem;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  opacity: 0.2;
+  transform: rotate(-15deg);
+}
+
 /* Our Content Section */
 .our-content-section {
   max-width: 800px;
@@ -182,6 +204,7 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  position: relative; /* Ensure it stays in the normal document flow */
 }
 
 .our-content-section h2 {
@@ -206,6 +229,27 @@ nav ul li a:hover {
 
 .our-content-section li strong {
   color: #1abc9c; /* Highlighted text color */
+}
+
+/* Add decorative icons or shapes */
+.our-content-section::before {
+  content: "🌟"; /* Star emoji for decoration */
+  font-size: 3rem;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  opacity: 0.2;
+  transform: rotate(15deg);
+}
+
+.our-content-section::after {
+  content: "🌿"; /* Leaf emoji for decoration */
+  font-size: 3rem;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  opacity: 0.2;
+  transform: rotate(-15deg);
 }
 
 /* Contact Form Styling */
