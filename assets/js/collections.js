@@ -6,21 +6,21 @@ const carousel = document.getElementById("carousel");
 // Paired: [collection name, background image URL]
 const fullCollectionList = [
   ["Fast Animals", "assets/images/cheetah.jpg"],
-  ["Slow Animals", "https://source.unsplash.com/300x200/?sloth"],
-  ["Flying Creatures", "https://source.unsplash.com/300x200/?eagle"],
-  ["Jumpers & Leapers", "https://source.unsplash.com/300x200/?frog"],
-  ["Swimming Masters", "https://source.unsplash.com/300x200/?dolphin"],
-  ["Climbers", "https://source.unsplash.com/300x200/?monkey"],
-  ["Burrowers", "https://source.unsplash.com/300x200/?meerkat"],
-  ["Fluffy & Fuzzy", "https://source.unsplash.com/300x200/?koala"],
-  ["Scaly & Spiky", "https://source.unsplash.com/300x200/?lizard"],
-  ["Colorful Creatures", "https://source.unsplash.com/300x200/?peacock"],
-  ["Camouflaged Animals", "https://source.unsplash.com/300x200/?chameleon"],
-  ["Tiny Critters", "https://source.unsplash.com/300x200/?mouse"],
-  ["Massive Giants", "https://source.unsplash.com/300x200/?elephant"],
-  ["Horned & Tusked", "https://source.unsplash.com/300x200/?rhino"],
-  ["Majestic Beasts", "https://source.unsplash.com/300x200/?lion"],
-  ["Alien-Looking Animals", "https://source.unsplash.com/300x200/?axolotl"]
+  ["Slow Animals", "assets/images/sloth.jpg"],
+  ["Flying Creatures", "assets/images/bald-eagle.jpg"],
+  ["Jumpers & Leapers", "assets/images/tree-frog.jpg"],
+  ["Swimming Masters", "assets/images/dolphin-jumping.jpg"],
+  ["Climbers", "assets/images/howler-monkey.jpg"],
+  ["Burrowers", "assets/images/meerkat.jpg"],
+  ["Fluffy & Fuzzy", "assets/images/sheep.jpg"],
+  ["Scaly & Spiky", "assets/images/spiky-iguana.jpg"],
+  ["Colorful Creatures", "assets/images/macaw.jpg"],
+  ["Camouflaged Animals", "assets/images/camouflaged.jpg"],
+  ["Tiny Critters", "assets/images/tiny-critters.jpg"],
+  ["Massive Giants", "assets/images/giant-whale.jpg"],
+  ["Horned & Tusked", "assets/images/horned.jpg"],
+  ["Majestic Beasts", "assets/images/majestic-horse.jpg"],
+  ["Alien-Looking Animals", "assets/images/octopus.jpg"],
 ];
 
 let hoverTimer;
