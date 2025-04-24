@@ -444,3 +444,101 @@ div.az-navbar {
     opacity: 0; /* Ensure it stays hidden */
   }
 }
+
+@media (max-width: 425px) {
+  .slideshow-collage img {
+    width: 100%;
+    height: auto;
+    transform: translate(0, 0) scale(1);
+    opacity: 1; /* Show all images */
+    object-fit: cover; 
+  }
+  .slideshow-collage {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+  .collection-item {
+    flex: 1 1 calc(100% - 20px); /* 1 item per row with spacing */
+    max-width: calc(100% - 20px);
+  }
+  .collection-item:hover {
+    background-color: #f9f9f9;
+  }
+  .animal-card {
+    width: 100%;
+    height: auto;
+  }
+  .animal-link img {
+    height: 100px; /* Adjust height for smaller screens */
+  }
+  .animal-link h3 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+  .animal-link p {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+  .navbar-left {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+  .navbar-left .subtitle {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+  .nav-links li a {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+  .search-box input {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+  .collections-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+  .collections-container {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+  .category-card {
+    width: 150px; /* Adjust width for smaller screens */
+    height: 100px; /* Adjust height for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  .category-card:hover {
+    transform: scale(1.05); /* Adjust scale for smaller screens */
+  }
+  .carousel-card {
+    width: 100px; /* Adjust width for smaller screens */
+    height: 70px; /* Adjust height for smaller screens */
+  }
+  .carousel-card:hover {
+    transform: scale(1.05) rotateY(var(--angle)) translateZ(220px); /* Adjust scale for smaller screens */
+  }
+  .animal-list {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+  .animal-card {
+    width: 90%; /* Full width for smaller screens */
+    max-width: 300px; /* Limit max width */
+  }
+  .animal-card:hover {
+    transform: scale(1.02); /* Adjust scale for smaller screens */
+  }
+  .animal-link h3 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+  .animal-link p {
+    font-size: 0.7rem; /* Adjust font size for smaller screens */
+  }
+  .az-navbar ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+  .az-navbar ul li {
+    margin: 5px 0; /* Add spacing between items */
+  }
+  .az-navbar ul li a {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    padding: 5px 15px; /* Adjust padding for smaller screens */
+  }
+  .heading-section {
+    margin-top: 100px; /* Adjust margin for smaller screens */
+  }
+
+}
