@@ -58,6 +58,15 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
+header nav {
+  display: none; /* Hide the default navigation */
+  flex-direction: column;
+}
+/* Show the navigation when the burger menu is clicked */
+header nav.active {
+  display: flex; /* Show the navigation */
+}
+
 /* Logo styling */
 .logo {
   font-size: 24px;
