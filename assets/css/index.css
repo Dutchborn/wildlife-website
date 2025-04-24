@@ -746,6 +746,7 @@ nav ul li a:hover {
   font-size: 2.5rem;
   color: #ffffff;
   text-shadow: 1px 1px #1abc9c;
+  margin-top: 30px;
 }
 
 .cta-section p {
