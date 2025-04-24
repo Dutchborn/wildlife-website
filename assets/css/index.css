@@ -628,6 +628,7 @@ nav ul li a:hover {
   color: #ffffff;
   margin-bottom: 20px;
   text-shadow: 1px 1px #1abc9c;
+  margin-top: 50px;
 }
 
 .habitat-nav ul {
@@ -708,6 +709,7 @@ nav ul li a:hover {
   color: #ffffff;
   margin-bottom: 30px;
   text-shadow: 1px 1px #1abc9c;
+  margin-top: 50px;
 }
 
 .testimonial-grid {
@@ -746,7 +748,7 @@ nav ul li a:hover {
   font-size: 2.5rem;
   color: #ffffff;
   text-shadow: 1px 1px #1abc9c;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .cta-section p {
