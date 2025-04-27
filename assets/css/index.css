@@ -1448,27 +1448,9 @@ footer {
   .row-container .fun-facts-section #fact-box button {
     width: 100%; /* Full width for the button */
     padding: 10px; /* Add padding for spacing */
-    font-size: 1rem; /* Adjust font size for medium screens */
+    font-size: 1.5rem; /* Adjust font size for medium screens */
   }
-  .row-container .fun-facts-section #fact-box #animal-fact,
-  #conservation-fact,
-  #wild-fact {
-    font-size: 1.2rem; /* Adjust font size for medium screens */
-  }
-  .row-container .fun-facts-section #fact-box #animal-fact,
-  #conservation-fact,
-  #wild-fact::before {
-    font-size: 1.5rem; /* Adjust icon size for medium screens */
-    top: -5px; /* Adjust position for medium screens */
-    right: -5px; /* Adjust position for medium screens */
-  }
-  .row-container .fun-facts-section #fact-box #animal-fact::after,
-  #conservation-fact::after,
-  #wild-fact::after {
-    font-size: 1.5rem; /* Adjust icon size for medium screens */
-    top: -5px; /* Adjust position for medium screens */
-    right: -5px; /* Adjust position for medium screens */
-  }
+  
   .row-container .animal-slider-section {
     width: 100%; /* Full width for the slider section */
     padding: 20px; /* Add padding for spacing */
