@@ -1,17 +1,37 @@
+/* FINAL about.css for Wildlife Wonders */
+* {
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
 body {
-  background-image: url("../images/zebras.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Fix the background image */
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensure the body spans the full height of the viewport */
+  font-family: 'Poppins', sans-serif;
+  position: static;
+  overflow: visible;
+  height: 100%;
+  background-image: url('../images/about-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Header */
+header {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  position: relative; /* Ensure the body stays in the normal document flow */
-  z-index: 1; /* Ensure it stays above the video background */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  color: white;
+  padding: 10px 20px;
+  position: absolute; /* Fix the header at the top */
+  top: 0; /* Ensure it stays at the top */
+  left: 0;
   width: 100%; /* Full width */
+  z-index: 10; /* Ensure it stays above other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 /* Logo styling */
@@ -31,23 +51,6 @@ body {
   color: #1abc9c; /* Change color on hover */
 }
 
-/* Header */
-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-  color: white;
-  padding: 10px 20px;
-  position: fixed; /* Fix the header at the top */
-  top: 0; /* Ensure it stays at the top */
-  left: 0;
-  width: 100%; /* Full width */
-  z-index: 10; /* Ensure it stays above other content */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-}
-
 /* Navigation styles */
 nav ul {
   list-style: none; /* Remove default list styles */
@@ -60,8 +63,9 @@ nav ul {
 
 /* Navigation list item styles */
 nav ul li {
-  flex: 1 1 auto;
+  display: inline-block; /* Inline-block for list items */
   margin: 0 15px; /* Add spacing between navigation items */
+  margin-right: 45px;
 }
 
 /* Navigation link styles */
@@ -73,6 +77,80 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #1abc9c; /* Highlight color on hover */
+}
+
+.parallax-hero {
+  background-image: url('../images/about-bg.jpg');
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.content-section {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 60px 20px;
+  margin: 60px auto;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 200px;
+}
+
+.gap {
+  height: 400px;
+  background: transparent;
+}
+
+.about-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.about-info h2 {
+  margin-top: 40px;
+  color: #333;
+}
+
+.about-info p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.counters {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.counter h3 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #1abc9c;
+}
+
+.counter p {
+  margin-top: 8px;
+  color: #333;
 }
 
 /* Reasons Section */
@@ -136,7 +214,7 @@ nav ul li a:hover {
   position: absolute;
   top: -10px;
   right: -10px;
-  opacity: 0.2;
+  opacity: 1;
   transform: rotate(15deg);
 }
 
@@ -146,7 +224,7 @@ nav ul li a:hover {
   position: absolute;
   bottom: -10px;
   left: -10px;
-  opacity: 0.2;
+  opacity: 1;
   transform: rotate(-15deg);
 }
 
@@ -238,7 +316,7 @@ nav ul li a:hover {
   position: absolute;
   top: -10px;
   right: -10px;
-  opacity: 0.2;
+  opacity: 1;
   transform: rotate(15deg);
 }
 
@@ -248,246 +326,50 @@ nav ul li a:hover {
   position: absolute;
   bottom: -10px;
   left: -10px;
-  opacity: 0.2;
+  opacity: 1;
   transform: rotate(-15deg);
 }
 
-/* Contact Form Styling */
 .contact-form {
-  max-width: 800px; /* Wider form for horizontal layout */
-  margin: 50px auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-  text-align: center;
-}
-
-.contact-form h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
-  font-family: "Arial", sans-serif;
+  margin-top: 60px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .contact-form form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Add spacing between rows */
-}
-
-.form-row {
-  display: flex;
-  gap: 15px; /* Add spacing between inputs in the same row */
-  justify-content: space-between;
+  gap: 15px;
 }
 
 .contact-form input,
-.contact-form select,
 .contact-form textarea {
-  flex: 1; /* Allow inputs to grow and fill available space */
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  border-color: #1abc9c;
-  box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
-  outline: none;
-}
-
-.contact-form textarea {
-  resize: none;
-  height: auto; /* Adjust height automatically */
+  border-radius: 6px;
 }
 
 .contact-form button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #1abc9c;
+  padding: 12px;
+  background: #1abc9c;
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
-  background-color: #16a085;
-  transform: translateY(-3px);
-}
-
-.contact-form button:active {
-  transform: translateY(0);
-}
-
-.contact-form p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 10px;
-}
-
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 2; /* Allow the checkbox and label to take more space */
-}
-
-.checkbox-container input[type="checkbox"] {
-  width: auto;
-  margin: 0;
-}
-
-.checkbox-container label {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.checkbox-container label a {
-  color: #1abc9c;
-  text-decoration: none;
-}
-
-.checkbox-container label a:hover {
-  text-decoration: underline;
+  background: #16a085;
 }
 
 footer {
-  text-align: center;
-  background: #2c3e50;
+  background: #333;
   color: white;
-  padding: 10px;
-  width: 100%; /* Ensure the footer spans the full width */
-  box-sizing: border-box; /* Include padding in the width calculation */
-  clear: both; /* Clear any floated elements above */
-  position: relative; /* Ensure it stays in the normal document flow */
-  z-index: 1; /* Ensure it stays above the video background */
-  flex-grow: 1;
-}
-
-@media screen and (max-width: 768px) {
-  .burger-menu {
-    display: block; /* Show burger menu on smaller screens */
-  }
-  nav ul {
-    flex-direction: column; /* Stack navigation items vertically */
-    display: none; /* Hide by default */
-    position: absolute; /* Position it absolutely */
-    top: 60px; /* Below the header */
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    width: 100%; /* Full width */
-    z-index: 5; /* Ensure it stays above other content */
-  }
-  nav ul.show {
-    display: flex; /* Show when toggled */
-  }
-  nav ul li {
-    margin: 10px 0; /* Adjust spacing for vertical layout */
-  }
-  .reasons-section {
-    padding: 20px; /* Adjust padding for smaller screens */
-    justify-self: center;
-  }
-  .reason {
-    max-width: 100%; /* Full width on smaller screens */
-    margin: 0 auto; /* Center the reason cards */
-  }
-  .reason h3 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-  .reason p {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
-  }
-  .reason::before,
-  .reason::after {
-    font-size: 2rem; /* Adjust size of decorative icons for smaller screens */
-  }
-  header {
-    flex-direction: column; /* Stack header items vertically */
-    align-items: flex-start; /* Align items to the start */
-  }
-  header .logo {
-    margin-bottom: 10px; /* Add spacing below the logo */
-  }
-  header nav {
-    width: 100%; /* Full width for navigation */
-  }
-  header nav ul {
-    flex-direction: column; /* Stack navigation items vertically */
-    width: 100%; /* Full width for navigation */
-  }
-  header nav ul li {
-    margin: 0; /* Remove margin for navigation items */
-  }
-  header nav ul li a {
-    padding: 10px 20px; /* Add padding for touch targets */
-    display: block; /* Make the entire area clickable */
-  }
-  header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
-  }
-  header .burger-menu {
-    margin-left: auto; /* Align burger menu to the right */
-  }
-  header .burger-menu:hover {
-    color: #1abc9c; /* Change color on hover */
-  }
-  .reasons-section h2 {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-  }
-  .reasons-section p {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-  .reasons-content {
-    flex-direction: column; /* Stack reason cards vertically */
-    align-items: center; /* Center the reason cards */
-  } 
-}
-
-@media screen and (max-width: 480px) {
-  .reasons-section h2 {
-    font-size: 1.5rem; /* Further adjust font size for very small screens */
-  }
-  .reasons-section p {
-    font-size: 0.9rem; /* Further adjust font size for very small screens */
-  }
-  .reason {
-    padding: 15px; /* Adjust padding for smaller screens */
-  }
-  .reason h3 {
-    font-size: 1.2rem; /* Further adjust font size for smaller screens */
-  }
-  .reason p {
-    font-size: 0.8rem; /* Further adjust font size for smaller screens */
-  }
-  .reason::before,
-  .reason::after {
-    font-size: 1.5rem; /* Further adjust size of decorative icons for smaller screens */
-  }
-  .reasons-content {
-    gap: 20px; /* Adjust gap for smaller screens */
-  }
-  .reason {
-    max-width: 100%; /* Full width on smaller screens */
-    margin: 0 auto; /* Center the reason cards */
-  }
-  .reason h3 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-  .reason p {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
-  }
-  .reason::before,
-  .reason::after {
-    font-size: 1.5rem; /* Further adjust size of decorative icons for smaller screens */
-  }  
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
 }
