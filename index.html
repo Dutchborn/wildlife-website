@@ -21,7 +21,7 @@
       <div class="logo">Wildlife Wonders</div>
 
       <div class="burger-menu" id="burger-menu">&#9776;</div>
-      
+
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -40,6 +40,10 @@
         <p>Explore the beauty and diversity of the animal kingdom.</p>
         <a href="animals.html" class="cta-button">Learn More</a>
       </div>
+
+      <section class="counter-section">
+        <h2>Over <span id="animalCounter">0</span> Animals Catalogued!</h2>
+      </section>
 
       <!-- Animal Grid -->
       <div class="animal-grid">
@@ -1244,7 +1248,14 @@
         wild.
       </p>
       <form class="newsletter-form">
-        <input type="email" name="email" id="email" placeholder="Your email" autocomplete="on" required>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email"
+          autocomplete="on"
+          required
+        />
         <button type="submit">Subscribe</button>
       </form>
     </section>
@@ -1259,6 +1270,22 @@
       <p>&copy; 2025 Wildlife Wonders. All Rights Reserved.</p>
     </footer>
     <script>
+       // Animal Counter Animation
+  const animalCounter = document.getElementById('animalCounter');
+  let count = 0;
+  const totalAnimals = 10000;
+
+  function updateCounter() {
+    count += 50;
+    if (count > totalAnimals) count = totalAnimals;
+    animalCounter.textContent = count.toLocaleString();
+    if (count < totalAnimals) {
+      setTimeout(updateCounter, 30);
+    }
+  }
+
+  updateCounter();
+
       // ---- Fun Facts ----
       const facts = [
         "A group of flamingos is called a flamboyance.",

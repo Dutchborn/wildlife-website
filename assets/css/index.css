@@ -94,6 +94,17 @@ nav ul li a:hover {
   color: #1abc9c; /* Highlight color on hover */
 }
 
+.counter-section {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.counter-section h2 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+
 /* Hero container styles */
 .container {
   width: 95%; /* Use a percentage instead of a fixed width */
