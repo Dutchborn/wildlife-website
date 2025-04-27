@@ -390,99 +390,89 @@ nav ul li a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   text-align: center; /* Center-align the content */
   align-content: center; /* Center-align the content */
+  height: 100%;
 }
 
 .animal-slider-section h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-  font-family: "Comic Sans MS", "Arial", sans-serif;
-  display: flex;
-  align-items: center;
-  position: absolute;
+  font-size: 2rem; /* Adjust font size for larger screens */
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 20px; /* Add spacing below the heading */
+  color: #333; /* Heading color */
+  font-family: "Comic Sans MS", "Arial", sans-serif; /* Font family for the heading */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center align the heading */
+  position: absolute; /* Position the heading at the top */
   top: 70px; /* Position the heading at the top */
 }
-
 /* Slider Container */
 .slider-container {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
+  position: relative; /* Keep it in the normal document flow */
+  max-width: 100%; /* Full width for the slider container */
+  margin: 0 auto; /* Center the slider container */
   overflow: hidden; /* Hide overflow for a clean look */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Rounded corners for the slider container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
 /* Slider */
 .slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  display: flex; /* Flexbox for the slider */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
 }
-
 /* Individual Slide */
 .slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  background-color: #fff;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
+  min-width: 100%; /* Full width for each slide */
+  box-sizing: border-box; /* Include padding and border in the width */
+  text-align: center; /* Center-align the content */
+  background-color: #fff; /* Background color for the slide */
+  border: 2px solid #ddd; /* Border for the slide */
+  border-radius: 10px; /* Rounded corners for the slide */
+  overflow: hidden; /* Hide overflow for a clean look */
 }
-
 .slide img {
-  width: 100%;
-  object-fit: cover;
-  border-bottom: 2px solid #ddd;
-  border-radius: 10px 10px 0 0;
-  height: 506px; /* Fixed height for images */
+  width: 100%; /* Full width for the image */
+  object-fit: cover; /* Cover the entire slide */
+  border-bottom: 2px solid #ddd; /* Border below the image */
+  border-radius: 10px 10px 0 0; /* Rounded corners for the top */
+  height: 300px; /* Fixed height for images on larger screens */
 }
-
 .slide-info {
-  padding: 15px;
+  padding: 15px; /* Padding inside the slide info */
 }
-
 .slide-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: 1.5rem; /* Font size for the slide title */
+  margin-bottom: 10px; /* Add spacing below the title */
+  color: #333; /* Title color */
 }
-
 .slide-info p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
+  font-size: 1rem; /* Font size for the slide description */
+  color: #555; /* Description text color */
+  line-height: 1.5; /* Line height for readability */
 }
-
 /* Navigation Buttons */
 .prev-btn,
 .next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 10;
+  position: absolute; /* Position absolute for the buttons */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color for the buttons */
+  color: #fff; /* Text color for the buttons */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Rounded corners for the buttons */
+  width: 40px; /* Width for the buttons */
+  height: 40px; /* Height for the buttons */
+  font-size: 1.5rem; /* Font size for the button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  z-index: 10; /* Ensure it stays above other content */
 }
-
 .prev-btn {
-  left: 10px;
+  left: 10px; /* Position the previous button to the left */
 }
-
 .next-btn {
-  right: 10px;
+  right: 10px; /* Position the next button to the right */
 }
-
 .prev-btn:hover,
 .next-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background color on hover */
 }
 
 /* Campaigns Section */
@@ -517,6 +507,9 @@ nav ul li a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative; /* Ensure it stays in the normal document flow */
   opacity: 0.9; /* Match opacity with animal cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .campaign-card:hover {
@@ -1377,7 +1370,6 @@ footer {
 /* Adjust styles for medium screens */
 @media (min-width: 426px) and (max-width: 768px) {
   body {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1481,7 +1473,7 @@ footer {
     width: 100%; /* Full width for the slider section */
     padding: 20px; /* Add padding for spacing */
     margin: 0 auto; /* Center the slider section */
-    height: auto; /* Adjust height for medium screens */
+    height: 700px; /* Adjust height for medium screens */
   }
  
   .row-container .animal-slider-section h2 {
@@ -1494,7 +1486,7 @@ footer {
     align-items: center; /* Center align the heading */
     position: absolute; /* Position the heading at the top */
     top: 70px; /* Position the heading at the top */
-    visibility: hidden; /* Hide the heading on smaller screens */
+    justify-self: anchor-center;
   }
   /* Slider Container */
   .slider-container {
@@ -1519,7 +1511,6 @@ footer {
     border: 2px solid #ddd; /* Border for the slide */
     border-radius: 10px; /* Rounded corners for the slide */
     overflow: hidden; /* Hide overflow for a clean look */
-    height: 400px; /* Fixed height for images on medium screens */
   }
   .slide img {
     width: 100%; /* Full width for the image */
@@ -1537,7 +1528,7 @@ footer {
     color: #333; /* Title color */
   }
   .slide-info p {
-    font-size: 1rem; /* Font size for the slide description */
+    font-size: 1.5rem; /* Font size for the slide description */
     color: #333; /* Description text color */
     line-height: 1.5; /* Line height for readability */
   }
@@ -1886,299 +1877,6 @@ footer {
     height: auto; /* Adjust height for larger screens */
   }
   }
-
-  .animal-slider-section h2 {
-    font-size: 2rem; /* Adjust font size for larger screens */
-    text-align: center; /* Center-align the heading */
-    margin-bottom: 20px; /* Add spacing below the heading */
-    color: #333; /* Heading color */
-    font-family: "Comic Sans MS", "Arial", sans-serif; /* Font family for the heading */
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Center align the heading */
-    position: absolute; /* Position the heading at the top */
-    top: 70px; /* Position the heading at the top */
-  }
-  /* Slider Container */
-  .slider-container {
-    position: relative; /* Keep it in the normal document flow */
-    max-width: 100%; /* Full width for the slider container */
-    margin: 0 auto; /* Center the slider container */
-    overflow: hidden; /* Hide overflow for a clean look */
-    border-radius: 10px; /* Rounded corners for the slider container */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  /* Slider */
-  .slider {
-    display: flex; /* Flexbox for the slider */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
-  }
-  /* Individual Slide */
-  .slide {
-    min-width: 100%; /* Full width for each slide */
-    box-sizing: border-box; /* Include padding and border in the width */
-    text-align: center; /* Center-align the content */
-    background-color: #fff; /* Background color for the slide */
-    border: 2px solid #ddd; /* Border for the slide */
-    border-radius: 10px; /* Rounded corners for the slide */
-    overflow: hidden; /* Hide overflow for a clean look */
-  }
-  .slide img {
-    width: 100%; /* Full width for the image */
-    object-fit: cover; /* Cover the entire slide */
-    border-bottom: 2px solid #ddd; /* Border below the image */
-    border-radius: 10px 10px 0 0; /* Rounded corners for the top */
-    height: 200px; /* Fixed height for images on larger screens */
-  }
-  .slide-info {
-    padding: 15px; /* Padding inside the slide info */
-  }
-  .slide-info h3 {
-    font-size: 1.5rem; /* Font size for the slide title */
-    margin-bottom: 10px; /* Add spacing below the title */
-    color: #333; /* Title color */
-  }
-  .slide-info p {
-    font-size: 1rem; /* Font size for the slide description */
-    color: #555; /* Description text color */
-    line-height: 1.5; /* Line height for readability */
-  }
-  /* Navigation Buttons */
-  .prev-btn,
-  .next-btn {
-    position: absolute; /* Position absolute for the buttons */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center vertically */
-    background-color: rgba(0, 0, 0, 0.5); /* Background color for the buttons */
-    color: #fff; /* Text color for the buttons */
-    border: none; /* Remove border */
-    border-radius: 50%; /* Rounded corners for the buttons */
-    width: 40px; /* Width for the buttons */
-    height: 40px; /* Height for the buttons */
-    font-size: 1.5rem; /* Font size for the button text */
-    cursor: pointer; /* Pointer cursor on hover */
-    z-index: 10; /* Ensure it stays above other content */
-  }
-  .prev-btn {
-    left: 10px; /* Position the previous button to the left */
-  }
-  .next-btn {
-    right: 10px; /* Position the next button to the right */
-  }
-  .prev-btn:hover,
-  .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darker background color on hover */
-  }
-  /* Campaigns Section */
-  .campaigns-section {
-    padding: 40px 20px; /* Adjust padding for larger screens */
-    text-align: center; /* Center-align the content */
-  }
-  .campaigns-section h2 {
-    font-size: 2.5rem; /* Adjust font size for larger screens */
-    color: #ffffff; /* Heading color */
-    margin-bottom: 40px; /* Add spacing below the heading */
-    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Font family for the heading */
-    text-shadow: 1px 1px #1abc9c; /* Text shadow for the heading */
-  }
-  .campaigns-container {
-    display: flex; /* Flexbox for the container */
-    flex-wrap: wrap; /* Wrap items to the next line */
-    justify-content: center; /* Center-align the items */
-    gap: 20px; /* Gap between items */
-  }
-  .campaign-card {
-    background: white; /* Background color for the card */
-    border: 2px solid #d4f1ed; /* Border for the card */
-    border-radius: 12px; /* Rounded corners for the card */
-    padding: 20px; /* Padding inside the card */
-    max-width: 280px; /* Maximum width for the card */
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* Shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    position: relative; /* Keep it in the normal document flow */
-    opacity: 0.9; /* Match opacity with animal cards */
-  }
-  .campaign-card:hover {
-    transform: translateY(-5px); /* Move the card up on hover */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Shadow for depth on hover */
-  }
-  .campaign-card h3 {
-    font-size: 1.5rem; /* Font size for the card title */
-    color: #16a085; /* Title color */
-    margin-bottom: 10px; /* Add spacing below the title */
-  }
-  .campaign-card p {
-    font-size: 1rem; /* Font size for the card description */
-    color: #555; /* Description text color */
-    margin-bottom: 15px; /* Add spacing below the description */
-  }
-  .campaign-card a {
-    display: inline-block; /* Inline-block for the link */
-    padding: 8px 16px; /* Padding inside the link */
-    background-color: #1abc9c; /* Background color for the link */
-    color: white; /* Text color for the link */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners for the link */
-    font-weight: bold; /* Bold text for the link */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-  }
-  .campaign-card a:hover {
-    background-color: #148f77; /* Darker background color on hover */
-  }
-  /* Wildlife Quiz Section */
-  .quiz-section {
-    background-color: #fffbe6; /* Background color for the quiz section */
-    padding: 40px 20px; /* Adjust padding for larger screens */
-    text-align: center; /* Center-align the content */
-    display: contents; /* Display contents for the section */
-  }
-  .quiz-section h2 {
-    font-size: 2.5rem; /* Font size for the quiz heading */
-    color: #ffffff; /* Heading color */
-    margin-bottom: 20px; /* Add spacing below the heading */
-    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Font family for the heading */
-    text-shadow: 1px 1px #1abc9c; /* Text shadow for the heading */
-  }
-  #quiz-box {
-    background: #fff; /* Background color for the quiz box */
-    padding: 30px; /* Padding inside the quiz box */
-    max-width: 600px; /* Maximum width for the quiz box */
-    margin: 0 auto; /* Center the quiz box */
-    border-radius: 12px; /* Rounded corners for the quiz box */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    opacity: 0.9; /* Match opacity with animal cards */
-  }
-  #quiz-question {
-    font-size: 1.3rem; /* Font size for the quiz question */
-    margin-bottom: 20px; /* Add spacing below the question */
-    color: #34495e; /* Question text color */
-    transform: scale(1.1); /* Scale effect for the question */
-  }
-  #quiz-options button {
-    display: block; /* Block display for the buttons */
-    width: 100%; /* Full width for the buttons */
-    margin: 10px auto; /* Center the buttons */
-    padding: 10px 15px; /* Padding inside the buttons */
-    background-color: #f39c12; /* Background color for the buttons */
-    color: white; /* Text color for the buttons */
-    font-size: 1rem; /* Font size for the button text */
-    border: none; /* Remove border */
-    border-radius: 6px; /* Rounded corners for the buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    transform: scale(1); /* Scale effect for the buttons */
-  }
-  #quiz-options button:hover {
-    background-color: #e67e22; /* Darker background color on hover */
-  }
-  #quiz-button {
-    margin-top: 20px; /* Add spacing above the button */
-    transform: scale(1.1); /* Scale effect for the button */
-  }
-  #quiz-result {
-    margin-top: 15px; /* Add spacing above the result */
-    font-weight: bold; /* Bold text for the result */
-    font-size: 1.2rem; /* Font size for the result */
-    color: #2c3e50; /* Result text color */
-  }
-  /* Habitat Tabs Section */
-  .habitat-section {
-    margin: 40px auto; /* Center the section */
-    padding: 20px; /* Padding inside the section */
-    text-align: center; /* Center-align the content */
-    background: linear-gradient(to bottom, #e6f9f4, #fafffc); /* Background gradient */
-    border-radius: 20px; /* Rounded corners for the section */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    max-width: 1200px; /* Maximum width for the section */
-    display: contents; /* Display contents for the section */
-  }
-  .habitat-section h2 {
-    font-size: 2.5rem; /* Font size for the habitat heading */
-    color: #ffffff; /* Heading color */
-    margin-bottom: 20px; /* Add spacing below the heading */
-    text-shadow: 1px 1px #1abc9c; /* Text shadow for the heading */
-  }
-  .habitat-nav ul {
-    list-style: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding */
-    margin: 0 0 20px; /* Remove default margin */
-    display: flex; /* Flexbox for the navigation */
-    flex-wrap: wrap; /* Wrap items to the next line */
-    justify-content: center; /* Center-align the items */
-    gap: 10px; /* Gap between items */
-  }
-  .habitat-nav ul li a {
-    display: inline-block; /* Inline-block for the links */
-    background-color: #ffffff; /* Background color for the links */
-    border: 2px solid #1abc9c; /* Border for the links */
-    color: #1abc9c; /* Text color for the links */
-    font-weight: bold; /* Bold text for the links */
-    padding: 10px 20px; /* Padding inside the links */
-    border-radius: 30px; /* Rounded corners for the links */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
-    transform: scale(1); /* Scale effect for the links */
-  }
-  .habitat-nav ul li a:hover,
-  .habitat-nav ul li a.active {
-    background-color: #1abc9c; /* Background color on hover */
-    color: #fff; /* Text color on hover */
-  }
-  .tab-content {
-    display: none; /* Hide all tab content by default */
-    text-align: left; /* Left-align the text */
-    padding: 30px; /* Padding inside the tab content */
-    background-color: #ffffff; /* Background color for the tab content */
-    border-radius: 15px; /* Rounded corners for the tab content */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    cursor: pointer; /* Pointer cursor on hover */
-    animation: fadeIn 0.6s ease-in-out; /* Fade-in animation */
-    opacity: 0.9; /* Match opacity with animal cards */
-  }
-  .tab-content h3 {
-    font-size: 1.8rem; /* Font size for the tab title */
-    margin-bottom: 15px; /* Add spacing below the title */
-    color: #34495e; /* Title color */
-  }
-  .tab-content p,
-  .tab-content ul li {
-    font-size: 1.1rem; /* Font size for the tab content */
-    color: #555; /* Text color for the tab content */
-    line-height: 1.6; /* Line height for readability */
-    margin-bottom: 10px; /* Add spacing below the content */
-  }
-  .tab-content ul {
-    padding-left: 20px; /* Padding for the list */
-  }
-  .tab-content ul li {
-    font-size: 1rem; /* Font size for the list items */
-    margin-bottom: 5px; /* Add spacing below the list items */
-    position: relative; /* Position relative for pseudo-elements */
-  }
-  .tab-content ul li::before {
-    content: "✔"; /* Add a checkmark before each list item */
-    position: absolute; /* Position absolute for the icon */
-    left: -20px; /* Adjust position to the left */
-    color: #1abc9c; /* Icon color */
-    font-size: 1.2rem; /* Icon size */
-  }
-  .tab-content ul li::after {
-    content: ""; /* Add an empty content for the after pseudo-element */
-    position: absolute; /* Position absolute for the icon */
-    left: -20px; /* Adjust position to the left */
-    color: #1abc9c; /* Icon color */
-    font-size: 1.2rem; /* Icon size */
-  }
-  .tab-content ul li::before {
-    font-size: 1.5rem; /* Adjust icon size for larger screens */
-    top: -5px; /* Adjust position for larger screens */
-    right: -5px; /* Adjust position for larger screens */
-  }
-  .tab-content ul li::after {
-    font-size: 1.5rem; /* Adjust icon size for larger screens */
-    top: -5px; /* Adjust position for larger screens */
-    right: -5px; /* Adjust position for larger screens */
-  }
-
 
   /* Larger Screens 1200+ */
   /* Adjust styles for larger screens */
