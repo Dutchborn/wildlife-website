@@ -382,6 +382,28 @@ blockquote {
   background: #16a085;
 }
 
+/* Floating Banner */
+.floating-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1abc9c;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  font-size: 1rem;
+  animation: pulse 2s infinite;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.floating-banner a {
+  color: #f9f9f9;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
 footer {
   background: #333;
   color: white;
