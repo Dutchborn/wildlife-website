@@ -10,11 +10,18 @@
       rel="stylesheet"
     />
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
         font-family: "Cabin Sketch", cursive;
-        background: linear-gradient(to bottom right, #101820, #283e51);
-        color: #f0f0f0;
+        background-image: url("assets/images/rainforest-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
       }
 
       p,
@@ -55,16 +62,18 @@
         padding: 30px;
         backdrop-filter: blur(8px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.4)
       }
       .animal-info em {
-        color: #aaa;
+        color: #fff;
         font-size: 1.1rem;
         display: block;
         margin-bottom: 10px;
       }
       .animal-info p {
-        font-size: 1.1rem;
+        font-size: 2rem;
         line-height: 1.7;
+        color: #f0f0f0;
       }
       .fact-grid {
         display: grid;
@@ -80,8 +89,8 @@
       }
       .fact-box h3 {
         margin: 0 0 10px;
-        font-size: 1.2rem;
-        color: #1abc9c;
+        font-size: 1.5rem;
+        color: #fff;
       }
       .back-link {
         margin-top: 40px;
