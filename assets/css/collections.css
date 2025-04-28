@@ -3,12 +3,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-h1 {
+h1, h2, h3 {
   display: flex;
   justify-content: center;
+  font-family: 'Cabin Sketch', cursive;
+
+  margin: 20px 0;
+}
+
+p, a, span {
+  font-family: 'Cabin Sketch', cursive;
+  text-align: center;
+  color: #333;
+  font-family: 'poppins', sans-serif;
 }
 
 body {
@@ -160,7 +169,6 @@ footer {
   margin-bottom: 40px;
   color: #fff;
   font-size: 2.5rem;
-  font-family: 'Comic Sans MS', 'Arial', sans-serif;
 }
 
 .collections-container {
@@ -169,6 +177,7 @@ footer {
   height: 400px;
   max-width: 1600px;
   margin: 0 auto;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 .category-card {
