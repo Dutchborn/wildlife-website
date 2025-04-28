@@ -424,7 +424,7 @@ div.az-navbar {
 .az-navbar ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -448,10 +448,52 @@ div.az-navbar {
   background-color: #ddd;
 }
 
-.heading-section {
+.nav-habitat-container {
   display: flex;
-  justify-content: flex-start;
-  margin-top: 150px;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.az-navbar {
+  width: 50%;
+}
+
+.habitat-gallery {
+width: 50%;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.habitat-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin-bottom: -80px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.habitat-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  z-index: 10;
+}
+
+.habitat-label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Floating Banner */
