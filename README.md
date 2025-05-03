@@ -1,8 +1,8 @@
 # 🌍 Wildlife Wonders
 
-Welcome to **Wildlife Wonders**, an interactive, visually engaging, and educational website dedicated to exploring the beauty and significance of animals and their environments. Built to inspire curiosity and support wildlife conservation, this site allows users to discover fascinating animal facts, filter species by category, and learn about ecosystems and endangered species in an immersive experience.
+Welcome to **Wildlife Wonders**, an interactive, visually engaging, and educational website dedicated to exploring the beauty and significance of animals and their environments. Built to inspire curiosity and support wildlife conservation, this site allows users to discover fascinating animal facts, filter species by category, and learn about ecosystems and endangered species in an immersive experience. On - Going Project!
 
-![Wildlife Wonders Screenshot](assets/images/wildlife-preview.png)
+![Wildlife Wonders Screenshot](assets/images/wildlifeWonders.png)
 
 ---
 
