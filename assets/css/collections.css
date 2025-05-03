@@ -452,10 +452,38 @@ div.az-navbar {
   display: flex;
   gap: 30px;
   margin-top: 40px;
+  align-items: flex-start;
 }
 
 .az-navbar {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.az-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.az-row span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.2s color 0.2s;
+}
+.az-row span:hover {
+  color: #1abc9c; 
+  transform: translateY(-3px)
 }
 
 .habitat-gallery {
