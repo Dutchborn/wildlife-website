@@ -366,7 +366,7 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-#fact-box {
+.fact-box {
   background: #ffffff;
   padding: 25px;
   border-radius: 10px;
@@ -389,7 +389,7 @@ nav ul li a:hover {
   color: #34495e;
 }
 
-#fact-box button {
+.fact-box button {
   padding: 10px 20px;
   background-color: #1abc9c;
   color: white;
@@ -403,7 +403,7 @@ nav ul li a:hover {
   transform: scale(1);
 }
 
-#fact-box button:hover {
+.fact-box button:hover {
   background-color: #16a085;
 }
 
@@ -1075,7 +1075,7 @@ footer {
     margin-bottom: 20px; /* Add spacing below the heading */
     color: #333; /* Heading color */
   }
-  #fact-box {
+  .fact-box {
     background: #ffffff; /* Background color for the fact box */
     padding: 25px; /* Padding inside the fact box */
     border-radius: 10px; /* Rounded corners for the fact box */
@@ -1091,7 +1091,7 @@ footer {
     color: #34495e; /* Fun fact text color */
     font-size: 1.2rem; /* Font size for the fun fact text */
   }
-  #fact-box button {
+  .fact-box button {
     padding: 10px 20px; /* Padding inside the button */
     background-color: #1abc9c; /* Button background color */
     color: white; /* Button text color */
@@ -1104,7 +1104,7 @@ footer {
     position: relative; /* Ensure it stays in the normal document flow */
     transform: scale(1); /* Scale effect for the button */
   }
-  #fact-box button:hover {
+  .fact-box button:hover {
     background-color: #16a085; /* Darker background color on hover */
   }
 
@@ -1466,11 +1466,11 @@ footer {
   .row-container .fun-facts-section h2 {
     font-size: 2rem; /* Adjust font size for medium screens */
   }
-  .row-container .fun-facts-section #fact-box {
+  .row-container .fun-facts-section .fact-box {
     width: 100%; /* Full width for the fact box */
     padding: 20px; /* Add padding for spacing */
   }
-  .row-container .fun-facts-section #fact-box button {
+  .row-container .fun-facts-section .fact-box button {
     width: 100%; /* Full width for the button */
     padding: 10px; /* Add padding for spacing */
     font-size: 1.5rem; /* Adjust font size for medium screens */
@@ -1846,28 +1846,28 @@ footer {
   .row-container .fun-facts-section h2 {
     font-size: 2rem; /* Adjust font size for larger screens */
   }
-  .row-container .fun-facts-section #fact-box {
+  .row-container .fun-facts-section .fact-box {
     width: 100%; /* Full width for the fact box */
     padding: 20px; /* Add padding for spacing */
   }
-  .row-container .fun-facts-section #fact-box button {
+  .row-container .fun-facts-section .fact-box button {
     width: 100%; /* Full width for the button */
     padding: 10px; /* Add padding for spacing */
     font-size: 1rem; /* Adjust font size for larger screens */
   }
-  .row-container .fun-facts-section #fact-box #animal-fact,
+  .row-container .fun-facts-section .fact-box #animal-fact,
   #conservation-fact,
   #wild-fact {
     font-size: 1.2rem; /* Adjust font size for larger screens */
   }
-  .row-container .fun-facts-section #fact-box #animal-fact,
+  .row-container .fun-facts-section .fact-box #animal-fact,
   #conservation-fact,
   #wild-fact::before {
     font-size: 1.5rem; /* Adjust icon size for larger screens */
     top: -5px; /* Adjust position for larger screens */
     right: -5px; /* Adjust position for larger screens */
   }
-  .row-container .fun-facts-section #fact-box #animal-fact::after,
+  .row-container .fun-facts-section .fact-box #animal-fact::after,
   #conservation-fact::after,
   #wild-fact::after {
     font-size: 1.5rem; /* Adjust icon size for larger screens */
